@@ -1,6 +1,28 @@
----- SCRUM 1 ---- 
+---- SCRUM 2 ---- 
 
  
+
+2022/10/13 Alina 
+
+1. Done / not done since last scrum: 
+
+- Added scrum file to GitHub repo 
+
+- Revised DB schema 
+
+- Submitted project proposal on Lea 
+
+2. To do until next Scrum: 
+
+- Create at least one of the app mockups using Material Design to get more comfortable with it.  
+
+- Figure out navigation, windows, dialogues, wizards...?
+
+3. Need assistance / figure things out 
+
+
+---- SCRUM 1 ---- 
+
 
 2022/10/12 Alina 
 

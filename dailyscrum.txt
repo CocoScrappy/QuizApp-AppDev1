@@ -1,6 +1,22 @@
 ---- SCRUM 2 ---- 
 
- 
+ 2022/10/13 Louis 
+
+1. Done / not done since last scrum: 
+
+- user stories on Trello
+
+- researching librairies for HTTP requests
+
+- researching login / auth 
+
+2. To do until next Scrum: 
+
+-Sample project to contact api and parse json 
+
+3. Need assistance / figure things out 
+
+- all good for now 
 
 2022/10/13 Alina 
 

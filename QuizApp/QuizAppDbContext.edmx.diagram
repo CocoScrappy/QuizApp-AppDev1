@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67b3421486564c3ca1d3db92004617fc" Name="Diagram1">
+        <EntityTypeShape EntityType="QuizAppProjectModel.attempt_responses" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.attempt" Width="1.5" PointX="11.125" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.category" Width="1.5" PointX="9.375" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.image" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.test_questions" Width="1.5" PointX="4.625" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.test" Width="1.5" PointX="6.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.user" Width="1.5" PointX="6.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuizAppProjectModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__attempt_r__attem__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__attempt_r__test___6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__attempts__player__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__attempts__test_i__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__tests__category___74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__test_ques__img_i__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__tests__img_id__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__users__img_id__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__test_ques__test___73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__tests__owner_id__76969D2E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

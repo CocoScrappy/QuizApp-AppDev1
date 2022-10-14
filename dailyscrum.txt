@@ -1,0 +1,101 @@
+---- SCRUM 2 ---- 
+
+ 2022/10/13 Louis 
+
+1. Done / not done since last scrum: 
+
+- user stories on Trello
+
+- researching librairies for HTTP requests
+
+- researching login / auth 
+
+2. To do until next Scrum: 
+
+-Sample project to contact api and parse json 
+
+3. Need assistance / figure things out 
+
+- all good for now 
+
+2022/10/13 Alina 
+
+1. Done / not done since last scrum: 
+
+- Added scrum file to GitHub repo 
+
+- Revised DB schema 
+
+- Submitted project proposal on Lea 
+
+2. To do until next Scrum: 
+
+- Create at least one of the app mockups using Material Design to get more comfortable with it.  
+
+- Figure out navigation, windows, dialogues, wizards...?
+
+3. Need assistance / figure things out 
+
+
+---- SCRUM 1 ---- 
+
+
+2022/10/12 Alina 
+
+1. Done / not done since last scrum: 
+
+- Brainstormed database schema design with team 
+
+2. To do until next Scrum: 
+
+- Add scrum file to GitHub repo 
+
+- Revise DB schema 
+
+- Submit project proposal on Lea 
+
+3. Need assistance / figure things out 
+ 
+
+
+2022/10/12 Louis 
+
+1. Done / not done since last scrum: 
+
+- Worked on project description with Alina 
+
+- researching librairies 
+
+- researching login / auth 
+
+2. To do until next Scrum: 
+
+- build login test project 
+
+- work on user stories 
+
+3. Need assistance / figure things out 
+
+- some help creating / verifying user stories 
+
+ 
+
+2022/10/12 Dmitry 
+
+1. Done / not done since last scrum: 
+
+- Started on mockups 
+
+2. To do until next Scrum: 
+
+- Finish the mockups 
+
+- Look into the Azure account setup 
+
+- Look into the Database first approach for EF 
+
+- Look into User stories after Louis 
+
+3. Need assistance / figure things out 
+
+- N/A 

@@ -1,4 +1,28 @@
 ---- SCRUM 2 ---- 
+ 2022/10/13 Dmitry  -  SCRUM lost when copying
+
+1. Done / not done since last scrum: 
+- Finish the mockups - DONE
+
+- Look into the Azure account setup - DONE
+
+- Look into the Database first approach for EF - DONE
+
+- Look into User stories after Louis - NOT DONE
+
+2. To do until next Scrum: 
+- Rewrite Database from MySQL to SQL
+
+- Tweak the database if needed
+
+- Set up the database
+
+- Upload the project to github with .gitignore
+
+3. Need assistance / figure things out 
+
+- all good for now 
+
 
  2022/10/13 Louis 
 

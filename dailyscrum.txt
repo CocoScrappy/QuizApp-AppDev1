@@ -1,4 +1,4 @@
----- SCRUM 2 ---- 
+---- SCRUM 3 ---- 
 
 2022/10/15 Louis 
 
@@ -14,6 +14,8 @@
 
 3. Need assistance / figure things out 
 ? 
+
+---- SCRUM 2 ---- 
 
  2022/10/13 Dmitry  -  SCRUM lost when copying
 

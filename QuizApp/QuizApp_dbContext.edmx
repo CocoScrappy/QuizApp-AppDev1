@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuizAppProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AttemptResponses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AttemptId" Type="int" Nullable="false" />
+          <Property Name="TestQuestionId" Type="int" Nullable="false" />
+          <Property Name="Response" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="IsCorrect" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Attempts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+          <Property Name="Result" Type="int" />
+          <Property Name="Archived" Type="smallint" Nullable="false" />
+          <Property Name="DateTaken" Type="datetime2" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestQuestions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
+          <Property Name="Question" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="CorrectAnswer" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="WrongAnswers" Type="varchar" MaxLength="1500" Nullable="false" />
+          <Property Name="ImgId" Type="int" />
+        </EntityType>
+        <EntityType Name="Tests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="Difficulty" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ImgId" Type="int" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Score" Type="int" />
+          <Property Name="MaxScore" Type="int" />
+          <Property Name="ImgId" Type="int" />
+        </EntityType>
+        <Association Name="FK__AttemptRe__Attem__6EF57B66">
+          <End Role="Attempts" Type="Self.Attempts" Multiplicity="1" />
+          <End Role="AttemptResponses" Type="Self.AttemptResponses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attempts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AttemptResponses">
+              <PropertyRef Name="AttemptId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AttemptRe__TestQ__6FE99F9F">
+          <End Role="TestQuestions" Type="Self.TestQuestions" Multiplicity="1" />
+          <End Role="AttemptResponses" Type="Self.AttemptResponses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestQuestions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AttemptResponses">
+              <PropertyRef Name="TestQuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attempts__Player__70DDC3D8">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Attempts" Type="Self.Attempts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Attempts">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attempts__TestId__71D1E811">
+          <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+          <End Role="Attempts" Type="Self.Attempts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Attempts">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestQuest__ImgId__72C60C4A">
+          <End Role="Images" Type="Self.Images" Multiplicity="0..1" />
+          <End Role="TestQuestions" Type="Self.TestQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestQuest__TestI__73BA3083">
+          <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+          <End Role="TestQuestions" Type="Self.TestQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tests__CategoryI__74AE54BC">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tests__ImgId__75A278F5">
+          <End Role="Images" Type="Self.Images" Multiplicity="0..1" />
+          <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tests__OwnerId__76969D2E">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Users__ImgId__778AC167">
+          <End Role="Images" Type="Self.Images" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuizAppProjectModelStoreContainer">
+          <EntitySet Name="AttemptResponses" EntityType="Self.AttemptResponses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Attempts" EntityType="Self.Attempts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestQuestions" EntityType="Self.TestQuestions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__AttemptRe__Attem__6EF57B66" Association="Self.FK__AttemptRe__Attem__6EF57B66">
+            <End Role="Attempts" EntitySet="Attempts" />
+            <End Role="AttemptResponses" EntitySet="AttemptResponses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AttemptRe__TestQ__6FE99F9F" Association="Self.FK__AttemptRe__TestQ__6FE99F9F">
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+            <End Role="AttemptResponses" EntitySet="AttemptResponses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attempts__Player__70DDC3D8" Association="Self.FK__Attempts__Player__70DDC3D8">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Attempts" EntitySet="Attempts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attempts__TestId__71D1E811" Association="Self.FK__Attempts__TestId__71D1E811">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="Attempts" EntitySet="Attempts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestQuest__ImgId__72C60C4A" Association="Self.FK__TestQuest__ImgId__72C60C4A">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestQuest__TestI__73BA3083" Association="Self.FK__TestQuest__TestI__73BA3083">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tests__CategoryI__74AE54BC" Association="Self.FK__Tests__CategoryI__74AE54BC">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tests__ImgId__75A278F5" Association="Self.FK__Tests__ImgId__75A278F5">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tests__OwnerId__76969D2E" Association="Self.FK__Tests__OwnerId__76969D2E">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Users__ImgId__778AC167" Association="Self.FK__Users__ImgId__778AC167">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuizAppProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AttemptRespons">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AttemptId" Type="Int32" Nullable="false" />
+          <Property Name="TestQuestionId" Type="Int32" Nullable="false" />
+          <Property Name="Response" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsCorrect" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Attempt" Relationship="Self.FK__AttemptRe__Attem__6EF57B66" FromRole="AttemptResponses" ToRole="Attempts" />
+          <NavigationProperty Name="TestQuestion" Relationship="Self.FK__AttemptRe__TestQ__6FE99F9F" FromRole="AttemptResponses" ToRole="TestQuestions" />
+        </EntityType>
+        <EntityType Name="Attempt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerId" Type="Int32" Nullable="false" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <Property Name="Result" Type="Int32" />
+          <Property Name="Archived" Type="Int16" Nullable="false" />
+          <Property Name="DateTaken" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="AttemptResponses" Relationship="Self.FK__AttemptRe__Attem__6EF57B66" FromRole="Attempts" ToRole="AttemptResponses" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Attempts__Player__70DDC3D8" FromRole="Attempts" ToRole="Users" />
+          <NavigationProperty Name="Test" Relationship="Self.FK__Attempts__TestId__71D1E811" FromRole="Attempts" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__CategoryI__74AE54BC" FromRole="Categories" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__ImgId__72C60C4A" FromRole="Images" ToRole="TestQuestions" />
+          <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__ImgId__75A278F5" FromRole="Images" ToRole="Tests" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Users__ImgId__778AC167" FromRole="Images" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="TestQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <Property Name="Question" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CorrectAnswer" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WrongAnswers" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImgId" Type="Int32" />
+          <NavigationProperty Name="AttemptResponses" Relationship="Self.FK__AttemptRe__TestQ__6FE99F9F" FromRole="TestQuestions" ToRole="AttemptResponses" />
+          <NavigationProperty Name="Image" Relationship="Self.FK__TestQuest__ImgId__72C60C4A" FromRole="TestQuestions" ToRole="Images" />
+          <NavigationProperty Name="Test" Relationship="Self.FK__TestQuest__TestI__73BA3083" FromRole="TestQuestions" ToRole="Tests" />
+        </EntityType>
+        <EntityType Name="Test">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="Difficulty" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImgId" Type="Int32" />
+          <Property Name="OwnerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Attempts" Relationship="Self.FK__Attempts__TestId__71D1E811" FromRole="Tests" ToRole="Attempts" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Tests__CategoryI__74AE54BC" FromRole="Tests" ToRole="Categories" />
+          <NavigationProperty Name="Image" Relationship="Self.FK__Tests__ImgId__75A278F5" FromRole="Tests" ToRole="Images" />
+          <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__TestI__73BA3083" FromRole="Tests" ToRole="TestQuestions" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Tests__OwnerId__76969D2E" FromRole="Tests" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Score" Type="Int32" />
+          <Property Name="MaxScore" Type="Int32" />
+          <Property Name="ImgId" Type="Int32" />
+          <NavigationProperty Name="Attempts" Relationship="Self.FK__Attempts__Player__70DDC3D8" FromRole="Users" ToRole="Attempts" />
+          <NavigationProperty Name="Image" Relationship="Self.FK__Users__ImgId__778AC167" FromRole="Users" ToRole="Images" />
+          <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__OwnerId__76969D2E" FromRole="Users" ToRole="Tests" />
+        </EntityType>
+        <Association Name="FK__AttemptRe__Attem__6EF57B66">
+          <End Role="Attempts" Type="Self.Attempt" Multiplicity="1" />
+          <End Role="AttemptResponses" Type="Self.AttemptRespons" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attempts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AttemptResponses">
+              <PropertyRef Name="AttemptId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AttemptRe__TestQ__6FE99F9F">
+          <End Role="TestQuestions" Type="Self.TestQuestion" Multiplicity="1" />
+          <End Role="AttemptResponses" Type="Self.AttemptRespons" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestQuestions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AttemptResponses">
+              <PropertyRef Name="TestQuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attempts__Player__70DDC3D8">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Attempts" Type="Self.Attempt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Attempts">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attempts__TestId__71D1E811">
+          <End Role="Tests" Type="Self.Test" Multiplicity="1" />
+          <End Role="Attempts" Type="Self.Attempt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Attempts">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tests__CategoryI__74AE54BC">
+          <End Role="Categories" Type="Self.Category" Multiplicity="1" />
+          <End Role="Tests" Type="Self.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestQuest__ImgId__72C60C4A">
+          <End Role="Images" Type="Self.Image" Multiplicity="0..1" />
+          <End Role="TestQuestions" Type="Self.TestQuestion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tests__ImgId__75A278F5">
+          <End Role="Images" Type="Self.Image" Multiplicity="0..1" />
+          <End Role="Tests" Type="Self.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Users__ImgId__778AC167">
+          <End Role="Images" Type="Self.Image" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestQuest__TestI__73BA3083">
+          <End Role="Tests" Type="Self.Test" Multiplicity="1" />
+          <End Role="TestQuestions" Type="Self.TestQuestion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TestQuestions">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tests__OwnerId__76969D2E">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Tests" Type="Self.Test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tests">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuizAppProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AttemptResponses" EntityType="Self.AttemptRespons" />
+          <EntitySet Name="Attempts" EntityType="Self.Attempt" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Images" EntityType="Self.Image" />
+          <EntitySet Name="TestQuestions" EntityType="Self.TestQuestion" />
+          <EntitySet Name="Tests" EntityType="Self.Test" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__AttemptRe__Attem__6EF57B66" Association="Self.FK__AttemptRe__Attem__6EF57B66">
+            <End Role="Attempts" EntitySet="Attempts" />
+            <End Role="AttemptResponses" EntitySet="AttemptResponses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AttemptRe__TestQ__6FE99F9F" Association="Self.FK__AttemptRe__TestQ__6FE99F9F">
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+            <End Role="AttemptResponses" EntitySet="AttemptResponses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attempts__Player__70DDC3D8" Association="Self.FK__Attempts__Player__70DDC3D8">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Attempts" EntitySet="Attempts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attempts__TestId__71D1E811" Association="Self.FK__Attempts__TestId__71D1E811">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="Attempts" EntitySet="Attempts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tests__CategoryI__74AE54BC" Association="Self.FK__Tests__CategoryI__74AE54BC">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestQuest__ImgId__72C60C4A" Association="Self.FK__TestQuest__ImgId__72C60C4A">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tests__ImgId__75A278F5" Association="Self.FK__Tests__ImgId__75A278F5">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Users__ImgId__778AC167" Association="Self.FK__Users__ImgId__778AC167">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestQuest__TestI__73BA3083" Association="Self.FK__TestQuest__TestI__73BA3083">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="TestQuestions" EntitySet="TestQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tests__OwnerId__76969D2E" Association="Self.FK__Tests__OwnerId__76969D2E">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tests" EntitySet="Tests" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuizAppProjectModelStoreContainer" CdmEntityContainer="QuizAppProjectEntities">
+          <EntitySetMapping Name="AttemptResponses">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.AttemptRespons">
+              <MappingFragment StoreEntitySet="AttemptResponses">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AttemptId" ColumnName="AttemptId" />
+                <ScalarProperty Name="TestQuestionId" ColumnName="TestQuestionId" />
+                <ScalarProperty Name="Response" ColumnName="Response" />
+                <ScalarProperty Name="IsCorrect" ColumnName="IsCorrect" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Attempts">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.Attempt">
+              <MappingFragment StoreEntitySet="Attempts">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="DateTaken" ColumnName="DateTaken" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.Image">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Image1" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestQuestions">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.TestQuestion">
+              <MappingFragment StoreEntitySet="TestQuestions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+                <ScalarProperty Name="WrongAnswers" ColumnName="WrongAnswers" />
+                <ScalarProperty Name="ImgId" ColumnName="ImgId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tests">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.Test">
+              <MappingFragment StoreEntitySet="Tests">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ImgId" ColumnName="ImgId" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="QuizAppProjectModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="MaxScore" ColumnName="MaxScore" />
+                <ScalarProperty Name="ImgId" ColumnName="ImgId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

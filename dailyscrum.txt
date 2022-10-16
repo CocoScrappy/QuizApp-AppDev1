@@ -1,5 +1,24 @@
 ---- SCRUM 3 ---- 
 
+2022/10/13 Dmitry  -  SCRUM lost when copying
+
+1. Done / not done since last scrum: 
+
+- Rewrite Database from MySQL to SQL - DONE
+- Tweak the database if needed - DONE
+- Set up the database - DONE 
+- Upload the project to github with .gitignore - DONE
+- Help Louis and Alina get project set up and connect to DB - DONE
+
+2. To do until next Scrum: 
+
+- User registration and Login
+- Come up with overall file structure for the project
+
+3. Need assistance / figure things out 
+
+- all good for now 
+
 2022/10/15 Louis 
 
 1. Done / not done since last scrum: 

@@ -30,6 +30,7 @@ namespace QuizApp
         {
             InitializeComponent();
         }
+<<<<<<< Updated upstream
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DlgCreateTest inputDialog = new DlgCreateTest();
@@ -38,6 +39,9 @@ namespace QuizApp
         }
 
           
+=======
+
+>>>>>>> Stashed changes
     }
 
 }

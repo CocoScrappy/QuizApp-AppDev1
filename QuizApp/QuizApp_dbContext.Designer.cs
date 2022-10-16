@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream:QuizApp/QuizApp_dbContext.Designer.cs
 ﻿// T4 code generation is enabled for model 'E:\Documents Backup\FULL STACK DEVELOPER COURSE\App Dev 1 - Gregory Prokopski\Project - QuizApp\project_repo\QuizApp\QuizApp_dbContext.edmx'. 
+=======
+﻿// T4 code generation is enabled for model 'C:\Users\Administrator\source\repos\QuizApp-AppDev1\QuizApp\QuizApp_DbContext.edmx'. 
+>>>>>>> Stashed changes:QuizApp/QuizApp_DbContext.Designer.cs
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

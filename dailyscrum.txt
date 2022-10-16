@@ -1,3 +1,24 @@
+---- SCRUM 4 ----
+
+2022/10/16 Louis 
+
+1. Done / not done since last scrum: 
+
+- create test and test questions from json request
+- add test and test questions to DB
+- created Globals.DbContextAutoGen singleton to use datasets
+- populated category table 
+
+2. To do until next Scrum: 
+
+- start working on quiz taking window skeleton
+
+- implement quiz taking logic 
+
+3. Need assistance / figure things out 
+- which design are we going for (show/hide tabs or pop-ups? or a mix?) 
+
+
 ---- SCRUM 3 ---- 
 
 2022/10/13 Dmitry  -  SCRUM lost when copying

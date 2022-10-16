@@ -30,18 +30,12 @@ namespace QuizApp
         {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DlgCreateTest inputDialog = new DlgCreateTest();
             if (inputDialog.ShowDialog() == true)
                 BtnCreateDialog.Content = "Success!";
         }
-
-          
-=======
-
->>>>>>> Stashed changes
     }
 
 }

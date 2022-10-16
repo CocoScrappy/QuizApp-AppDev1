@@ -74,7 +74,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Attempt.cs">
-<<<<<<< Updated upstream
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="AttemptRespons.cs">
@@ -87,29 +86,6 @@
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="QuizApp_dbContext.Context.cs">
-=======
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AttemptRespons.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Category.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Core\ObservableObject.cs" />
-    <Compile Include="database_firewall_rules.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Image.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuizAppProjectDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuizApp_DbContext.Context.cs">
->>>>>>> Stashed changes
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuizApp_dbContext.Context.tt</DependentUpon>
@@ -124,7 +100,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
     <Compile Include="Test.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
@@ -133,17 +108,6 @@
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
-=======
-    <Compile Include="Core\RelayCommand.cs" />
-    <Compile Include="Test.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TestQuestion.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>QuizApp_DbContext.tt</DependentUpon>
->>>>>>> Stashed changes
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -211,36 +175,15 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuizApp_dbContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-<<<<<<< Updated upstream
     <None Include="QuizApp_dbContext.edmx.diagram">
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
-=======
-    <None Include="QuizAppProjectDataSet.xsc">
-      <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuizAppProjectDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuizAppProjectDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuizAppProjectDataSet.xss">
-      <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuizApp_DbContext.edmx.diagram">
-      <DependentUpon>QuizApp_DbContext.edmx</DependentUpon>
->>>>>>> Stashed changes
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Content Include="QuizApp_dbContext.Context.tt">
-=======
-    <Resource Include="Fonts\Poppins\OFL.txt" />
-    <Content Include="QuizApp_DbContext.Context.tt">
->>>>>>> Stashed changes
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
       <LastGenOutput>QuizApp_dbContext.Context.cs</LastGenOutput>

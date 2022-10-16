@@ -20,10 +20,7 @@ namespace QuizApp
             this.TestQuestions = new HashSet<TestQuestion>();
             this.Tests = new HashSet<Test>();
             this.Users = new HashSet<User>();
-<<<<<<< Updated upstream:QuizApp/Image.cs
-=======
             this.Categories = new HashSet<Category>();
->>>>>>> Stashed changes:QuizApp/image.cs
         }
     
         public int Id { get; set; }
@@ -35,10 +32,7 @@ namespace QuizApp
         public virtual ICollection<Test> Tests { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> Users { get; set; }
-<<<<<<< Updated upstream:QuizApp/Image.cs
-=======
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Category> Categories { get; set; }
->>>>>>> Stashed changes:QuizApp/image.cs
     }
 }

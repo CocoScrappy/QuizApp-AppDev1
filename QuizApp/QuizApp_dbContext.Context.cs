@@ -25,10 +25,6 @@ namespace QuizApp
             throw new UnintentionalCodeFirstException();
         }
     
-<<<<<<< Updated upstream:QuizApp/QuizApp_dbContext.Context.cs
-=======
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
->>>>>>> Stashed changes:QuizApp/QuizApp_DbContext.Context.cs
         public virtual DbSet<AttemptRespons> AttemptResponses { get; set; }
         public virtual DbSet<Attempt> Attempts { get; set; }
         public virtual DbSet<Category> Categories { get; set; }

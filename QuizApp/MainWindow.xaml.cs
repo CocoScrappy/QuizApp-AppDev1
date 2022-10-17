@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿// using Newtonsoft.Json;
+// using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,12 +30,12 @@ namespace QuizApp
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /*private void Button_Click(object sender, RoutedEventArgs e)
         {
             DlgCreateTest inputDialog = new DlgCreateTest();
             if (inputDialog.ShowDialog() == true)
                 BtnCreateDialog.Content = "Success!";
-        }
+        }*/
     }
 
 }

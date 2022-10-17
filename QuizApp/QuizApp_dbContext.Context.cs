@@ -13,10 +13,10 @@ namespace QuizApp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuizAppProjectEntities : DbContext
+    public partial class QuizAppProjectEntities1 : DbContext
     {
-        public QuizAppProjectEntities()
-            : base("name=QuizAppProjectEntities")
+        public QuizAppProjectEntities1()
+            : base("name=QuizAppProjectEntities1")
         {
         }
     

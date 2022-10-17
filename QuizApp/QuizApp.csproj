@@ -178,6 +178,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="QuizApp_dbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuizApp_dbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuizApp_dbContext.edmx.diagram">
+      <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
+    </None>
     <Resource Include="Fonts\Poppins\Poppins-Black.ttf" />
     <Resource Include="Fonts\Poppins\Poppins-BlackItalic.ttf" />
     <Resource Include="Fonts\Poppins\Poppins-Bold.ttf" />
@@ -201,10 +208,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="QuizApp_dbContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuizApp_dbContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="QuizAppProjectDataSet.xsc">
       <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
     </None>
@@ -216,12 +219,18 @@
     <None Include="QuizAppProjectDataSet.xss">
       <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
     </None>
-    <None Include="QuizApp_dbContext.edmx.diagram">
-      <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="MVVM\Model\" />
+    <Folder Include="MVVM\ViewModel\" />
+    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="QuizApp_dbContext.Context.tt">
@@ -234,15 +243,6 @@
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
       <LastGenOutput>QuizApp_dbContext.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="MVVM\Model\" />
-    <Folder Include="MVVM\ViewModel\" />
-    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

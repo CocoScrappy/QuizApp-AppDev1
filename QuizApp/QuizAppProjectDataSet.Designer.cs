@@ -24,39 +24,39 @@ namespace QuizApp {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class QuizAppProjectDataSet : global::System.Data.DataSet {
         
-        private attempt_responsesDataTable tableattempt_responses;
+        private AttemptResponsesDataTable tableAttemptResponses;
         
-        private attemptsDataTable tableattempts;
+        private AttemptsDataTable tableAttempts;
         
-        private categoriesDataTable tablecategories;
+        private CategoriesDataTable tableCategories;
         
-        private imagesDataTable tableimages;
+        private ImagesDataTable tableImages;
         
-        private test_questionsDataTable tabletest_questions;
+        private TestQuestionsDataTable tableTestQuestions;
         
-        private testsDataTable tabletests;
+        private TestsDataTable tableTests;
         
-        private usersDataTable tableusers;
+        private UsersDataTable tableUsers;
         
-        private global::System.Data.DataRelation relationFK__attempt_r__attem__6EF57B66;
+        private global::System.Data.DataRelation relationFK__AttemptRe__Attem__6EF57B66;
         
-        private global::System.Data.DataRelation relationFK__attempt_r__test___6FE99F9F;
+        private global::System.Data.DataRelation relationFK__AttemptRe__TestQ__6FE99F9F;
         
-        private global::System.Data.DataRelation relationFK__attempts__player__70DDC3D8;
+        private global::System.Data.DataRelation relationFK__Attempts__Player__70DDC3D8;
         
-        private global::System.Data.DataRelation relationFK__attempts__test_i__71D1E811;
+        private global::System.Data.DataRelation relationFK__Attempts__TestId__71D1E811;
         
-        private global::System.Data.DataRelation relationFK__test_ques__img_i__72C60C4A;
+        private global::System.Data.DataRelation relationFK__TestQuest__ImgId__72C60C4A;
         
-        private global::System.Data.DataRelation relationFK__test_ques__test___73BA3083;
+        private global::System.Data.DataRelation relationFK__TestQuest__TestI__73BA3083;
         
-        private global::System.Data.DataRelation relationFK__tests__category___74AE54BC;
+        private global::System.Data.DataRelation relationFK__Tests__CategoryI__74AE54BC;
         
-        private global::System.Data.DataRelation relationFK__tests__img_id__75A278F5;
+        private global::System.Data.DataRelation relationFK__Tests__ImgId__75A278F5;
         
-        private global::System.Data.DataRelation relationFK__tests__owner_id__76969D2E;
+        private global::System.Data.DataRelation relationFK__Tests__OwnerId__76969D2E;
         
-        private global::System.Data.DataRelation relationFK__users__img_id__778AC167;
+        private global::System.Data.DataRelation relationFK__Users__ImgId__778AC167;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -86,26 +86,26 @@ namespace QuizApp {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["attempt_responses"] != null)) {
-                    base.Tables.Add(new attempt_responsesDataTable(ds.Tables["attempt_responses"]));
+                if ((ds.Tables["AttemptResponses"] != null)) {
+                    base.Tables.Add(new AttemptResponsesDataTable(ds.Tables["AttemptResponses"]));
                 }
-                if ((ds.Tables["attempts"] != null)) {
-                    base.Tables.Add(new attemptsDataTable(ds.Tables["attempts"]));
+                if ((ds.Tables["Attempts"] != null)) {
+                    base.Tables.Add(new AttemptsDataTable(ds.Tables["Attempts"]));
                 }
-                if ((ds.Tables["categories"] != null)) {
-                    base.Tables.Add(new categoriesDataTable(ds.Tables["categories"]));
+                if ((ds.Tables["Categories"] != null)) {
+                    base.Tables.Add(new CategoriesDataTable(ds.Tables["Categories"]));
                 }
-                if ((ds.Tables["images"] != null)) {
-                    base.Tables.Add(new imagesDataTable(ds.Tables["images"]));
+                if ((ds.Tables["Images"] != null)) {
+                    base.Tables.Add(new ImagesDataTable(ds.Tables["Images"]));
                 }
-                if ((ds.Tables["test_questions"] != null)) {
-                    base.Tables.Add(new test_questionsDataTable(ds.Tables["test_questions"]));
+                if ((ds.Tables["TestQuestions"] != null)) {
+                    base.Tables.Add(new TestQuestionsDataTable(ds.Tables["TestQuestions"]));
                 }
-                if ((ds.Tables["tests"] != null)) {
-                    base.Tables.Add(new testsDataTable(ds.Tables["tests"]));
+                if ((ds.Tables["Tests"] != null)) {
+                    base.Tables.Add(new TestsDataTable(ds.Tables["Tests"]));
                 }
-                if ((ds.Tables["users"] != null)) {
-                    base.Tables.Add(new usersDataTable(ds.Tables["users"]));
+                if ((ds.Tables["Users"] != null)) {
+                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -129,9 +129,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public attempt_responsesDataTable attempt_responses {
+        public AttemptResponsesDataTable AttemptResponses {
             get {
-                return this.tableattempt_responses;
+                return this.tableAttemptResponses;
             }
         }
         
@@ -139,9 +139,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public attemptsDataTable attempts {
+        public AttemptsDataTable Attempts {
             get {
-                return this.tableattempts;
+                return this.tableAttempts;
             }
         }
         
@@ -149,9 +149,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public categoriesDataTable categories {
+        public CategoriesDataTable Categories {
             get {
-                return this.tablecategories;
+                return this.tableCategories;
             }
         }
         
@@ -159,9 +159,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public imagesDataTable images {
+        public ImagesDataTable Images {
             get {
-                return this.tableimages;
+                return this.tableImages;
             }
         }
         
@@ -169,9 +169,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public test_questionsDataTable test_questions {
+        public TestQuestionsDataTable TestQuestions {
             get {
-                return this.tabletest_questions;
+                return this.tableTestQuestions;
             }
         }
         
@@ -179,9 +179,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public testsDataTable tests {
+        public TestsDataTable Tests {
             get {
-                return this.tabletests;
+                return this.tableTests;
             }
         }
         
@@ -189,9 +189,9 @@ namespace QuizApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public usersDataTable users {
+        public UsersDataTable Users {
             get {
-                return this.tableusers;
+                return this.tableUsers;
             }
         }
         
@@ -262,26 +262,26 @@ namespace QuizApp {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["attempt_responses"] != null)) {
-                    base.Tables.Add(new attempt_responsesDataTable(ds.Tables["attempt_responses"]));
+                if ((ds.Tables["AttemptResponses"] != null)) {
+                    base.Tables.Add(new AttemptResponsesDataTable(ds.Tables["AttemptResponses"]));
                 }
-                if ((ds.Tables["attempts"] != null)) {
-                    base.Tables.Add(new attemptsDataTable(ds.Tables["attempts"]));
+                if ((ds.Tables["Attempts"] != null)) {
+                    base.Tables.Add(new AttemptsDataTable(ds.Tables["Attempts"]));
                 }
-                if ((ds.Tables["categories"] != null)) {
-                    base.Tables.Add(new categoriesDataTable(ds.Tables["categories"]));
+                if ((ds.Tables["Categories"] != null)) {
+                    base.Tables.Add(new CategoriesDataTable(ds.Tables["Categories"]));
                 }
-                if ((ds.Tables["images"] != null)) {
-                    base.Tables.Add(new imagesDataTable(ds.Tables["images"]));
+                if ((ds.Tables["Images"] != null)) {
+                    base.Tables.Add(new ImagesDataTable(ds.Tables["Images"]));
                 }
-                if ((ds.Tables["test_questions"] != null)) {
-                    base.Tables.Add(new test_questionsDataTable(ds.Tables["test_questions"]));
+                if ((ds.Tables["TestQuestions"] != null)) {
+                    base.Tables.Add(new TestQuestionsDataTable(ds.Tables["TestQuestions"]));
                 }
-                if ((ds.Tables["tests"] != null)) {
-                    base.Tables.Add(new testsDataTable(ds.Tables["tests"]));
+                if ((ds.Tables["Tests"] != null)) {
+                    base.Tables.Add(new TestsDataTable(ds.Tables["Tests"]));
                 }
-                if ((ds.Tables["users"] != null)) {
-                    base.Tables.Add(new usersDataTable(ds.Tables["users"]));
+                if ((ds.Tables["Users"] != null)) {
+                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -316,58 +316,58 @@ namespace QuizApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableattempt_responses = ((attempt_responsesDataTable)(base.Tables["attempt_responses"]));
+            this.tableAttemptResponses = ((AttemptResponsesDataTable)(base.Tables["AttemptResponses"]));
             if ((initTable == true)) {
-                if ((this.tableattempt_responses != null)) {
-                    this.tableattempt_responses.InitVars();
+                if ((this.tableAttemptResponses != null)) {
+                    this.tableAttemptResponses.InitVars();
                 }
             }
-            this.tableattempts = ((attemptsDataTable)(base.Tables["attempts"]));
+            this.tableAttempts = ((AttemptsDataTable)(base.Tables["Attempts"]));
             if ((initTable == true)) {
-                if ((this.tableattempts != null)) {
-                    this.tableattempts.InitVars();
+                if ((this.tableAttempts != null)) {
+                    this.tableAttempts.InitVars();
                 }
             }
-            this.tablecategories = ((categoriesDataTable)(base.Tables["categories"]));
+            this.tableCategories = ((CategoriesDataTable)(base.Tables["Categories"]));
             if ((initTable == true)) {
-                if ((this.tablecategories != null)) {
-                    this.tablecategories.InitVars();
+                if ((this.tableCategories != null)) {
+                    this.tableCategories.InitVars();
                 }
             }
-            this.tableimages = ((imagesDataTable)(base.Tables["images"]));
+            this.tableImages = ((ImagesDataTable)(base.Tables["Images"]));
             if ((initTable == true)) {
-                if ((this.tableimages != null)) {
-                    this.tableimages.InitVars();
+                if ((this.tableImages != null)) {
+                    this.tableImages.InitVars();
                 }
             }
-            this.tabletest_questions = ((test_questionsDataTable)(base.Tables["test_questions"]));
+            this.tableTestQuestions = ((TestQuestionsDataTable)(base.Tables["TestQuestions"]));
             if ((initTable == true)) {
-                if ((this.tabletest_questions != null)) {
-                    this.tabletest_questions.InitVars();
+                if ((this.tableTestQuestions != null)) {
+                    this.tableTestQuestions.InitVars();
                 }
             }
-            this.tabletests = ((testsDataTable)(base.Tables["tests"]));
+            this.tableTests = ((TestsDataTable)(base.Tables["Tests"]));
             if ((initTable == true)) {
-                if ((this.tabletests != null)) {
-                    this.tabletests.InitVars();
+                if ((this.tableTests != null)) {
+                    this.tableTests.InitVars();
                 }
             }
-            this.tableusers = ((usersDataTable)(base.Tables["users"]));
+            this.tableUsers = ((UsersDataTable)(base.Tables["Users"]));
             if ((initTable == true)) {
-                if ((this.tableusers != null)) {
-                    this.tableusers.InitVars();
+                if ((this.tableUsers != null)) {
+                    this.tableUsers.InitVars();
                 }
             }
-            this.relationFK__attempt_r__attem__6EF57B66 = this.Relations["FK__attempt_r__attem__6EF57B66"];
-            this.relationFK__attempt_r__test___6FE99F9F = this.Relations["FK__attempt_r__test___6FE99F9F"];
-            this.relationFK__attempts__player__70DDC3D8 = this.Relations["FK__attempts__player__70DDC3D8"];
-            this.relationFK__attempts__test_i__71D1E811 = this.Relations["FK__attempts__test_i__71D1E811"];
-            this.relationFK__test_ques__img_i__72C60C4A = this.Relations["FK__test_ques__img_i__72C60C4A"];
-            this.relationFK__test_ques__test___73BA3083 = this.Relations["FK__test_ques__test___73BA3083"];
-            this.relationFK__tests__category___74AE54BC = this.Relations["FK__tests__category___74AE54BC"];
-            this.relationFK__tests__img_id__75A278F5 = this.Relations["FK__tests__img_id__75A278F5"];
-            this.relationFK__tests__owner_id__76969D2E = this.Relations["FK__tests__owner_id__76969D2E"];
-            this.relationFK__users__img_id__778AC167 = this.Relations["FK__users__img_id__778AC167"];
+            this.relationFK__AttemptRe__Attem__6EF57B66 = this.Relations["FK__AttemptRe__Attem__6EF57B66"];
+            this.relationFK__AttemptRe__TestQ__6FE99F9F = this.Relations["FK__AttemptRe__TestQ__6FE99F9F"];
+            this.relationFK__Attempts__Player__70DDC3D8 = this.Relations["FK__Attempts__Player__70DDC3D8"];
+            this.relationFK__Attempts__TestId__71D1E811 = this.Relations["FK__Attempts__TestId__71D1E811"];
+            this.relationFK__TestQuest__ImgId__72C60C4A = this.Relations["FK__TestQuest__ImgId__72C60C4A"];
+            this.relationFK__TestQuest__TestI__73BA3083 = this.Relations["FK__TestQuest__TestI__73BA3083"];
+            this.relationFK__Tests__CategoryI__74AE54BC = this.Relations["FK__Tests__CategoryI__74AE54BC"];
+            this.relationFK__Tests__ImgId__75A278F5 = this.Relations["FK__Tests__ImgId__75A278F5"];
+            this.relationFK__Tests__OwnerId__76969D2E = this.Relations["FK__Tests__OwnerId__76969D2E"];
+            this.relationFK__Users__ImgId__778AC167 = this.Relations["FK__Users__ImgId__778AC167"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -378,101 +378,101 @@ namespace QuizApp {
             this.Namespace = "http://tempuri.org/QuizAppProjectDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableattempt_responses = new attempt_responsesDataTable();
-            base.Tables.Add(this.tableattempt_responses);
-            this.tableattempts = new attemptsDataTable();
-            base.Tables.Add(this.tableattempts);
-            this.tablecategories = new categoriesDataTable();
-            base.Tables.Add(this.tablecategories);
-            this.tableimages = new imagesDataTable();
-            base.Tables.Add(this.tableimages);
-            this.tabletest_questions = new test_questionsDataTable();
-            base.Tables.Add(this.tabletest_questions);
-            this.tabletests = new testsDataTable();
-            base.Tables.Add(this.tabletests);
-            this.tableusers = new usersDataTable();
-            base.Tables.Add(this.tableusers);
-            this.relationFK__attempt_r__attem__6EF57B66 = new global::System.Data.DataRelation("FK__attempt_r__attem__6EF57B66", new global::System.Data.DataColumn[] {
-                        this.tableattempts.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableattempt_responses.attempt_idColumn}, false);
-            this.Relations.Add(this.relationFK__attempt_r__attem__6EF57B66);
-            this.relationFK__attempt_r__test___6FE99F9F = new global::System.Data.DataRelation("FK__attempt_r__test___6FE99F9F", new global::System.Data.DataColumn[] {
-                        this.tabletest_questions.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableattempt_responses.test_question_idColumn}, false);
-            this.Relations.Add(this.relationFK__attempt_r__test___6FE99F9F);
-            this.relationFK__attempts__player__70DDC3D8 = new global::System.Data.DataRelation("FK__attempts__player__70DDC3D8", new global::System.Data.DataColumn[] {
-                        this.tableusers.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableattempts.player_idColumn}, false);
-            this.Relations.Add(this.relationFK__attempts__player__70DDC3D8);
-            this.relationFK__attempts__test_i__71D1E811 = new global::System.Data.DataRelation("FK__attempts__test_i__71D1E811", new global::System.Data.DataColumn[] {
-                        this.tabletests.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableattempts.test_idColumn}, false);
-            this.Relations.Add(this.relationFK__attempts__test_i__71D1E811);
-            this.relationFK__test_ques__img_i__72C60C4A = new global::System.Data.DataRelation("FK__test_ques__img_i__72C60C4A", new global::System.Data.DataColumn[] {
-                        this.tableimages.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletest_questions.img_idColumn}, false);
-            this.Relations.Add(this.relationFK__test_ques__img_i__72C60C4A);
-            this.relationFK__test_ques__test___73BA3083 = new global::System.Data.DataRelation("FK__test_ques__test___73BA3083", new global::System.Data.DataColumn[] {
-                        this.tabletests.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletest_questions.test_idColumn}, false);
-            this.Relations.Add(this.relationFK__test_ques__test___73BA3083);
-            this.relationFK__tests__category___74AE54BC = new global::System.Data.DataRelation("FK__tests__category___74AE54BC", new global::System.Data.DataColumn[] {
-                        this.tablecategories.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletests.category_idColumn}, false);
-            this.Relations.Add(this.relationFK__tests__category___74AE54BC);
-            this.relationFK__tests__img_id__75A278F5 = new global::System.Data.DataRelation("FK__tests__img_id__75A278F5", new global::System.Data.DataColumn[] {
-                        this.tableimages.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletests.img_idColumn}, false);
-            this.Relations.Add(this.relationFK__tests__img_id__75A278F5);
-            this.relationFK__tests__owner_id__76969D2E = new global::System.Data.DataRelation("FK__tests__owner_id__76969D2E", new global::System.Data.DataColumn[] {
-                        this.tableusers.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletests.owner_idColumn}, false);
-            this.Relations.Add(this.relationFK__tests__owner_id__76969D2E);
-            this.relationFK__users__img_id__778AC167 = new global::System.Data.DataRelation("FK__users__img_id__778AC167", new global::System.Data.DataColumn[] {
-                        this.tableimages.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableusers.img_idColumn}, false);
-            this.Relations.Add(this.relationFK__users__img_id__778AC167);
+            this.tableAttemptResponses = new AttemptResponsesDataTable();
+            base.Tables.Add(this.tableAttemptResponses);
+            this.tableAttempts = new AttemptsDataTable();
+            base.Tables.Add(this.tableAttempts);
+            this.tableCategories = new CategoriesDataTable();
+            base.Tables.Add(this.tableCategories);
+            this.tableImages = new ImagesDataTable();
+            base.Tables.Add(this.tableImages);
+            this.tableTestQuestions = new TestQuestionsDataTable();
+            base.Tables.Add(this.tableTestQuestions);
+            this.tableTests = new TestsDataTable();
+            base.Tables.Add(this.tableTests);
+            this.tableUsers = new UsersDataTable();
+            base.Tables.Add(this.tableUsers);
+            this.relationFK__AttemptRe__Attem__6EF57B66 = new global::System.Data.DataRelation("FK__AttemptRe__Attem__6EF57B66", new global::System.Data.DataColumn[] {
+                        this.tableAttempts.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAttemptResponses.AttemptIdColumn}, false);
+            this.Relations.Add(this.relationFK__AttemptRe__Attem__6EF57B66);
+            this.relationFK__AttemptRe__TestQ__6FE99F9F = new global::System.Data.DataRelation("FK__AttemptRe__TestQ__6FE99F9F", new global::System.Data.DataColumn[] {
+                        this.tableTestQuestions.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAttemptResponses.TestQuestionIdColumn}, false);
+            this.Relations.Add(this.relationFK__AttemptRe__TestQ__6FE99F9F);
+            this.relationFK__Attempts__Player__70DDC3D8 = new global::System.Data.DataRelation("FK__Attempts__Player__70DDC3D8", new global::System.Data.DataColumn[] {
+                        this.tableUsers.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAttempts.PlayerIdColumn}, false);
+            this.Relations.Add(this.relationFK__Attempts__Player__70DDC3D8);
+            this.relationFK__Attempts__TestId__71D1E811 = new global::System.Data.DataRelation("FK__Attempts__TestId__71D1E811", new global::System.Data.DataColumn[] {
+                        this.tableTests.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAttempts.TestIdColumn}, false);
+            this.Relations.Add(this.relationFK__Attempts__TestId__71D1E811);
+            this.relationFK__TestQuest__ImgId__72C60C4A = new global::System.Data.DataRelation("FK__TestQuest__ImgId__72C60C4A", new global::System.Data.DataColumn[] {
+                        this.tableImages.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTestQuestions.ImgIdColumn}, false);
+            this.Relations.Add(this.relationFK__TestQuest__ImgId__72C60C4A);
+            this.relationFK__TestQuest__TestI__73BA3083 = new global::System.Data.DataRelation("FK__TestQuest__TestI__73BA3083", new global::System.Data.DataColumn[] {
+                        this.tableTests.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTestQuestions.TestIdColumn}, false);
+            this.Relations.Add(this.relationFK__TestQuest__TestI__73BA3083);
+            this.relationFK__Tests__CategoryI__74AE54BC = new global::System.Data.DataRelation("FK__Tests__CategoryI__74AE54BC", new global::System.Data.DataColumn[] {
+                        this.tableCategories.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTests.CategoryIdColumn}, false);
+            this.Relations.Add(this.relationFK__Tests__CategoryI__74AE54BC);
+            this.relationFK__Tests__ImgId__75A278F5 = new global::System.Data.DataRelation("FK__Tests__ImgId__75A278F5", new global::System.Data.DataColumn[] {
+                        this.tableImages.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTests.ImgIdColumn}, false);
+            this.Relations.Add(this.relationFK__Tests__ImgId__75A278F5);
+            this.relationFK__Tests__OwnerId__76969D2E = new global::System.Data.DataRelation("FK__Tests__OwnerId__76969D2E", new global::System.Data.DataColumn[] {
+                        this.tableUsers.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTests.OwnerIdColumn}, false);
+            this.Relations.Add(this.relationFK__Tests__OwnerId__76969D2E);
+            this.relationFK__Users__ImgId__778AC167 = new global::System.Data.DataRelation("FK__Users__ImgId__778AC167", new global::System.Data.DataColumn[] {
+                        this.tableImages.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUsers.ImgIdColumn}, false);
+            this.Relations.Add(this.relationFK__Users__ImgId__778AC167);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeattempt_responses() {
+        private bool ShouldSerializeAttemptResponses() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeattempts() {
+        private bool ShouldSerializeAttempts() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializecategories() {
+        private bool ShouldSerializeCategories() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeimages() {
+        private bool ShouldSerializeImages() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializetest_questions() {
+        private bool ShouldSerializeTestQuestions() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializetests() {
+        private bool ShouldSerializeTests() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeusers() {
+        private bool ShouldSerializeUsers() {
             return false;
         }
         
@@ -532,47 +532,47 @@ namespace QuizApp {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void attempt_responsesRowChangeEventHandler(object sender, attempt_responsesRowChangeEvent e);
+        public delegate void AttemptResponsesRowChangeEventHandler(object sender, AttemptResponsesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void attemptsRowChangeEventHandler(object sender, attemptsRowChangeEvent e);
+        public delegate void AttemptsRowChangeEventHandler(object sender, AttemptsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void categoriesRowChangeEventHandler(object sender, categoriesRowChangeEvent e);
+        public delegate void CategoriesRowChangeEventHandler(object sender, CategoriesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void imagesRowChangeEventHandler(object sender, imagesRowChangeEvent e);
+        public delegate void ImagesRowChangeEventHandler(object sender, ImagesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void test_questionsRowChangeEventHandler(object sender, test_questionsRowChangeEvent e);
+        public delegate void TestQuestionsRowChangeEventHandler(object sender, TestQuestionsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void testsRowChangeEventHandler(object sender, testsRowChangeEvent e);
+        public delegate void TestsRowChangeEventHandler(object sender, TestsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void usersRowChangeEventHandler(object sender, usersRowChangeEvent e);
+        public delegate void UsersRowChangeEventHandler(object sender, UsersRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class attempt_responsesDataTable : global::System.Data.TypedTableBase<attempt_responsesRow> {
+        public partial class AttemptResponsesDataTable : global::System.Data.TypedTableBase<AttemptResponsesRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnattempt_id;
+            private global::System.Data.DataColumn columnAttemptId;
             
-            private global::System.Data.DataColumn columntest_question_id;
+            private global::System.Data.DataColumn columnTestQuestionId;
             
-            private global::System.Data.DataColumn columnresponse;
+            private global::System.Data.DataColumn columnResponse;
             
-            private global::System.Data.DataColumn columnis_correct;
+            private global::System.Data.DataColumn columnIsCorrect;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesDataTable() {
-                this.TableName = "attempt_responses";
+            public AttemptResponsesDataTable() {
+                this.TableName = "AttemptResponses";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -580,7 +580,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal attempt_responsesDataTable(global::System.Data.DataTable table) {
+            internal AttemptResponsesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -597,48 +597,48 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected attempt_responsesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AttemptResponsesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn attempt_idColumn {
+            public global::System.Data.DataColumn AttemptIdColumn {
                 get {
-                    return this.columnattempt_id;
+                    return this.columnAttemptId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn test_question_idColumn {
+            public global::System.Data.DataColumn TestQuestionIdColumn {
                 get {
-                    return this.columntest_question_id;
+                    return this.columnTestQuestionId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn responseColumn {
+            public global::System.Data.DataColumn ResponseColumn {
                 get {
-                    return this.columnresponse;
+                    return this.columnResponse;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn is_correctColumn {
+            public global::System.Data.DataColumn IsCorrectColumn {
                 get {
-                    return this.columnis_correct;
+                    return this.columnIsCorrect;
                 }
             }
             
@@ -653,62 +653,62 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow this[int index] {
+            public AttemptResponsesRow this[int index] {
                 get {
-                    return ((attempt_responsesRow)(this.Rows[index]));
+                    return ((AttemptResponsesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attempt_responsesRowChangeEventHandler attempt_responsesRowChanging;
+            public event AttemptResponsesRowChangeEventHandler AttemptResponsesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attempt_responsesRowChangeEventHandler attempt_responsesRowChanged;
+            public event AttemptResponsesRowChangeEventHandler AttemptResponsesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attempt_responsesRowChangeEventHandler attempt_responsesRowDeleting;
+            public event AttemptResponsesRowChangeEventHandler AttemptResponsesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attempt_responsesRowChangeEventHandler attempt_responsesRowDeleted;
+            public event AttemptResponsesRowChangeEventHandler AttemptResponsesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Addattempt_responsesRow(attempt_responsesRow row) {
+            public void AddAttemptResponsesRow(AttemptResponsesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow Addattempt_responsesRow(attemptsRow parentattemptsRowByFK__attempt_r__attem__6EF57B66, test_questionsRow parenttest_questionsRowByFK__attempt_r__test___6FE99F9F, string response, short is_correct) {
-                attempt_responsesRow rowattempt_responsesRow = ((attempt_responsesRow)(this.NewRow()));
+            public AttemptResponsesRow AddAttemptResponsesRow(AttemptsRow parentAttemptsRowByFK__AttemptRe__Attem__6EF57B66, TestQuestionsRow parentTestQuestionsRowByFK__AttemptRe__TestQ__6FE99F9F, string Response, short IsCorrect) {
+                AttemptResponsesRow rowAttemptResponsesRow = ((AttemptResponsesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        response,
-                        is_correct};
-                if ((parentattemptsRowByFK__attempt_r__attem__6EF57B66 != null)) {
-                    columnValuesArray[1] = parentattemptsRowByFK__attempt_r__attem__6EF57B66[0];
+                        Response,
+                        IsCorrect};
+                if ((parentAttemptsRowByFK__AttemptRe__Attem__6EF57B66 != null)) {
+                    columnValuesArray[1] = parentAttemptsRowByFK__AttemptRe__Attem__6EF57B66[0];
                 }
-                if ((parenttest_questionsRowByFK__attempt_r__test___6FE99F9F != null)) {
-                    columnValuesArray[2] = parenttest_questionsRowByFK__attempt_r__test___6FE99F9F[0];
+                if ((parentTestQuestionsRowByFK__AttemptRe__TestQ__6FE99F9F != null)) {
+                    columnValuesArray[2] = parentTestQuestionsRowByFK__AttemptRe__TestQ__6FE99F9F[0];
                 }
-                rowattempt_responsesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowattempt_responsesRow);
-                return rowattempt_responsesRow;
+                rowAttemptResponsesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAttemptResponsesRow);
+                return rowAttemptResponsesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow FindByid(int id) {
-                return ((attempt_responsesRow)(this.Rows.Find(new object[] {
-                            id})));
+            public AttemptResponsesRow FindById(int Id) {
+                return ((AttemptResponsesRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                attempt_responsesDataTable cln = ((attempt_responsesDataTable)(base.Clone()));
+                AttemptResponsesDataTable cln = ((AttemptResponsesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -716,71 +716,71 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new attempt_responsesDataTable();
+                return new AttemptResponsesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnattempt_id = base.Columns["attempt_id"];
-                this.columntest_question_id = base.Columns["test_question_id"];
-                this.columnresponse = base.Columns["response"];
-                this.columnis_correct = base.Columns["is_correct"];
+                this.columnId = base.Columns["Id"];
+                this.columnAttemptId = base.Columns["AttemptId"];
+                this.columnTestQuestionId = base.Columns["TestQuestionId"];
+                this.columnResponse = base.Columns["Response"];
+                this.columnIsCorrect = base.Columns["IsCorrect"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnattempt_id = new global::System.Data.DataColumn("attempt_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnattempt_id);
-                this.columntest_question_id = new global::System.Data.DataColumn("test_question_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntest_question_id);
-                this.columnresponse = new global::System.Data.DataColumn("response", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnresponse);
-                this.columnis_correct = new global::System.Data.DataColumn("is_correct", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnis_correct);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnAttemptId = new global::System.Data.DataColumn("AttemptId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAttemptId);
+                this.columnTestQuestionId = new global::System.Data.DataColumn("TestQuestionId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestQuestionId);
+                this.columnResponse = new global::System.Data.DataColumn("Response", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnResponse);
+                this.columnIsCorrect = new global::System.Data.DataColumn("IsCorrect", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsCorrect);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnattempt_id.AllowDBNull = false;
-                this.columntest_question_id.AllowDBNull = false;
-                this.columnresponse.AllowDBNull = false;
-                this.columnresponse.MaxLength = 200;
-                this.columnis_correct.AllowDBNull = false;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnAttemptId.AllowDBNull = false;
+                this.columnTestQuestionId.AllowDBNull = false;
+                this.columnResponse.AllowDBNull = false;
+                this.columnResponse.MaxLength = 200;
+                this.columnIsCorrect.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow Newattempt_responsesRow() {
-                return ((attempt_responsesRow)(this.NewRow()));
+            public AttemptResponsesRow NewAttemptResponsesRow() {
+                return ((AttemptResponsesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new attempt_responsesRow(builder);
+                return new AttemptResponsesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(attempt_responsesRow);
+                return typeof(AttemptResponsesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.attempt_responsesRowChanged != null)) {
-                    this.attempt_responsesRowChanged(this, new attempt_responsesRowChangeEvent(((attempt_responsesRow)(e.Row)), e.Action));
+                if ((this.AttemptResponsesRowChanged != null)) {
+                    this.AttemptResponsesRowChanged(this, new AttemptResponsesRowChangeEvent(((AttemptResponsesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -788,8 +788,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.attempt_responsesRowChanging != null)) {
-                    this.attempt_responsesRowChanging(this, new attempt_responsesRowChangeEvent(((attempt_responsesRow)(e.Row)), e.Action));
+                if ((this.AttemptResponsesRowChanging != null)) {
+                    this.AttemptResponsesRowChanging(this, new AttemptResponsesRowChangeEvent(((AttemptResponsesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -797,8 +797,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.attempt_responsesRowDeleted != null)) {
-                    this.attempt_responsesRowDeleted(this, new attempt_responsesRowChangeEvent(((attempt_responsesRow)(e.Row)), e.Action));
+                if ((this.AttemptResponsesRowDeleted != null)) {
+                    this.AttemptResponsesRowDeleted(this, new AttemptResponsesRowChangeEvent(((AttemptResponsesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -806,14 +806,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.attempt_responsesRowDeleting != null)) {
-                    this.attempt_responsesRowDeleting(this, new attempt_responsesRowChangeEvent(((attempt_responsesRow)(e.Row)), e.Action));
+                if ((this.AttemptResponsesRowDeleting != null)) {
+                    this.AttemptResponsesRowDeleting(this, new AttemptResponsesRowChangeEvent(((AttemptResponsesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Removeattempt_responsesRow(attempt_responsesRow row) {
+            public void RemoveAttemptResponsesRow(AttemptResponsesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -840,7 +840,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "attempt_responsesDataTable";
+                attribute2.FixedValue = "AttemptResponsesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -886,24 +886,24 @@ namespace QuizApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class attemptsDataTable : global::System.Data.TypedTableBase<attemptsRow> {
+        public partial class AttemptsDataTable : global::System.Data.TypedTableBase<AttemptsRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnplayer_id;
+            private global::System.Data.DataColumn columnPlayerId;
             
-            private global::System.Data.DataColumn columntest_id;
+            private global::System.Data.DataColumn columnTestId;
             
-            private global::System.Data.DataColumn columnresult;
+            private global::System.Data.DataColumn columnResult;
             
-            private global::System.Data.DataColumn columnarchived;
+            private global::System.Data.DataColumn columnArchived;
             
-            private global::System.Data.DataColumn columndate_taken;
+            private global::System.Data.DataColumn columnDateTaken;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsDataTable() {
-                this.TableName = "attempts";
+            public AttemptsDataTable() {
+                this.TableName = "Attempts";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -911,7 +911,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal attemptsDataTable(global::System.Data.DataTable table) {
+            internal AttemptsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -928,56 +928,56 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected attemptsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AttemptsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn player_idColumn {
+            public global::System.Data.DataColumn PlayerIdColumn {
                 get {
-                    return this.columnplayer_id;
+                    return this.columnPlayerId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn test_idColumn {
+            public global::System.Data.DataColumn TestIdColumn {
                 get {
-                    return this.columntest_id;
+                    return this.columnTestId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn resultColumn {
+            public global::System.Data.DataColumn ResultColumn {
                 get {
-                    return this.columnresult;
+                    return this.columnResult;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn archivedColumn {
+            public global::System.Data.DataColumn ArchivedColumn {
                 get {
-                    return this.columnarchived;
+                    return this.columnArchived;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn date_takenColumn {
+            public global::System.Data.DataColumn DateTakenColumn {
                 get {
-                    return this.columndate_taken;
+                    return this.columnDateTaken;
                 }
             }
             
@@ -992,63 +992,63 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow this[int index] {
+            public AttemptsRow this[int index] {
                 get {
-                    return ((attemptsRow)(this.Rows[index]));
+                    return ((AttemptsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attemptsRowChangeEventHandler attemptsRowChanging;
+            public event AttemptsRowChangeEventHandler AttemptsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attemptsRowChangeEventHandler attemptsRowChanged;
+            public event AttemptsRowChangeEventHandler AttemptsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attemptsRowChangeEventHandler attemptsRowDeleting;
+            public event AttemptsRowChangeEventHandler AttemptsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event attemptsRowChangeEventHandler attemptsRowDeleted;
+            public event AttemptsRowChangeEventHandler AttemptsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddattemptsRow(attemptsRow row) {
+            public void AddAttemptsRow(AttemptsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow AddattemptsRow(usersRow parentusersRowByFK__attempts__player__70DDC3D8, testsRow parenttestsRowByFK__attempts__test_i__71D1E811, int result, short archived, System.DateTime date_taken) {
-                attemptsRow rowattemptsRow = ((attemptsRow)(this.NewRow()));
+            public AttemptsRow AddAttemptsRow(UsersRow parentUsersRowByFK__Attempts__Player__70DDC3D8, TestsRow parentTestsRowByFK__Attempts__TestId__71D1E811, int Result, short Archived, System.DateTime DateTaken) {
+                AttemptsRow rowAttemptsRow = ((AttemptsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        result,
-                        archived,
-                        date_taken};
-                if ((parentusersRowByFK__attempts__player__70DDC3D8 != null)) {
-                    columnValuesArray[1] = parentusersRowByFK__attempts__player__70DDC3D8[0];
+                        Result,
+                        Archived,
+                        DateTaken};
+                if ((parentUsersRowByFK__Attempts__Player__70DDC3D8 != null)) {
+                    columnValuesArray[1] = parentUsersRowByFK__Attempts__Player__70DDC3D8[0];
                 }
-                if ((parenttestsRowByFK__attempts__test_i__71D1E811 != null)) {
-                    columnValuesArray[2] = parenttestsRowByFK__attempts__test_i__71D1E811[0];
+                if ((parentTestsRowByFK__Attempts__TestId__71D1E811 != null)) {
+                    columnValuesArray[2] = parentTestsRowByFK__Attempts__TestId__71D1E811[0];
                 }
-                rowattemptsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowattemptsRow);
-                return rowattemptsRow;
+                rowAttemptsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAttemptsRow);
+                return rowAttemptsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow FindByid(int id) {
-                return ((attemptsRow)(this.Rows.Find(new object[] {
-                            id})));
+            public AttemptsRow FindById(int Id) {
+                return ((AttemptsRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                attemptsDataTable cln = ((attemptsDataTable)(base.Clone()));
+                AttemptsDataTable cln = ((AttemptsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1056,73 +1056,73 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new attemptsDataTable();
+                return new AttemptsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnplayer_id = base.Columns["player_id"];
-                this.columntest_id = base.Columns["test_id"];
-                this.columnresult = base.Columns["result"];
-                this.columnarchived = base.Columns["archived"];
-                this.columndate_taken = base.Columns["date_taken"];
+                this.columnId = base.Columns["Id"];
+                this.columnPlayerId = base.Columns["PlayerId"];
+                this.columnTestId = base.Columns["TestId"];
+                this.columnResult = base.Columns["Result"];
+                this.columnArchived = base.Columns["Archived"];
+                this.columnDateTaken = base.Columns["DateTaken"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnplayer_id = new global::System.Data.DataColumn("player_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnplayer_id);
-                this.columntest_id = new global::System.Data.DataColumn("test_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntest_id);
-                this.columnresult = new global::System.Data.DataColumn("result", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnresult);
-                this.columnarchived = new global::System.Data.DataColumn("archived", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnarchived);
-                this.columndate_taken = new global::System.Data.DataColumn("date_taken", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate_taken);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnPlayerId = new global::System.Data.DataColumn("PlayerId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlayerId);
+                this.columnTestId = new global::System.Data.DataColumn("TestId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestId);
+                this.columnResult = new global::System.Data.DataColumn("Result", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnResult);
+                this.columnArchived = new global::System.Data.DataColumn("Archived", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnArchived);
+                this.columnDateTaken = new global::System.Data.DataColumn("DateTaken", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateTaken);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnplayer_id.AllowDBNull = false;
-                this.columntest_id.AllowDBNull = false;
-                this.columnarchived.AllowDBNull = false;
-                this.columndate_taken.AllowDBNull = false;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnPlayerId.AllowDBNull = false;
+                this.columnTestId.AllowDBNull = false;
+                this.columnArchived.AllowDBNull = false;
+                this.columnDateTaken.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow NewattemptsRow() {
-                return ((attemptsRow)(this.NewRow()));
+            public AttemptsRow NewAttemptsRow() {
+                return ((AttemptsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new attemptsRow(builder);
+                return new AttemptsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(attemptsRow);
+                return typeof(AttemptsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.attemptsRowChanged != null)) {
-                    this.attemptsRowChanged(this, new attemptsRowChangeEvent(((attemptsRow)(e.Row)), e.Action));
+                if ((this.AttemptsRowChanged != null)) {
+                    this.AttemptsRowChanged(this, new AttemptsRowChangeEvent(((AttemptsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1130,8 +1130,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.attemptsRowChanging != null)) {
-                    this.attemptsRowChanging(this, new attemptsRowChangeEvent(((attemptsRow)(e.Row)), e.Action));
+                if ((this.AttemptsRowChanging != null)) {
+                    this.AttemptsRowChanging(this, new AttemptsRowChangeEvent(((AttemptsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1139,8 +1139,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.attemptsRowDeleted != null)) {
-                    this.attemptsRowDeleted(this, new attemptsRowChangeEvent(((attemptsRow)(e.Row)), e.Action));
+                if ((this.AttemptsRowDeleted != null)) {
+                    this.AttemptsRowDeleted(this, new AttemptsRowChangeEvent(((AttemptsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1148,14 +1148,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.attemptsRowDeleting != null)) {
-                    this.attemptsRowDeleting(this, new attemptsRowChangeEvent(((attemptsRow)(e.Row)), e.Action));
+                if ((this.AttemptsRowDeleting != null)) {
+                    this.AttemptsRowDeleting(this, new AttemptsRowChangeEvent(((AttemptsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveattemptsRow(attemptsRow row) {
+            public void RemoveAttemptsRow(AttemptsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1182,7 +1182,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "attemptsDataTable";
+                attribute2.FixedValue = "AttemptsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1228,16 +1228,16 @@ namespace QuizApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class categoriesDataTable : global::System.Data.TypedTableBase<categoriesRow> {
+        public partial class CategoriesDataTable : global::System.Data.TypedTableBase<CategoriesRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesDataTable() {
-                this.TableName = "categories";
+            public CategoriesDataTable() {
+                this.TableName = "Categories";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1245,7 +1245,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal categoriesDataTable(global::System.Data.DataTable table) {
+            internal CategoriesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1262,24 +1262,24 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected categoriesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CategoriesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnname;
+                    return this.columnName;
                 }
             }
             
@@ -1294,53 +1294,53 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRow this[int index] {
+            public CategoriesRow this[int index] {
                 get {
-                    return ((categoriesRow)(this.Rows[index]));
+                    return ((CategoriesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event categoriesRowChangeEventHandler categoriesRowChanging;
+            public event CategoriesRowChangeEventHandler CategoriesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event categoriesRowChangeEventHandler categoriesRowChanged;
+            public event CategoriesRowChangeEventHandler CategoriesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event categoriesRowChangeEventHandler categoriesRowDeleting;
+            public event CategoriesRowChangeEventHandler CategoriesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event categoriesRowChangeEventHandler categoriesRowDeleted;
+            public event CategoriesRowChangeEventHandler CategoriesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddcategoriesRow(categoriesRow row) {
+            public void AddCategoriesRow(CategoriesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRow AddcategoriesRow(string name) {
-                categoriesRow rowcategoriesRow = ((categoriesRow)(this.NewRow()));
+            public CategoriesRow AddCategoriesRow(string Name) {
+                CategoriesRow rowCategoriesRow = ((CategoriesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        name};
-                rowcategoriesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowcategoriesRow);
-                return rowcategoriesRow;
+                        Name};
+                rowCategoriesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCategoriesRow);
+                return rowCategoriesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRow FindByid(int id) {
-                return ((categoriesRow)(this.Rows.Find(new object[] {
-                            id})));
+            public CategoriesRow FindById(int Id) {
+                return ((CategoriesRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                categoriesDataTable cln = ((categoriesDataTable)(base.Clone()));
+                CategoriesDataTable cln = ((CategoriesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1348,59 +1348,59 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new categoriesDataTable();
+                return new CategoriesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnname = base.Columns["name"];
+                this.columnId = base.Columns["Id"];
+                this.columnName = base.Columns["Name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnname.AllowDBNull = false;
-                this.columnname.MaxLength = 200;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnName.AllowDBNull = false;
+                this.columnName.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRow NewcategoriesRow() {
-                return ((categoriesRow)(this.NewRow()));
+            public CategoriesRow NewCategoriesRow() {
+                return ((CategoriesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new categoriesRow(builder);
+                return new CategoriesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(categoriesRow);
+                return typeof(CategoriesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.categoriesRowChanged != null)) {
-                    this.categoriesRowChanged(this, new categoriesRowChangeEvent(((categoriesRow)(e.Row)), e.Action));
+                if ((this.CategoriesRowChanged != null)) {
+                    this.CategoriesRowChanged(this, new CategoriesRowChangeEvent(((CategoriesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1408,8 +1408,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.categoriesRowChanging != null)) {
-                    this.categoriesRowChanging(this, new categoriesRowChangeEvent(((categoriesRow)(e.Row)), e.Action));
+                if ((this.CategoriesRowChanging != null)) {
+                    this.CategoriesRowChanging(this, new CategoriesRowChangeEvent(((CategoriesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1417,8 +1417,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.categoriesRowDeleted != null)) {
-                    this.categoriesRowDeleted(this, new categoriesRowChangeEvent(((categoriesRow)(e.Row)), e.Action));
+                if ((this.CategoriesRowDeleted != null)) {
+                    this.CategoriesRowDeleted(this, new CategoriesRowChangeEvent(((CategoriesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1426,14 +1426,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.categoriesRowDeleting != null)) {
-                    this.categoriesRowDeleting(this, new categoriesRowChangeEvent(((categoriesRow)(e.Row)), e.Action));
+                if ((this.CategoriesRowDeleting != null)) {
+                    this.CategoriesRowDeleting(this, new CategoriesRowChangeEvent(((CategoriesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovecategoriesRow(categoriesRow row) {
+            public void RemoveCategoriesRow(CategoriesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1460,7 +1460,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "categoriesDataTable";
+                attribute2.FixedValue = "CategoriesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1506,16 +1506,16 @@ namespace QuizApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class imagesDataTable : global::System.Data.TypedTableBase<imagesRow> {
+        public partial class ImagesDataTable : global::System.Data.TypedTableBase<ImagesRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnimage;
+            private global::System.Data.DataColumn columnImage;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesDataTable() {
-                this.TableName = "images";
+            public ImagesDataTable() {
+                this.TableName = "Images";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1523,7 +1523,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal imagesDataTable(global::System.Data.DataTable table) {
+            internal ImagesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1540,24 +1540,24 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected imagesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ImagesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn imageColumn {
+            public global::System.Data.DataColumn ImageColumn {
                 get {
-                    return this.columnimage;
+                    return this.columnImage;
                 }
             }
             
@@ -1572,53 +1572,53 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow this[int index] {
+            public ImagesRow this[int index] {
                 get {
-                    return ((imagesRow)(this.Rows[index]));
+                    return ((ImagesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event imagesRowChangeEventHandler imagesRowChanging;
+            public event ImagesRowChangeEventHandler ImagesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event imagesRowChangeEventHandler imagesRowChanged;
+            public event ImagesRowChangeEventHandler ImagesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event imagesRowChangeEventHandler imagesRowDeleting;
+            public event ImagesRowChangeEventHandler ImagesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event imagesRowChangeEventHandler imagesRowDeleted;
+            public event ImagesRowChangeEventHandler ImagesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddimagesRow(imagesRow row) {
+            public void AddImagesRow(ImagesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow AddimagesRow(byte[] image) {
-                imagesRow rowimagesRow = ((imagesRow)(this.NewRow()));
+            public ImagesRow AddImagesRow(byte[] Image) {
+                ImagesRow rowImagesRow = ((ImagesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        image};
-                rowimagesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowimagesRow);
-                return rowimagesRow;
+                        Image};
+                rowImagesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowImagesRow);
+                return rowImagesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow FindByid(int id) {
-                return ((imagesRow)(this.Rows.Find(new object[] {
-                            id})));
+            public ImagesRow FindById(int Id) {
+                return ((ImagesRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                imagesDataTable cln = ((imagesDataTable)(base.Clone()));
+                ImagesDataTable cln = ((ImagesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1626,58 +1626,58 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new imagesDataTable();
+                return new ImagesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnimage = base.Columns["image"];
+                this.columnId = base.Columns["Id"];
+                this.columnImage = base.Columns["Image"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnimage = new global::System.Data.DataColumn("image", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimage);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnImage = new global::System.Data.DataColumn("Image", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImage);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnimage.AllowDBNull = false;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnImage.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow NewimagesRow() {
-                return ((imagesRow)(this.NewRow()));
+            public ImagesRow NewImagesRow() {
+                return ((ImagesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new imagesRow(builder);
+                return new ImagesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(imagesRow);
+                return typeof(ImagesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.imagesRowChanged != null)) {
-                    this.imagesRowChanged(this, new imagesRowChangeEvent(((imagesRow)(e.Row)), e.Action));
+                if ((this.ImagesRowChanged != null)) {
+                    this.ImagesRowChanged(this, new ImagesRowChangeEvent(((ImagesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1685,8 +1685,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.imagesRowChanging != null)) {
-                    this.imagesRowChanging(this, new imagesRowChangeEvent(((imagesRow)(e.Row)), e.Action));
+                if ((this.ImagesRowChanging != null)) {
+                    this.ImagesRowChanging(this, new ImagesRowChangeEvent(((ImagesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1694,8 +1694,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.imagesRowDeleted != null)) {
-                    this.imagesRowDeleted(this, new imagesRowChangeEvent(((imagesRow)(e.Row)), e.Action));
+                if ((this.ImagesRowDeleted != null)) {
+                    this.ImagesRowDeleted(this, new ImagesRowChangeEvent(((ImagesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1703,14 +1703,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.imagesRowDeleting != null)) {
-                    this.imagesRowDeleting(this, new imagesRowChangeEvent(((imagesRow)(e.Row)), e.Action));
+                if ((this.ImagesRowDeleting != null)) {
+                    this.ImagesRowDeleting(this, new ImagesRowChangeEvent(((ImagesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveimagesRow(imagesRow row) {
+            public void RemoveImagesRow(ImagesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1737,7 +1737,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "imagesDataTable";
+                attribute2.FixedValue = "ImagesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1783,24 +1783,24 @@ namespace QuizApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class test_questionsDataTable : global::System.Data.TypedTableBase<test_questionsRow> {
+        public partial class TestQuestionsDataTable : global::System.Data.TypedTableBase<TestQuestionsRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columntest_id;
+            private global::System.Data.DataColumn columnTestId;
             
-            private global::System.Data.DataColumn columnquestion;
+            private global::System.Data.DataColumn columnQuestion;
             
-            private global::System.Data.DataColumn columncorrect_answer;
+            private global::System.Data.DataColumn columnCorrectAnswer;
             
-            private global::System.Data.DataColumn columnwrong_answers;
+            private global::System.Data.DataColumn columnWrongAnswers;
             
-            private global::System.Data.DataColumn columnimg_id;
+            private global::System.Data.DataColumn columnImgId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsDataTable() {
-                this.TableName = "test_questions";
+            public TestQuestionsDataTable() {
+                this.TableName = "TestQuestions";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1808,7 +1808,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal test_questionsDataTable(global::System.Data.DataTable table) {
+            internal TestQuestionsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1825,56 +1825,56 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected test_questionsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TestQuestionsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn test_idColumn {
+            public global::System.Data.DataColumn TestIdColumn {
                 get {
-                    return this.columntest_id;
+                    return this.columnTestId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn questionColumn {
+            public global::System.Data.DataColumn QuestionColumn {
                 get {
-                    return this.columnquestion;
+                    return this.columnQuestion;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn correct_answerColumn {
+            public global::System.Data.DataColumn CorrectAnswerColumn {
                 get {
-                    return this.columncorrect_answer;
+                    return this.columnCorrectAnswer;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn wrong_answersColumn {
+            public global::System.Data.DataColumn WrongAnswersColumn {
                 get {
-                    return this.columnwrong_answers;
+                    return this.columnWrongAnswers;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn img_idColumn {
+            public global::System.Data.DataColumn ImgIdColumn {
                 get {
-                    return this.columnimg_id;
+                    return this.columnImgId;
                 }
             }
             
@@ -1889,63 +1889,63 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow this[int index] {
+            public TestQuestionsRow this[int index] {
                 get {
-                    return ((test_questionsRow)(this.Rows[index]));
+                    return ((TestQuestionsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event test_questionsRowChangeEventHandler test_questionsRowChanging;
+            public event TestQuestionsRowChangeEventHandler TestQuestionsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event test_questionsRowChangeEventHandler test_questionsRowChanged;
+            public event TestQuestionsRowChangeEventHandler TestQuestionsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event test_questionsRowChangeEventHandler test_questionsRowDeleting;
+            public event TestQuestionsRowChangeEventHandler TestQuestionsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event test_questionsRowChangeEventHandler test_questionsRowDeleted;
+            public event TestQuestionsRowChangeEventHandler TestQuestionsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Addtest_questionsRow(test_questionsRow row) {
+            public void AddTestQuestionsRow(TestQuestionsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow Addtest_questionsRow(testsRow parenttestsRowByFK__test_ques__test___73BA3083, string question, string correct_answer, string wrong_answers, imagesRow parentimagesRowByFK__test_ques__img_i__72C60C4A) {
-                test_questionsRow rowtest_questionsRow = ((test_questionsRow)(this.NewRow()));
+            public TestQuestionsRow AddTestQuestionsRow(TestsRow parentTestsRowByFK__TestQuest__TestI__73BA3083, string Question, string CorrectAnswer, string WrongAnswers, ImagesRow parentImagesRowByFK__TestQuest__ImgId__72C60C4A) {
+                TestQuestionsRow rowTestQuestionsRow = ((TestQuestionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        question,
-                        correct_answer,
-                        wrong_answers,
+                        Question,
+                        CorrectAnswer,
+                        WrongAnswers,
                         null};
-                if ((parenttestsRowByFK__test_ques__test___73BA3083 != null)) {
-                    columnValuesArray[1] = parenttestsRowByFK__test_ques__test___73BA3083[0];
+                if ((parentTestsRowByFK__TestQuest__TestI__73BA3083 != null)) {
+                    columnValuesArray[1] = parentTestsRowByFK__TestQuest__TestI__73BA3083[0];
                 }
-                if ((parentimagesRowByFK__test_ques__img_i__72C60C4A != null)) {
-                    columnValuesArray[5] = parentimagesRowByFK__test_ques__img_i__72C60C4A[0];
+                if ((parentImagesRowByFK__TestQuest__ImgId__72C60C4A != null)) {
+                    columnValuesArray[5] = parentImagesRowByFK__TestQuest__ImgId__72C60C4A[0];
                 }
-                rowtest_questionsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtest_questionsRow);
-                return rowtest_questionsRow;
+                rowTestQuestionsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTestQuestionsRow);
+                return rowTestQuestionsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow FindByid(int id) {
-                return ((test_questionsRow)(this.Rows.Find(new object[] {
-                            id})));
+            public TestQuestionsRow FindById(int Id) {
+                return ((TestQuestionsRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                test_questionsDataTable cln = ((test_questionsDataTable)(base.Clone()));
+                TestQuestionsDataTable cln = ((TestQuestionsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1953,76 +1953,76 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new test_questionsDataTable();
+                return new TestQuestionsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columntest_id = base.Columns["test_id"];
-                this.columnquestion = base.Columns["question"];
-                this.columncorrect_answer = base.Columns["correct_answer"];
-                this.columnwrong_answers = base.Columns["wrong_answers"];
-                this.columnimg_id = base.Columns["img_id"];
+                this.columnId = base.Columns["Id"];
+                this.columnTestId = base.Columns["TestId"];
+                this.columnQuestion = base.Columns["Question"];
+                this.columnCorrectAnswer = base.Columns["CorrectAnswer"];
+                this.columnWrongAnswers = base.Columns["WrongAnswers"];
+                this.columnImgId = base.Columns["ImgId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columntest_id = new global::System.Data.DataColumn("test_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntest_id);
-                this.columnquestion = new global::System.Data.DataColumn("question", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquestion);
-                this.columncorrect_answer = new global::System.Data.DataColumn("correct_answer", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncorrect_answer);
-                this.columnwrong_answers = new global::System.Data.DataColumn("wrong_answers", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwrong_answers);
-                this.columnimg_id = new global::System.Data.DataColumn("img_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimg_id);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnTestId = new global::System.Data.DataColumn("TestId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestId);
+                this.columnQuestion = new global::System.Data.DataColumn("Question", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuestion);
+                this.columnCorrectAnswer = new global::System.Data.DataColumn("CorrectAnswer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorrectAnswer);
+                this.columnWrongAnswers = new global::System.Data.DataColumn("WrongAnswers", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWrongAnswers);
+                this.columnImgId = new global::System.Data.DataColumn("ImgId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImgId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columntest_id.AllowDBNull = false;
-                this.columnquestion.AllowDBNull = false;
-                this.columnquestion.MaxLength = 1000;
-                this.columncorrect_answer.AllowDBNull = false;
-                this.columncorrect_answer.MaxLength = 500;
-                this.columnwrong_answers.AllowDBNull = false;
-                this.columnwrong_answers.MaxLength = 1500;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnTestId.AllowDBNull = false;
+                this.columnQuestion.AllowDBNull = false;
+                this.columnQuestion.MaxLength = 1000;
+                this.columnCorrectAnswer.AllowDBNull = false;
+                this.columnCorrectAnswer.MaxLength = 500;
+                this.columnWrongAnswers.AllowDBNull = false;
+                this.columnWrongAnswers.MaxLength = 1500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow Newtest_questionsRow() {
-                return ((test_questionsRow)(this.NewRow()));
+            public TestQuestionsRow NewTestQuestionsRow() {
+                return ((TestQuestionsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new test_questionsRow(builder);
+                return new TestQuestionsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(test_questionsRow);
+                return typeof(TestQuestionsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.test_questionsRowChanged != null)) {
-                    this.test_questionsRowChanged(this, new test_questionsRowChangeEvent(((test_questionsRow)(e.Row)), e.Action));
+                if ((this.TestQuestionsRowChanged != null)) {
+                    this.TestQuestionsRowChanged(this, new TestQuestionsRowChangeEvent(((TestQuestionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2030,8 +2030,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.test_questionsRowChanging != null)) {
-                    this.test_questionsRowChanging(this, new test_questionsRowChangeEvent(((test_questionsRow)(e.Row)), e.Action));
+                if ((this.TestQuestionsRowChanging != null)) {
+                    this.TestQuestionsRowChanging(this, new TestQuestionsRowChangeEvent(((TestQuestionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2039,8 +2039,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.test_questionsRowDeleted != null)) {
-                    this.test_questionsRowDeleted(this, new test_questionsRowChangeEvent(((test_questionsRow)(e.Row)), e.Action));
+                if ((this.TestQuestionsRowDeleted != null)) {
+                    this.TestQuestionsRowDeleted(this, new TestQuestionsRowChangeEvent(((TestQuestionsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2048,14 +2048,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.test_questionsRowDeleting != null)) {
-                    this.test_questionsRowDeleting(this, new test_questionsRowChangeEvent(((test_questionsRow)(e.Row)), e.Action));
+                if ((this.TestQuestionsRowDeleting != null)) {
+                    this.TestQuestionsRowDeleting(this, new TestQuestionsRowChangeEvent(((TestQuestionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Removetest_questionsRow(test_questionsRow row) {
+            public void RemoveTestQuestionsRow(TestQuestionsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2082,7 +2082,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "test_questionsDataTable";
+                attribute2.FixedValue = "TestQuestionsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2128,26 +2128,26 @@ namespace QuizApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class testsDataTable : global::System.Data.TypedTableBase<testsRow> {
+        public partial class TestsDataTable : global::System.Data.TypedTableBase<TestsRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnamount;
+            private global::System.Data.DataColumn columnAmount;
             
-            private global::System.Data.DataColumn columndifficulty;
+            private global::System.Data.DataColumn columnDifficulty;
             
-            private global::System.Data.DataColumn columncategory_id;
+            private global::System.Data.DataColumn columnCategoryId;
             
-            private global::System.Data.DataColumn columntype;
+            private global::System.Data.DataColumn columnType;
             
-            private global::System.Data.DataColumn columnimg_id;
+            private global::System.Data.DataColumn columnImgId;
             
-            private global::System.Data.DataColumn columnowner_id;
+            private global::System.Data.DataColumn columnOwnerId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsDataTable() {
-                this.TableName = "tests";
+            public TestsDataTable() {
+                this.TableName = "Tests";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2155,7 +2155,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal testsDataTable(global::System.Data.DataTable table) {
+            internal TestsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2172,64 +2172,64 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected testsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TestsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn amountColumn {
+            public global::System.Data.DataColumn AmountColumn {
                 get {
-                    return this.columnamount;
+                    return this.columnAmount;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn difficultyColumn {
+            public global::System.Data.DataColumn DifficultyColumn {
                 get {
-                    return this.columndifficulty;
+                    return this.columnDifficulty;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn category_idColumn {
+            public global::System.Data.DataColumn CategoryIdColumn {
                 get {
-                    return this.columncategory_id;
+                    return this.columnCategoryId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn typeColumn {
+            public global::System.Data.DataColumn TypeColumn {
                 get {
-                    return this.columntype;
+                    return this.columnType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn img_idColumn {
+            public global::System.Data.DataColumn ImgIdColumn {
                 get {
-                    return this.columnimg_id;
+                    return this.columnImgId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn owner_idColumn {
+            public global::System.Data.DataColumn OwnerIdColumn {
                 get {
-                    return this.columnowner_id;
+                    return this.columnOwnerId;
                 }
             }
             
@@ -2244,67 +2244,67 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow this[int index] {
+            public TestsRow this[int index] {
                 get {
-                    return ((testsRow)(this.Rows[index]));
+                    return ((TestsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event testsRowChangeEventHandler testsRowChanging;
+            public event TestsRowChangeEventHandler TestsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event testsRowChangeEventHandler testsRowChanged;
+            public event TestsRowChangeEventHandler TestsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event testsRowChangeEventHandler testsRowDeleting;
+            public event TestsRowChangeEventHandler TestsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event testsRowChangeEventHandler testsRowDeleted;
+            public event TestsRowChangeEventHandler TestsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddtestsRow(testsRow row) {
+            public void AddTestsRow(TestsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow AddtestsRow(int amount, string difficulty, categoriesRow parentcategoriesRowByFK__tests__category___74AE54BC, string type, imagesRow parentimagesRowByFK__tests__img_id__75A278F5, usersRow parentusersRowByFK__tests__owner_id__76969D2E) {
-                testsRow rowtestsRow = ((testsRow)(this.NewRow()));
+            public TestsRow AddTestsRow(int Amount, string Difficulty, CategoriesRow parentCategoriesRowByFK__Tests__CategoryI__74AE54BC, string Type, ImagesRow parentImagesRowByFK__Tests__ImgId__75A278F5, UsersRow parentUsersRowByFK__Tests__OwnerId__76969D2E) {
+                TestsRow rowTestsRow = ((TestsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        amount,
-                        difficulty,
+                        Amount,
+                        Difficulty,
                         null,
-                        type,
+                        Type,
                         null,
                         null};
-                if ((parentcategoriesRowByFK__tests__category___74AE54BC != null)) {
-                    columnValuesArray[3] = parentcategoriesRowByFK__tests__category___74AE54BC[0];
+                if ((parentCategoriesRowByFK__Tests__CategoryI__74AE54BC != null)) {
+                    columnValuesArray[3] = parentCategoriesRowByFK__Tests__CategoryI__74AE54BC[0];
                 }
-                if ((parentimagesRowByFK__tests__img_id__75A278F5 != null)) {
-                    columnValuesArray[5] = parentimagesRowByFK__tests__img_id__75A278F5[0];
+                if ((parentImagesRowByFK__Tests__ImgId__75A278F5 != null)) {
+                    columnValuesArray[5] = parentImagesRowByFK__Tests__ImgId__75A278F5[0];
                 }
-                if ((parentusersRowByFK__tests__owner_id__76969D2E != null)) {
-                    columnValuesArray[6] = parentusersRowByFK__tests__owner_id__76969D2E[0];
+                if ((parentUsersRowByFK__Tests__OwnerId__76969D2E != null)) {
+                    columnValuesArray[6] = parentUsersRowByFK__Tests__OwnerId__76969D2E[0];
                 }
-                rowtestsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtestsRow);
-                return rowtestsRow;
+                rowTestsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTestsRow);
+                return rowTestsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow FindByid(int id) {
-                return ((testsRow)(this.Rows.Find(new object[] {
-                            id})));
+            public TestsRow FindById(int Id) {
+                return ((TestsRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                testsDataTable cln = ((testsDataTable)(base.Clone()));
+                TestsDataTable cln = ((TestsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2312,79 +2312,79 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new testsDataTable();
+                return new TestsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnamount = base.Columns["amount"];
-                this.columndifficulty = base.Columns["difficulty"];
-                this.columncategory_id = base.Columns["category_id"];
-                this.columntype = base.Columns["type"];
-                this.columnimg_id = base.Columns["img_id"];
-                this.columnowner_id = base.Columns["owner_id"];
+                this.columnId = base.Columns["Id"];
+                this.columnAmount = base.Columns["Amount"];
+                this.columnDifficulty = base.Columns["Difficulty"];
+                this.columnCategoryId = base.Columns["CategoryId"];
+                this.columnType = base.Columns["Type"];
+                this.columnImgId = base.Columns["ImgId"];
+                this.columnOwnerId = base.Columns["OwnerId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnamount = new global::System.Data.DataColumn("amount", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnamount);
-                this.columndifficulty = new global::System.Data.DataColumn("difficulty", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndifficulty);
-                this.columncategory_id = new global::System.Data.DataColumn("category_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncategory_id);
-                this.columntype = new global::System.Data.DataColumn("type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntype);
-                this.columnimg_id = new global::System.Data.DataColumn("img_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimg_id);
-                this.columnowner_id = new global::System.Data.DataColumn("owner_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnowner_id);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount);
+                this.columnDifficulty = new global::System.Data.DataColumn("Difficulty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDifficulty);
+                this.columnCategoryId = new global::System.Data.DataColumn("CategoryId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategoryId);
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
+                this.columnImgId = new global::System.Data.DataColumn("ImgId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImgId);
+                this.columnOwnerId = new global::System.Data.DataColumn("OwnerId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOwnerId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnamount.AllowDBNull = false;
-                this.columndifficulty.AllowDBNull = false;
-                this.columndifficulty.MaxLength = 20;
-                this.columncategory_id.AllowDBNull = false;
-                this.columntype.AllowDBNull = false;
-                this.columntype.MaxLength = 20;
-                this.columnowner_id.AllowDBNull = false;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnAmount.AllowDBNull = false;
+                this.columnDifficulty.AllowDBNull = false;
+                this.columnDifficulty.MaxLength = 20;
+                this.columnCategoryId.AllowDBNull = false;
+                this.columnType.AllowDBNull = false;
+                this.columnType.MaxLength = 20;
+                this.columnOwnerId.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow NewtestsRow() {
-                return ((testsRow)(this.NewRow()));
+            public TestsRow NewTestsRow() {
+                return ((TestsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new testsRow(builder);
+                return new TestsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(testsRow);
+                return typeof(TestsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.testsRowChanged != null)) {
-                    this.testsRowChanged(this, new testsRowChangeEvent(((testsRow)(e.Row)), e.Action));
+                if ((this.TestsRowChanged != null)) {
+                    this.TestsRowChanged(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2392,8 +2392,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.testsRowChanging != null)) {
-                    this.testsRowChanging(this, new testsRowChangeEvent(((testsRow)(e.Row)), e.Action));
+                if ((this.TestsRowChanging != null)) {
+                    this.TestsRowChanging(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2401,8 +2401,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.testsRowDeleted != null)) {
-                    this.testsRowDeleted(this, new testsRowChangeEvent(((testsRow)(e.Row)), e.Action));
+                if ((this.TestsRowDeleted != null)) {
+                    this.TestsRowDeleted(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2410,14 +2410,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.testsRowDeleting != null)) {
-                    this.testsRowDeleting(this, new testsRowChangeEvent(((testsRow)(e.Row)), e.Action));
+                if ((this.TestsRowDeleting != null)) {
+                    this.TestsRowDeleting(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovetestsRow(testsRow row) {
+            public void RemoveTestsRow(TestsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2444,7 +2444,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "testsDataTable";
+                attribute2.FixedValue = "TestsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2490,26 +2490,26 @@ namespace QuizApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class usersDataTable : global::System.Data.TypedTableBase<usersRow> {
+        public partial class UsersDataTable : global::System.Data.TypedTableBase<UsersRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnemail;
+            private global::System.Data.DataColumn columnEmail;
             
-            private global::System.Data.DataColumn columnusername;
+            private global::System.Data.DataColumn columnUsername;
             
-            private global::System.Data.DataColumn columnpassword;
+            private global::System.Data.DataColumn columnPassword;
             
-            private global::System.Data.DataColumn columnscore;
+            private global::System.Data.DataColumn columnScore;
             
-            private global::System.Data.DataColumn columnmax_score;
+            private global::System.Data.DataColumn columnMaxScore;
             
-            private global::System.Data.DataColumn columnimg_id;
+            private global::System.Data.DataColumn columnImgId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersDataTable() {
-                this.TableName = "users";
+            public UsersDataTable() {
+                this.TableName = "Users";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2517,7 +2517,7 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal usersDataTable(global::System.Data.DataTable table) {
+            internal UsersDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2534,64 +2534,64 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected usersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected UsersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnid;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn emailColumn {
+            public global::System.Data.DataColumn EmailColumn {
                 get {
-                    return this.columnemail;
+                    return this.columnEmail;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn usernameColumn {
+            public global::System.Data.DataColumn UsernameColumn {
                 get {
-                    return this.columnusername;
+                    return this.columnUsername;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn passwordColumn {
+            public global::System.Data.DataColumn PasswordColumn {
                 get {
-                    return this.columnpassword;
+                    return this.columnPassword;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn scoreColumn {
+            public global::System.Data.DataColumn ScoreColumn {
                 get {
-                    return this.columnscore;
+                    return this.columnScore;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn max_scoreColumn {
+            public global::System.Data.DataColumn MaxScoreColumn {
                 get {
-                    return this.columnmax_score;
+                    return this.columnMaxScore;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn img_idColumn {
+            public global::System.Data.DataColumn ImgIdColumn {
                 get {
-                    return this.columnimg_id;
+                    return this.columnImgId;
                 }
             }
             
@@ -2606,61 +2606,61 @@ namespace QuizApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow this[int index] {
+            public UsersRow this[int index] {
                 get {
-                    return ((usersRow)(this.Rows[index]));
+                    return ((UsersRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event usersRowChangeEventHandler usersRowChanging;
+            public event UsersRowChangeEventHandler UsersRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event usersRowChangeEventHandler usersRowChanged;
+            public event UsersRowChangeEventHandler UsersRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event usersRowChangeEventHandler usersRowDeleting;
+            public event UsersRowChangeEventHandler UsersRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event usersRowChangeEventHandler usersRowDeleted;
+            public event UsersRowChangeEventHandler UsersRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddusersRow(usersRow row) {
+            public void AddUsersRow(UsersRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow AddusersRow(string email, string username, string password, int score, int max_score, imagesRow parentimagesRowByFK__users__img_id__778AC167) {
-                usersRow rowusersRow = ((usersRow)(this.NewRow()));
+            public UsersRow AddUsersRow(string Email, string Username, string Password, int Score, int MaxScore, ImagesRow parentImagesRowByFK__Users__ImgId__778AC167) {
+                UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        email,
-                        username,
-                        password,
-                        score,
-                        max_score,
+                        Email,
+                        Username,
+                        Password,
+                        Score,
+                        MaxScore,
                         null};
-                if ((parentimagesRowByFK__users__img_id__778AC167 != null)) {
-                    columnValuesArray[6] = parentimagesRowByFK__users__img_id__778AC167[0];
+                if ((parentImagesRowByFK__Users__ImgId__778AC167 != null)) {
+                    columnValuesArray[6] = parentImagesRowByFK__Users__ImgId__778AC167[0];
                 }
-                rowusersRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowusersRow);
-                return rowusersRow;
+                rowUsersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUsersRow);
+                return rowUsersRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow FindByid(int id) {
-                return ((usersRow)(this.Rows.Find(new object[] {
-                            id})));
+            public UsersRow FindById(int Id) {
+                return ((UsersRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                usersDataTable cln = ((usersDataTable)(base.Clone()));
+                UsersDataTable cln = ((UsersDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2668,78 +2668,78 @@ namespace QuizApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new usersDataTable();
+                return new UsersDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnemail = base.Columns["email"];
-                this.columnusername = base.Columns["username"];
-                this.columnpassword = base.Columns["password"];
-                this.columnscore = base.Columns["score"];
-                this.columnmax_score = base.Columns["max_score"];
-                this.columnimg_id = base.Columns["img_id"];
+                this.columnId = base.Columns["Id"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnUsername = base.Columns["Username"];
+                this.columnPassword = base.Columns["Password"];
+                this.columnScore = base.Columns["Score"];
+                this.columnMaxScore = base.Columns["MaxScore"];
+                this.columnImgId = base.Columns["ImgId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemail);
-                this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusername);
-                this.columnpassword = new global::System.Data.DataColumn("password", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpassword);
-                this.columnscore = new global::System.Data.DataColumn("score", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnscore);
-                this.columnmax_score = new global::System.Data.DataColumn("max_score", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmax_score);
-                this.columnimg_id = new global::System.Data.DataColumn("img_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnimg_id);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnUsername = new global::System.Data.DataColumn("Username", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUsername);
+                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPassword);
+                this.columnScore = new global::System.Data.DataColumn("Score", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnScore);
+                this.columnMaxScore = new global::System.Data.DataColumn("MaxScore", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaxScore);
+                this.columnImgId = new global::System.Data.DataColumn("ImgId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImgId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AutoIncrement = true;
-                this.columnid.AutoIncrementSeed = -1;
-                this.columnid.AutoIncrementStep = -1;
-                this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
-                this.columnemail.AllowDBNull = false;
-                this.columnemail.MaxLength = 100;
-                this.columnusername.AllowDBNull = false;
-                this.columnusername.MaxLength = 20;
-                this.columnpassword.AllowDBNull = false;
-                this.columnpassword.MaxLength = 60;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnEmail.AllowDBNull = false;
+                this.columnEmail.MaxLength = 100;
+                this.columnUsername.AllowDBNull = false;
+                this.columnUsername.MaxLength = 20;
+                this.columnPassword.AllowDBNull = false;
+                this.columnPassword.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow NewusersRow() {
-                return ((usersRow)(this.NewRow()));
+            public UsersRow NewUsersRow() {
+                return ((UsersRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new usersRow(builder);
+                return new UsersRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(usersRow);
+                return typeof(UsersRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.usersRowChanged != null)) {
-                    this.usersRowChanged(this, new usersRowChangeEvent(((usersRow)(e.Row)), e.Action));
+                if ((this.UsersRowChanged != null)) {
+                    this.UsersRowChanged(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2747,8 +2747,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.usersRowChanging != null)) {
-                    this.usersRowChanging(this, new usersRowChangeEvent(((usersRow)(e.Row)), e.Action));
+                if ((this.UsersRowChanging != null)) {
+                    this.UsersRowChanging(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2756,8 +2756,8 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.usersRowDeleted != null)) {
-                    this.usersRowDeleted(this, new usersRowChangeEvent(((usersRow)(e.Row)), e.Action));
+                if ((this.UsersRowDeleted != null)) {
+                    this.UsersRowDeleted(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2765,14 +2765,14 @@ namespace QuizApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.usersRowDeleting != null)) {
-                    this.usersRowDeleting(this, new usersRowChangeEvent(((usersRow)(e.Row)), e.Action));
+                if ((this.UsersRowDeleting != null)) {
+                    this.UsersRowDeleting(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveusersRow(usersRow row) {
+            public void RemoveUsersRow(UsersRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2799,7 +2799,7 @@ namespace QuizApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "usersDataTable";
+                attribute2.FixedValue = "UsersDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2843,91 +2843,91 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class attempt_responsesRow : global::System.Data.DataRow {
+        public partial class AttemptResponsesRow : global::System.Data.DataRow {
             
-            private attempt_responsesDataTable tableattempt_responses;
+            private AttemptResponsesDataTable tableAttemptResponses;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal attempt_responsesRow(global::System.Data.DataRowBuilder rb) : 
+            internal AttemptResponsesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableattempt_responses = ((attempt_responsesDataTable)(this.Table));
+                this.tableAttemptResponses = ((AttemptResponsesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tableattempt_responses.idColumn]));
+                    return ((int)(this[this.tableAttemptResponses.IdColumn]));
                 }
                 set {
-                    this[this.tableattempt_responses.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int attempt_id {
-                get {
-                    return ((int)(this[this.tableattempt_responses.attempt_idColumn]));
-                }
-                set {
-                    this[this.tableattempt_responses.attempt_idColumn] = value;
+                    this[this.tableAttemptResponses.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int test_question_id {
+            public int AttemptId {
                 get {
-                    return ((int)(this[this.tableattempt_responses.test_question_idColumn]));
+                    return ((int)(this[this.tableAttemptResponses.AttemptIdColumn]));
                 }
                 set {
-                    this[this.tableattempt_responses.test_question_idColumn] = value;
+                    this[this.tableAttemptResponses.AttemptIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string response {
+            public int TestQuestionId {
                 get {
-                    return ((string)(this[this.tableattempt_responses.responseColumn]));
+                    return ((int)(this[this.tableAttemptResponses.TestQuestionIdColumn]));
                 }
                 set {
-                    this[this.tableattempt_responses.responseColumn] = value;
+                    this[this.tableAttemptResponses.TestQuestionIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short is_correct {
+            public string Response {
                 get {
-                    return ((short)(this[this.tableattempt_responses.is_correctColumn]));
+                    return ((string)(this[this.tableAttemptResponses.ResponseColumn]));
                 }
                 set {
-                    this[this.tableattempt_responses.is_correctColumn] = value;
+                    this[this.tableAttemptResponses.ResponseColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow attemptsRow {
+            public short IsCorrect {
                 get {
-                    return ((attemptsRow)(this.GetParentRow(this.Table.ParentRelations["FK__attempt_r__attem__6EF57B66"])));
+                    return ((short)(this[this.tableAttemptResponses.IsCorrectColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__attempt_r__attem__6EF57B66"]);
+                    this[this.tableAttemptResponses.IsCorrectColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow test_questionsRow {
+            public AttemptsRow AttemptsRow {
                 get {
-                    return ((test_questionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__attempt_r__test___6FE99F9F"])));
+                    return ((AttemptsRow)(this.GetParentRow(this.Table.ParentRelations["FK__AttemptRe__Attem__6EF57B66"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__attempt_r__test___6FE99F9F"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__AttemptRe__Attem__6EF57B66"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TestQuestionsRow TestQuestionsRow {
+                get {
+                    return ((TestQuestionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__AttemptRe__TestQ__6FE99F9F"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__AttemptRe__TestQ__6FE99F9F"]);
                 }
             }
         }
@@ -2935,130 +2935,130 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class attemptsRow : global::System.Data.DataRow {
+        public partial class AttemptsRow : global::System.Data.DataRow {
             
-            private attemptsDataTable tableattempts;
+            private AttemptsDataTable tableAttempts;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal attemptsRow(global::System.Data.DataRowBuilder rb) : 
+            internal AttemptsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableattempts = ((attemptsDataTable)(this.Table));
+                this.tableAttempts = ((AttemptsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tableattempts.idColumn]));
+                    return ((int)(this[this.tableAttempts.IdColumn]));
                 }
                 set {
-                    this[this.tableattempts.idColumn] = value;
+                    this[this.tableAttempts.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int player_id {
+            public int PlayerId {
                 get {
-                    return ((int)(this[this.tableattempts.player_idColumn]));
+                    return ((int)(this[this.tableAttempts.PlayerIdColumn]));
                 }
                 set {
-                    this[this.tableattempts.player_idColumn] = value;
+                    this[this.tableAttempts.PlayerIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int test_id {
+            public int TestId {
                 get {
-                    return ((int)(this[this.tableattempts.test_idColumn]));
+                    return ((int)(this[this.tableAttempts.TestIdColumn]));
                 }
                 set {
-                    this[this.tableattempts.test_idColumn] = value;
+                    this[this.tableAttempts.TestIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int result {
+            public int Result {
                 get {
                     try {
-                        return ((int)(this[this.tableattempts.resultColumn]));
+                        return ((int)(this[this.tableAttempts.ResultColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'result\' in table \'attempts\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Result\' in table \'Attempts\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableattempts.resultColumn] = value;
+                    this[this.tableAttempts.ResultColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short archived {
+            public short Archived {
                 get {
-                    return ((short)(this[this.tableattempts.archivedColumn]));
+                    return ((short)(this[this.tableAttempts.ArchivedColumn]));
                 }
                 set {
-                    this[this.tableattempts.archivedColumn] = value;
+                    this[this.tableAttempts.ArchivedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime date_taken {
+            public System.DateTime DateTaken {
                 get {
-                    return ((global::System.DateTime)(this[this.tableattempts.date_takenColumn]));
+                    return ((global::System.DateTime)(this[this.tableAttempts.DateTakenColumn]));
                 }
                 set {
-                    this[this.tableattempts.date_takenColumn] = value;
+                    this[this.tableAttempts.DateTakenColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow usersRow {
+            public UsersRow UsersRow {
                 get {
-                    return ((usersRow)(this.GetParentRow(this.Table.ParentRelations["FK__attempts__player__70DDC3D8"])));
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Attempts__Player__70DDC3D8"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__attempts__player__70DDC3D8"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Attempts__Player__70DDC3D8"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow testsRow {
+            public TestsRow TestsRow {
                 get {
-                    return ((testsRow)(this.GetParentRow(this.Table.ParentRelations["FK__attempts__test_i__71D1E811"])));
+                    return ((TestsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Attempts__TestId__71D1E811"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__attempts__test_i__71D1E811"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Attempts__TestId__71D1E811"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsresultNull() {
-                return this.IsNull(this.tableattempts.resultColumn);
+            public bool IsResultNull() {
+                return this.IsNull(this.tableAttempts.ResultColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetresultNull() {
-                this[this.tableattempts.resultColumn] = global::System.Convert.DBNull;
+            public void SetResultNull() {
+                this[this.tableAttempts.ResultColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow[] Getattempt_responsesRows() {
-                if ((this.Table.ChildRelations["FK__attempt_r__attem__6EF57B66"] == null)) {
-                    return new attempt_responsesRow[0];
+            public AttemptResponsesRow[] GetAttemptResponsesRows() {
+                if ((this.Table.ChildRelations["FK__AttemptRe__Attem__6EF57B66"] == null)) {
+                    return new AttemptResponsesRow[0];
                 }
                 else {
-                    return ((attempt_responsesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__attempt_r__attem__6EF57B66"])));
+                    return ((AttemptResponsesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__AttemptRe__Attem__6EF57B66"])));
                 }
             }
         }
@@ -3066,47 +3066,47 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class categoriesRow : global::System.Data.DataRow {
+        public partial class CategoriesRow : global::System.Data.DataRow {
             
-            private categoriesDataTable tablecategories;
+            private CategoriesDataTable tableCategories;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal categoriesRow(global::System.Data.DataRowBuilder rb) : 
+            internal CategoriesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablecategories = ((categoriesDataTable)(this.Table));
+                this.tableCategories = ((CategoriesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tablecategories.idColumn]));
+                    return ((int)(this[this.tableCategories.IdColumn]));
                 }
                 set {
-                    this[this.tablecategories.idColumn] = value;
+                    this[this.tableCategories.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string name {
+            public string Name {
                 get {
-                    return ((string)(this[this.tablecategories.nameColumn]));
+                    return ((string)(this[this.tableCategories.NameColumn]));
                 }
                 set {
-                    this[this.tablecategories.nameColumn] = value;
+                    this[this.tableCategories.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow[] GettestsRows() {
-                if ((this.Table.ChildRelations["FK__tests__category___74AE54BC"] == null)) {
-                    return new testsRow[0];
+            public TestsRow[] GetTestsRows() {
+                if ((this.Table.ChildRelations["FK__Tests__CategoryI__74AE54BC"] == null)) {
+                    return new TestsRow[0];
                 }
                 else {
-                    return ((testsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__tests__category___74AE54BC"])));
+                    return ((TestsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Tests__CategoryI__74AE54BC"])));
                 }
             }
         }
@@ -3114,69 +3114,69 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class imagesRow : global::System.Data.DataRow {
+        public partial class ImagesRow : global::System.Data.DataRow {
             
-            private imagesDataTable tableimages;
+            private ImagesDataTable tableImages;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal imagesRow(global::System.Data.DataRowBuilder rb) : 
+            internal ImagesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableimages = ((imagesDataTable)(this.Table));
+                this.tableImages = ((ImagesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tableimages.idColumn]));
+                    return ((int)(this[this.tableImages.IdColumn]));
                 }
                 set {
-                    this[this.tableimages.idColumn] = value;
+                    this[this.tableImages.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte[] image {
+            public byte[] Image {
                 get {
-                    return ((byte[])(this[this.tableimages.imageColumn]));
+                    return ((byte[])(this[this.tableImages.ImageColumn]));
                 }
                 set {
-                    this[this.tableimages.imageColumn] = value;
+                    this[this.tableImages.ImageColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow[] Gettest_questionsRows() {
-                if ((this.Table.ChildRelations["FK__test_ques__img_i__72C60C4A"] == null)) {
-                    return new test_questionsRow[0];
+            public TestQuestionsRow[] GetTestQuestionsRows() {
+                if ((this.Table.ChildRelations["FK__TestQuest__ImgId__72C60C4A"] == null)) {
+                    return new TestQuestionsRow[0];
                 }
                 else {
-                    return ((test_questionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__test_ques__img_i__72C60C4A"])));
+                    return ((TestQuestionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__TestQuest__ImgId__72C60C4A"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow[] GettestsRows() {
-                if ((this.Table.ChildRelations["FK__tests__img_id__75A278F5"] == null)) {
-                    return new testsRow[0];
+            public TestsRow[] GetTestsRows() {
+                if ((this.Table.ChildRelations["FK__Tests__ImgId__75A278F5"] == null)) {
+                    return new TestsRow[0];
                 }
                 else {
-                    return ((testsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__tests__img_id__75A278F5"])));
+                    return ((TestsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Tests__ImgId__75A278F5"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow[] GetusersRows() {
-                if ((this.Table.ChildRelations["FK__users__img_id__778AC167"] == null)) {
-                    return new usersRow[0];
+            public UsersRow[] GetUsersRows() {
+                if ((this.Table.ChildRelations["FK__Users__ImgId__778AC167"] == null)) {
+                    return new UsersRow[0];
                 }
                 else {
-                    return ((usersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__users__img_id__778AC167"])));
+                    return ((UsersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Users__ImgId__778AC167"])));
                 }
             }
         }
@@ -3184,130 +3184,130 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class test_questionsRow : global::System.Data.DataRow {
+        public partial class TestQuestionsRow : global::System.Data.DataRow {
             
-            private test_questionsDataTable tabletest_questions;
+            private TestQuestionsDataTable tableTestQuestions;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal test_questionsRow(global::System.Data.DataRowBuilder rb) : 
+            internal TestQuestionsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletest_questions = ((test_questionsDataTable)(this.Table));
+                this.tableTestQuestions = ((TestQuestionsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tabletest_questions.idColumn]));
+                    return ((int)(this[this.tableTestQuestions.IdColumn]));
                 }
                 set {
-                    this[this.tabletest_questions.idColumn] = value;
+                    this[this.tableTestQuestions.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int test_id {
+            public int TestId {
                 get {
-                    return ((int)(this[this.tabletest_questions.test_idColumn]));
+                    return ((int)(this[this.tableTestQuestions.TestIdColumn]));
                 }
                 set {
-                    this[this.tabletest_questions.test_idColumn] = value;
+                    this[this.tableTestQuestions.TestIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string question {
+            public string Question {
                 get {
-                    return ((string)(this[this.tabletest_questions.questionColumn]));
+                    return ((string)(this[this.tableTestQuestions.QuestionColumn]));
                 }
                 set {
-                    this[this.tabletest_questions.questionColumn] = value;
+                    this[this.tableTestQuestions.QuestionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string correct_answer {
+            public string CorrectAnswer {
                 get {
-                    return ((string)(this[this.tabletest_questions.correct_answerColumn]));
+                    return ((string)(this[this.tableTestQuestions.CorrectAnswerColumn]));
                 }
                 set {
-                    this[this.tabletest_questions.correct_answerColumn] = value;
+                    this[this.tableTestQuestions.CorrectAnswerColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string wrong_answers {
+            public string WrongAnswers {
                 get {
-                    return ((string)(this[this.tabletest_questions.wrong_answersColumn]));
+                    return ((string)(this[this.tableTestQuestions.WrongAnswersColumn]));
                 }
                 set {
-                    this[this.tabletest_questions.wrong_answersColumn] = value;
+                    this[this.tableTestQuestions.WrongAnswersColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int img_id {
+            public int ImgId {
                 get {
                     try {
-                        return ((int)(this[this.tabletest_questions.img_idColumn]));
+                        return ((int)(this[this.tableTestQuestions.ImgIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'img_id\' in table \'test_questions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImgId\' in table \'TestQuestions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletest_questions.img_idColumn] = value;
+                    this[this.tableTestQuestions.ImgIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow imagesRow {
+            public ImagesRow ImagesRow {
                 get {
-                    return ((imagesRow)(this.GetParentRow(this.Table.ParentRelations["FK__test_ques__img_i__72C60C4A"])));
+                    return ((ImagesRow)(this.GetParentRow(this.Table.ParentRelations["FK__TestQuest__ImgId__72C60C4A"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__test_ques__img_i__72C60C4A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__TestQuest__ImgId__72C60C4A"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow testsRow {
+            public TestsRow TestsRow {
                 get {
-                    return ((testsRow)(this.GetParentRow(this.Table.ParentRelations["FK__test_ques__test___73BA3083"])));
+                    return ((TestsRow)(this.GetParentRow(this.Table.ParentRelations["FK__TestQuest__TestI__73BA3083"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__test_ques__test___73BA3083"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__TestQuest__TestI__73BA3083"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isimg_idNull() {
-                return this.IsNull(this.tabletest_questions.img_idColumn);
+            public bool IsImgIdNull() {
+                return this.IsNull(this.tableTestQuestions.ImgIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setimg_idNull() {
-                this[this.tabletest_questions.img_idColumn] = global::System.Convert.DBNull;
+            public void SetImgIdNull() {
+                this[this.tableTestQuestions.ImgIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow[] Getattempt_responsesRows() {
-                if ((this.Table.ChildRelations["FK__attempt_r__test___6FE99F9F"] == null)) {
-                    return new attempt_responsesRow[0];
+            public AttemptResponsesRow[] GetAttemptResponsesRows() {
+                if ((this.Table.ChildRelations["FK__AttemptRe__TestQ__6FE99F9F"] == null)) {
+                    return new AttemptResponsesRow[0];
                 }
                 else {
-                    return ((attempt_responsesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__attempt_r__test___6FE99F9F"])));
+                    return ((AttemptResponsesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__AttemptRe__TestQ__6FE99F9F"])));
                 }
             }
         }
@@ -3315,163 +3315,163 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class testsRow : global::System.Data.DataRow {
+        public partial class TestsRow : global::System.Data.DataRow {
             
-            private testsDataTable tabletests;
+            private TestsDataTable tableTests;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal testsRow(global::System.Data.DataRowBuilder rb) : 
+            internal TestsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletests = ((testsDataTable)(this.Table));
+                this.tableTests = ((TestsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tabletests.idColumn]));
+                    return ((int)(this[this.tableTests.IdColumn]));
                 }
                 set {
-                    this[this.tabletests.idColumn] = value;
+                    this[this.tableTests.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int amount {
+            public int Amount {
                 get {
-                    return ((int)(this[this.tabletests.amountColumn]));
+                    return ((int)(this[this.tableTests.AmountColumn]));
                 }
                 set {
-                    this[this.tabletests.amountColumn] = value;
+                    this[this.tableTests.AmountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string difficulty {
+            public string Difficulty {
                 get {
-                    return ((string)(this[this.tabletests.difficultyColumn]));
+                    return ((string)(this[this.tableTests.DifficultyColumn]));
                 }
                 set {
-                    this[this.tabletests.difficultyColumn] = value;
+                    this[this.tableTests.DifficultyColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int category_id {
+            public int CategoryId {
                 get {
-                    return ((int)(this[this.tabletests.category_idColumn]));
+                    return ((int)(this[this.tableTests.CategoryIdColumn]));
                 }
                 set {
-                    this[this.tabletests.category_idColumn] = value;
+                    this[this.tableTests.CategoryIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string type {
+            public string Type {
                 get {
-                    return ((string)(this[this.tabletests.typeColumn]));
+                    return ((string)(this[this.tableTests.TypeColumn]));
                 }
                 set {
-                    this[this.tabletests.typeColumn] = value;
+                    this[this.tableTests.TypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int img_id {
+            public int ImgId {
                 get {
                     try {
-                        return ((int)(this[this.tabletests.img_idColumn]));
+                        return ((int)(this[this.tableTests.ImgIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'img_id\' in table \'tests\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImgId\' in table \'Tests\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletests.img_idColumn] = value;
+                    this[this.tableTests.ImgIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int owner_id {
+            public int OwnerId {
                 get {
-                    return ((int)(this[this.tabletests.owner_idColumn]));
+                    return ((int)(this[this.tableTests.OwnerIdColumn]));
                 }
                 set {
-                    this[this.tabletests.owner_idColumn] = value;
+                    this[this.tableTests.OwnerIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRow categoriesRow {
+            public CategoriesRow CategoriesRow {
                 get {
-                    return ((categoriesRow)(this.GetParentRow(this.Table.ParentRelations["FK__tests__category___74AE54BC"])));
+                    return ((CategoriesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Tests__CategoryI__74AE54BC"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__tests__category___74AE54BC"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Tests__CategoryI__74AE54BC"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow imagesRow {
+            public ImagesRow ImagesRow {
                 get {
-                    return ((imagesRow)(this.GetParentRow(this.Table.ParentRelations["FK__tests__img_id__75A278F5"])));
+                    return ((ImagesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Tests__ImgId__75A278F5"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__tests__img_id__75A278F5"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Tests__ImgId__75A278F5"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow usersRow {
+            public UsersRow UsersRow {
                 get {
-                    return ((usersRow)(this.GetParentRow(this.Table.ParentRelations["FK__tests__owner_id__76969D2E"])));
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK__Tests__OwnerId__76969D2E"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__tests__owner_id__76969D2E"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Tests__OwnerId__76969D2E"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isimg_idNull() {
-                return this.IsNull(this.tabletests.img_idColumn);
+            public bool IsImgIdNull() {
+                return this.IsNull(this.tableTests.ImgIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setimg_idNull() {
-                this[this.tabletests.img_idColumn] = global::System.Convert.DBNull;
+            public void SetImgIdNull() {
+                this[this.tableTests.ImgIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow[] GetattemptsRows() {
-                if ((this.Table.ChildRelations["FK__attempts__test_i__71D1E811"] == null)) {
-                    return new attemptsRow[0];
+            public AttemptsRow[] GetAttemptsRows() {
+                if ((this.Table.ChildRelations["FK__Attempts__TestId__71D1E811"] == null)) {
+                    return new AttemptsRow[0];
                 }
                 else {
-                    return ((attemptsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__attempts__test_i__71D1E811"])));
+                    return ((AttemptsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Attempts__TestId__71D1E811"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow[] Gettest_questionsRows() {
-                if ((this.Table.ChildRelations["FK__test_ques__test___73BA3083"] == null)) {
-                    return new test_questionsRow[0];
+            public TestQuestionsRow[] GetTestQuestionsRows() {
+                if ((this.Table.ChildRelations["FK__TestQuest__TestI__73BA3083"] == null)) {
+                    return new TestQuestionsRow[0];
                 }
                 else {
-                    return ((test_questionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__test_ques__test___73BA3083"])));
+                    return ((TestQuestionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__TestQuest__TestI__73BA3083"])));
                 }
             }
         }
@@ -3479,175 +3479,175 @@ namespace QuizApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class usersRow : global::System.Data.DataRow {
+        public partial class UsersRow : global::System.Data.DataRow {
             
-            private usersDataTable tableusers;
+            private UsersDataTable tableUsers;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal usersRow(global::System.Data.DataRowBuilder rb) : 
+            internal UsersRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableusers = ((usersDataTable)(this.Table));
+                this.tableUsers = ((UsersDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public int Id {
                 get {
-                    return ((int)(this[this.tableusers.idColumn]));
+                    return ((int)(this[this.tableUsers.IdColumn]));
                 }
                 set {
-                    this[this.tableusers.idColumn] = value;
+                    this[this.tableUsers.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string email {
+            public string Email {
                 get {
-                    return ((string)(this[this.tableusers.emailColumn]));
+                    return ((string)(this[this.tableUsers.EmailColumn]));
                 }
                 set {
-                    this[this.tableusers.emailColumn] = value;
+                    this[this.tableUsers.EmailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string username {
+            public string Username {
                 get {
-                    return ((string)(this[this.tableusers.usernameColumn]));
+                    return ((string)(this[this.tableUsers.UsernameColumn]));
                 }
                 set {
-                    this[this.tableusers.usernameColumn] = value;
+                    this[this.tableUsers.UsernameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string password {
+            public string Password {
                 get {
-                    return ((string)(this[this.tableusers.passwordColumn]));
+                    return ((string)(this[this.tableUsers.PasswordColumn]));
                 }
                 set {
-                    this[this.tableusers.passwordColumn] = value;
+                    this[this.tableUsers.PasswordColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int score {
-                get {
-                    try {
-                        return ((int)(this[this.tableusers.scoreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'score\' in table \'users\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusers.scoreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int max_score {
+            public int Score {
                 get {
                     try {
-                        return ((int)(this[this.tableusers.max_scoreColumn]));
+                        return ((int)(this[this.tableUsers.ScoreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'max_score\' in table \'users\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Score\' in table \'Users\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableusers.max_scoreColumn] = value;
+                    this[this.tableUsers.ScoreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int img_id {
+            public int MaxScore {
                 get {
                     try {
-                        return ((int)(this[this.tableusers.img_idColumn]));
+                        return ((int)(this[this.tableUsers.MaxScoreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'img_id\' in table \'users\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaxScore\' in table \'Users\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableusers.img_idColumn] = value;
+                    this[this.tableUsers.MaxScoreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow imagesRow {
+            public int ImgId {
                 get {
-                    return ((imagesRow)(this.GetParentRow(this.Table.ParentRelations["FK__users__img_id__778AC167"])));
+                    try {
+                        return ((int)(this[this.tableUsers.ImgIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImgId\' in table \'Users\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__users__img_id__778AC167"]);
+                    this[this.tableUsers.ImgIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsscoreNull() {
-                return this.IsNull(this.tableusers.scoreColumn);
+            public ImagesRow ImagesRow {
+                get {
+                    return ((ImagesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Users__ImgId__778AC167"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Users__ImgId__778AC167"]);
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetscoreNull() {
-                this[this.tableusers.scoreColumn] = global::System.Convert.DBNull;
+            public bool IsScoreNull() {
+                return this.IsNull(this.tableUsers.ScoreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ismax_scoreNull() {
-                return this.IsNull(this.tableusers.max_scoreColumn);
+            public void SetScoreNull() {
+                this[this.tableUsers.ScoreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setmax_scoreNull() {
-                this[this.tableusers.max_scoreColumn] = global::System.Convert.DBNull;
+            public bool IsMaxScoreNull() {
+                return this.IsNull(this.tableUsers.MaxScoreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isimg_idNull() {
-                return this.IsNull(this.tableusers.img_idColumn);
+            public void SetMaxScoreNull() {
+                this[this.tableUsers.MaxScoreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setimg_idNull() {
-                this[this.tableusers.img_idColumn] = global::System.Convert.DBNull;
+            public bool IsImgIdNull() {
+                return this.IsNull(this.tableUsers.ImgIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow[] GetattemptsRows() {
-                if ((this.Table.ChildRelations["FK__attempts__player__70DDC3D8"] == null)) {
-                    return new attemptsRow[0];
+            public void SetImgIdNull() {
+                this[this.tableUsers.ImgIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AttemptsRow[] GetAttemptsRows() {
+                if ((this.Table.ChildRelations["FK__Attempts__Player__70DDC3D8"] == null)) {
+                    return new AttemptsRow[0];
                 }
                 else {
-                    return ((attemptsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__attempts__player__70DDC3D8"])));
+                    return ((AttemptsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Attempts__Player__70DDC3D8"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow[] GettestsRows() {
-                if ((this.Table.ChildRelations["FK__tests__owner_id__76969D2E"] == null)) {
-                    return new testsRow[0];
+            public TestsRow[] GetTestsRows() {
+                if ((this.Table.ChildRelations["FK__Tests__OwnerId__76969D2E"] == null)) {
+                    return new TestsRow[0];
                 }
                 else {
-                    return ((testsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__tests__owner_id__76969D2E"])));
+                    return ((TestsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Tests__OwnerId__76969D2E"])));
                 }
             }
         }
@@ -3656,22 +3656,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class attempt_responsesRowChangeEvent : global::System.EventArgs {
+        public class AttemptResponsesRowChangeEvent : global::System.EventArgs {
             
-            private attempt_responsesRow eventRow;
+            private AttemptResponsesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRowChangeEvent(attempt_responsesRow row, global::System.Data.DataRowAction action) {
+            public AttemptResponsesRowChangeEvent(AttemptResponsesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attempt_responsesRow Row {
+            public AttemptResponsesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3690,22 +3690,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class attemptsRowChangeEvent : global::System.EventArgs {
+        public class AttemptsRowChangeEvent : global::System.EventArgs {
             
-            private attemptsRow eventRow;
+            private AttemptsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRowChangeEvent(attemptsRow row, global::System.Data.DataRowAction action) {
+            public AttemptsRowChangeEvent(AttemptsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public attemptsRow Row {
+            public AttemptsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3724,22 +3724,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class categoriesRowChangeEvent : global::System.EventArgs {
+        public class CategoriesRowChangeEvent : global::System.EventArgs {
             
-            private categoriesRow eventRow;
+            private CategoriesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRowChangeEvent(categoriesRow row, global::System.Data.DataRowAction action) {
+            public CategoriesRowChangeEvent(CategoriesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public categoriesRow Row {
+            public CategoriesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3758,22 +3758,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class imagesRowChangeEvent : global::System.EventArgs {
+        public class ImagesRowChangeEvent : global::System.EventArgs {
             
-            private imagesRow eventRow;
+            private ImagesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRowChangeEvent(imagesRow row, global::System.Data.DataRowAction action) {
+            public ImagesRowChangeEvent(ImagesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public imagesRow Row {
+            public ImagesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3792,22 +3792,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class test_questionsRowChangeEvent : global::System.EventArgs {
+        public class TestQuestionsRowChangeEvent : global::System.EventArgs {
             
-            private test_questionsRow eventRow;
+            private TestQuestionsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRowChangeEvent(test_questionsRow row, global::System.Data.DataRowAction action) {
+            public TestQuestionsRowChangeEvent(TestQuestionsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public test_questionsRow Row {
+            public TestQuestionsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3826,22 +3826,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class testsRowChangeEvent : global::System.EventArgs {
+        public class TestsRowChangeEvent : global::System.EventArgs {
             
-            private testsRow eventRow;
+            private TestsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRowChangeEvent(testsRow row, global::System.Data.DataRowAction action) {
+            public TestsRowChangeEvent(TestsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public testsRow Row {
+            public TestsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3860,22 +3860,22 @@ namespace QuizApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class usersRowChangeEvent : global::System.EventArgs {
+        public class UsersRowChangeEvent : global::System.EventArgs {
             
-            private usersRow eventRow;
+            private UsersRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRowChangeEvent(usersRow row, global::System.Data.DataRowAction action) {
+            public UsersRowChangeEvent(UsersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usersRow Row {
+            public UsersRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3903,7 +3903,7 @@ namespace QuizApp.QuizAppProjectDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class attempt_responsesTableAdapter : global::System.ComponentModel.Component {
+    public partial class AttemptResponsesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3917,7 +3917,7 @@ namespace QuizApp.QuizAppProjectDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public attempt_responsesTableAdapter() {
+        public AttemptResponsesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4014,49 +4014,48 @@ namespace QuizApp.QuizAppProjectDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "attempt_responses";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("attempt_id", "attempt_id");
-            tableMapping.ColumnMappings.Add("test_question_id", "test_question_id");
-            tableMapping.ColumnMappings.Add("response", "response");
-            tableMapping.ColumnMappings.Add("is_correct", "is_correct");
+            tableMapping.DataSetTable = "AttemptResponses";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("AttemptId", "AttemptId");
+            tableMapping.ColumnMappings.Add("TestQuestionId", "TestQuestionId");
+            tableMapping.ColumnMappings.Add("Response", "Response");
+            tableMapping.ColumnMappings.Add("IsCorrect", "IsCorrect");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[attempt_responses] WHERE (([id] = @Original_id) AND ([attempt_" +
-                "id] = @Original_attempt_id) AND ([test_question_id] = @Original_test_question_id" +
-                ") AND ([response] = @Original_response) AND ([is_correct] = @Original_is_correct" +
-                "))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AttemptResponses] WHERE (([Id] = @Original_Id) AND ([AttemptId" +
+                "] = @Original_AttemptId) AND ([TestQuestionId] = @Original_TestQuestionId) AND (" +
+                "[Response] = @Original_Response) AND ([IsCorrect] = @Original_IsCorrect))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_attempt_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "attempt_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_test_question_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_question_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "response", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_correct", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_correct", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AttemptId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttemptId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestQuestionId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestQuestionId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Response", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsCorrect", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsCorrect", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[attempt_responses] ([attempt_id], [test_question_id], [response], [is_correct]) VALUES (@attempt_id, @test_question_id, @response, @is_correct);
-SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_responses WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[AttemptResponses] ([AttemptId], [TestQuestionId], [Response], [IsCorrect]) VALUES (@AttemptId, @TestQuestionId, @Response, @IsCorrect);
+SELECT Id, AttemptId, TestQuestionId, Response, IsCorrect FROM AttemptResponses WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@attempt_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "attempt_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@test_question_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_question_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "response", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_correct", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_correct", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttemptId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttemptId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestQuestionId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestQuestionId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Response", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsCorrect", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsCorrect", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[attempt_responses] SET [attempt_id] = @attempt_id, [test_question_id] = @test_question_id, [response] = @response, [is_correct] = @is_correct WHERE (([id] = @Original_id) AND ([attempt_id] = @Original_attempt_id) AND ([test_question_id] = @Original_test_question_id) AND ([response] = @Original_response) AND ([is_correct] = @Original_is_correct));
-SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_responses WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AttemptResponses] SET [AttemptId] = @AttemptId, [TestQuestionId] = @TestQuestionId, [Response] = @Response, [IsCorrect] = @IsCorrect WHERE (([Id] = @Original_Id) AND ([AttemptId] = @Original_AttemptId) AND ([TestQuestionId] = @Original_TestQuestionId) AND ([Response] = @Original_Response) AND ([IsCorrect] = @Original_IsCorrect));
+SELECT Id, AttemptId, TestQuestionId, Response, IsCorrect FROM AttemptResponses WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@attempt_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "attempt_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@test_question_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_question_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "response", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_correct", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_correct", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_attempt_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "attempt_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_test_question_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_question_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "response", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_correct", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_correct", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttemptId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttemptId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestQuestionId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestQuestionId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Response", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsCorrect", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsCorrect", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AttemptId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttemptId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestQuestionId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestQuestionId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Response", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Response", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsCorrect", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsCorrect", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4072,8 +4071,8 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, attempt_id, test_question_id, response, is_correct FROM dbo.attempt_re" +
-                "sponses";
+            this._commandCollection[0].CommandText = "SELECT Id, AttemptId, TestQuestionId, Response, IsCorrect FROM dbo.AttemptRespons" +
+                "es";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4081,7 +4080,7 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.attempt_responsesDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.AttemptResponsesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4094,9 +4093,9 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.attempt_responsesDataTable GetData() {
+        public virtual QuizAppProjectDataSet.AttemptResponsesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.attempt_responsesDataTable dataTable = new QuizAppProjectDataSet.attempt_responsesDataTable();
+            QuizAppProjectDataSet.AttemptResponsesDataTable dataTable = new QuizAppProjectDataSet.AttemptResponsesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4104,7 +4103,7 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.attempt_responsesDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.AttemptResponsesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4112,7 +4111,7 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "attempt_responses");
+            return this.Adapter.Update(dataSet, "AttemptResponses");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4134,17 +4133,17 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_attempt_id, int Original_test_question_id, string Original_response, short Original_is_correct) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_attempt_id));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_test_question_id));
-            if ((Original_response == null)) {
-                throw new global::System.ArgumentNullException("Original_response");
+        public virtual int Delete(int Original_Id, int Original_AttemptId, int Original_TestQuestionId, string Original_Response, short Original_IsCorrect) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_AttemptId));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_TestQuestionId));
+            if ((Original_Response == null)) {
+                throw new global::System.ArgumentNullException("Original_Response");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_response));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Response));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((short)(Original_is_correct));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((short)(Original_IsCorrect));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4165,16 +4164,16 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int attempt_id, int test_question_id, string response, short is_correct) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(attempt_id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(test_question_id));
-            if ((response == null)) {
-                throw new global::System.ArgumentNullException("response");
+        public virtual int Insert(int AttemptId, int TestQuestionId, string Response, short IsCorrect) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(AttemptId));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(TestQuestionId));
+            if ((Response == null)) {
+                throw new global::System.ArgumentNullException("Response");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(response));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Response));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((short)(is_correct));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((short)(IsCorrect));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4195,27 +4194,27 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int attempt_id, int test_question_id, string response, short is_correct, int Original_id, int Original_attempt_id, int Original_test_question_id, string Original_response, short Original_is_correct, int id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(attempt_id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(test_question_id));
-            if ((response == null)) {
-                throw new global::System.ArgumentNullException("response");
+        public virtual int Update(int AttemptId, int TestQuestionId, string Response, short IsCorrect, int Original_Id, int Original_AttemptId, int Original_TestQuestionId, string Original_Response, short Original_IsCorrect, int Id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AttemptId));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(TestQuestionId));
+            if ((Response == null)) {
+                throw new global::System.ArgumentNullException("Response");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(response));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Response));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(is_correct));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_attempt_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_test_question_id));
-            if ((Original_response == null)) {
-                throw new global::System.ArgumentNullException("Original_response");
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(IsCorrect));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_AttemptId));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_TestQuestionId));
+            if ((Original_Response == null)) {
+                throw new global::System.ArgumentNullException("Original_Response");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_response));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Response));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((short)(Original_is_correct));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((short)(Original_IsCorrect));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4236,8 +4235,8 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int attempt_id, int test_question_id, string response, short is_correct, int Original_id, int Original_attempt_id, int Original_test_question_id, string Original_response, short Original_is_correct) {
-            return this.Update(attempt_id, test_question_id, response, is_correct, Original_id, Original_attempt_id, Original_test_question_id, Original_response, Original_is_correct, Original_id);
+        public virtual int Update(int AttemptId, int TestQuestionId, string Response, short IsCorrect, int Original_Id, int Original_AttemptId, int Original_TestQuestionId, string Original_Response, short Original_IsCorrect) {
+            return this.Update(AttemptId, TestQuestionId, Response, IsCorrect, Original_Id, Original_AttemptId, Original_TestQuestionId, Original_Response, Original_IsCorrect, Original_Id);
         }
     }
     
@@ -4250,7 +4249,7 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class attemptsTableAdapter : global::System.ComponentModel.Component {
+    public partial class AttemptsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4264,7 +4263,7 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public attemptsTableAdapter() {
+        public AttemptsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4361,53 +4360,55 @@ SELECT id, attempt_id, test_question_id, response, is_correct FROM attempt_respo
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "attempts";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("player_id", "player_id");
-            tableMapping.ColumnMappings.Add("test_id", "test_id");
-            tableMapping.ColumnMappings.Add("result", "result");
-            tableMapping.ColumnMappings.Add("archived", "archived");
-            tableMapping.ColumnMappings.Add("date_taken", "date_taken");
+            tableMapping.DataSetTable = "Attempts";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("PlayerId", "PlayerId");
+            tableMapping.ColumnMappings.Add("TestId", "TestId");
+            tableMapping.ColumnMappings.Add("Result", "Result");
+            tableMapping.ColumnMappings.Add("Archived", "Archived");
+            tableMapping.ColumnMappings.Add("DateTaken", "DateTaken");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[attempts] WHERE (([id] = @Original_id) AND ([player_id] = @Original_player_id) AND ([test_id] = @Original_test_id) AND ((@IsNull_result = 1 AND [result] IS NULL) OR ([result] = @Original_result)) AND ([archived] = @Original_archived) AND ([date_taken] = @Original_date_taken))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Attempts] WHERE (([Id] = @Original_Id) AND ([PlayerId] = @Original_PlayerId) AND ([TestId] = @Original_TestId) AND ((@IsNull_Result = 1 AND [Result] IS NULL) OR ([Result] = @Original_Result)) AND ([Archived] = @Original_Archived) AND ([DateTaken] = @Original_DateTaken))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_player_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "player_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "result", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "result", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "archived", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_taken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_taken", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PlayerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlayerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Result", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Result", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Archived", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateTaken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTaken", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[attempts] ([player_id], [test_id], [result], [archived], [date_taken]) VALUES (@player_id, @test_id, @result, @archived, @date_taken);
-SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Attempts] ([PlayerId], [TestId], [Result], [Archived], [DateTa" +
+                "ken]) VALUES (@PlayerId, @TestId, @Result, @Archived, @DateTaken);\r\nSELECT Id, P" +
+                "layerId, TestId, Result, Archived, DateTaken FROM Attempts WHERE (Id = SCOPE_IDE" +
+                "NTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@player_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "player_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "archived", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_taken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_taken", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlayerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlayerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Archived", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateTaken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTaken", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[attempts] SET [player_id] = @player_id, [test_id] = @test_id, [result] = @result, [archived] = @archived, [date_taken] = @date_taken WHERE (([id] = @Original_id) AND ([player_id] = @Original_player_id) AND ([test_id] = @Original_test_id) AND ((@IsNull_result = 1 AND [result] IS NULL) OR ([result] = @Original_result)) AND ([archived] = @Original_archived) AND ([date_taken] = @Original_date_taken));
-SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Attempts] SET [PlayerId] = @PlayerId, [TestId] = @TestId, [Result] = @Result, [Archived] = @Archived, [DateTaken] = @DateTaken WHERE (([Id] = @Original_Id) AND ([PlayerId] = @Original_PlayerId) AND ([TestId] = @Original_TestId) AND ((@IsNull_Result = 1 AND [Result] IS NULL) OR ([Result] = @Original_Result)) AND ([Archived] = @Original_Archived) AND ([DateTaken] = @Original_DateTaken));
+SELECT Id, PlayerId, TestId, Result, Archived, DateTaken FROM Attempts WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@player_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "player_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "archived", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_taken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_taken", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_player_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "player_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "result", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "result", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "archived", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_taken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_taken", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlayerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlayerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Result", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Archived", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateTaken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTaken", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PlayerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlayerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Result", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Result", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Result", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Archived", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Archived", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateTaken", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTaken", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4423,7 +4424,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, player_id, test_id, result, archived, date_taken FROM dbo.attempts";
+            this._commandCollection[0].CommandText = "SELECT Id, PlayerId, TestId, Result, Archived, DateTaken FROM dbo.Attempts";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4431,7 +4432,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.attemptsDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.AttemptsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4444,9 +4445,9 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.attemptsDataTable GetData() {
+        public virtual QuizAppProjectDataSet.AttemptsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.attemptsDataTable dataTable = new QuizAppProjectDataSet.attemptsDataTable();
+            QuizAppProjectDataSet.AttemptsDataTable dataTable = new QuizAppProjectDataSet.AttemptsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4454,7 +4455,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.attemptsDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.AttemptsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4462,7 +4463,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "attempts");
+            return this.Adapter.Update(dataSet, "Attempts");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4484,20 +4485,20 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_player_id, int Original_test_id, global::System.Nullable<int> Original_result, short Original_archived, System.DateTime Original_date_taken) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_player_id));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_test_id));
-            if ((Original_result.HasValue == true)) {
+        public virtual int Delete(int Original_Id, int Original_PlayerId, int Original_TestId, global::System.Nullable<int> Original_Result, short Original_Archived, System.DateTime Original_DateTaken) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_PlayerId));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_TestId));
+            if ((Original_Result.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_result.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Result.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((short)(Original_archived));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_date_taken));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((short)(Original_Archived));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_DateTaken));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4518,17 +4519,17 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int player_id, int test_id, global::System.Nullable<int> result, short archived, System.DateTime date_taken) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(player_id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(test_id));
-            if ((result.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(result.Value));
+        public virtual int Insert(int PlayerId, int TestId, global::System.Nullable<int> Result, short Archived, System.DateTime DateTaken) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(PlayerId));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(TestId));
+            if ((Result.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Result.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((short)(archived));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(date_taken));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((short)(Archived));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DateTaken));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4549,31 +4550,31 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int player_id, int test_id, global::System.Nullable<int> result, short archived, System.DateTime date_taken, int Original_id, int Original_player_id, int Original_test_id, global::System.Nullable<int> Original_result, short Original_archived, System.DateTime Original_date_taken, int id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(player_id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(test_id));
-            if ((result.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(result.Value));
+        public virtual int Update(int PlayerId, int TestId, global::System.Nullable<int> Result, short Archived, System.DateTime DateTaken, int Original_Id, int Original_PlayerId, int Original_TestId, global::System.Nullable<int> Original_Result, short Original_Archived, System.DateTime Original_DateTaken, int Id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(PlayerId));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(TestId));
+            if ((Result.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Result.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(archived));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(date_taken));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_player_id));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_test_id));
-            if ((Original_result.HasValue == true)) {
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(Archived));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DateTaken));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_PlayerId));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_TestId));
+            if ((Original_Result.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_result.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Result.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((short)(Original_archived));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_date_taken));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((short)(Original_Archived));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_DateTaken));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4594,8 +4595,8 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int player_id, int test_id, global::System.Nullable<int> result, short archived, System.DateTime date_taken, int Original_id, int Original_player_id, int Original_test_id, global::System.Nullable<int> Original_result, short Original_archived, System.DateTime Original_date_taken) {
-            return this.Update(player_id, test_id, result, archived, date_taken, Original_id, Original_player_id, Original_test_id, Original_result, Original_archived, Original_date_taken, Original_id);
+        public virtual int Update(int PlayerId, int TestId, global::System.Nullable<int> Result, short Archived, System.DateTime DateTaken, int Original_Id, int Original_PlayerId, int Original_TestId, global::System.Nullable<int> Original_Result, short Original_Archived, System.DateTime Original_DateTaken) {
+            return this.Update(PlayerId, TestId, Result, Archived, DateTaken, Original_Id, Original_PlayerId, Original_TestId, Original_Result, Original_Archived, Original_DateTaken, Original_Id);
         }
     }
     
@@ -4608,7 +4609,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class categoriesTableAdapter : global::System.ComponentModel.Component {
+    public partial class CategoriesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4622,7 +4623,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public categoriesTableAdapter() {
+        public CategoriesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4719,32 +4720,32 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "categories";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.DataSetTable = "Categories";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Name", "Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[categories] WHERE (([id] = @Original_id) AND ([name] = @Origin" +
-                "al_name))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Categories] WHERE (([Id] = @Original_Id) AND ([Name] = @Origin" +
+                "al_Name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[categories] ([name]) VALUES (@name);\r\nSELECT id, name FROM cat" +
-                "egories WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Categories] ([Name]) VALUES (@Name);\r\nSELECT Id, Name FROM Cat" +
+                "egories WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[categories] SET [name] = @name WHERE (([id] = @Original_id) AND ([n" +
-                "ame] = @Original_name));\r\nSELECT id, name FROM categories WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Categories] SET [Name] = @Name WHERE (([Id] = @Original_Id) AND ([N" +
+                "ame] = @Original_Name));\r\nSELECT Id, Name FROM Categories WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4760,7 +4761,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, name FROM dbo.categories";
+            this._commandCollection[0].CommandText = "SELECT Id, Name FROM dbo.Categories";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4768,7 +4769,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.categoriesDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.CategoriesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4781,9 +4782,9 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.categoriesDataTable GetData() {
+        public virtual QuizAppProjectDataSet.CategoriesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.categoriesDataTable dataTable = new QuizAppProjectDataSet.categoriesDataTable();
+            QuizAppProjectDataSet.CategoriesDataTable dataTable = new QuizAppProjectDataSet.CategoriesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4791,7 +4792,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.categoriesDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.CategoriesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4799,7 +4800,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "categories");
+            return this.Adapter.Update(dataSet, "Categories");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4821,13 +4822,13 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_name) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_name == null)) {
-                throw new global::System.ArgumentNullException("Original_name");
+        public virtual int Delete(int Original_Id, string Original_Name) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_name));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4849,12 +4850,12 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name) {
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+        public virtual int Insert(string Name) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4876,21 +4877,21 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, int Original_id, string Original_name, int id) {
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+        public virtual int Update(string Name, int Original_Id, string Original_Name, int Id) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_id));
-            if ((Original_name == null)) {
-                throw new global::System.ArgumentNullException("Original_name");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_name));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4911,8 +4912,8 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, int Original_id, string Original_name) {
-            return this.Update(name, Original_id, Original_name, Original_id);
+        public virtual int Update(string Name, int Original_Id, string Original_Name) {
+            return this.Update(Name, Original_Id, Original_Name, Original_Id);
         }
     }
     
@@ -4925,7 +4926,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class imagesTableAdapter : global::System.ComponentModel.Component {
+    public partial class ImagesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4939,7 +4940,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public imagesTableAdapter() {
+        public ImagesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5036,29 +5037,29 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "images";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("image", "image");
+            tableMapping.DataSetTable = "Images";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Image", "Image");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[images] WHERE (([id] = @Original_id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Images] WHERE (([Id] = @Original_Id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[images] ([image]) VALUES (@image);\r\nSELECT id, image FROM imag" +
-                "es WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Images] ([Image]) VALUES (@Image);\r\nSELECT Id, Image FROM Imag" +
+                "es WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@image", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[images] SET [image] = @image WHERE (([id] = @Original_id));\r\nSELECT" +
-                " id, image FROM images WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Images] SET [Image] = @Image WHERE (([Id] = @Original_Id));\r\nSELECT" +
+                " Id, Image FROM Images WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@image", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5074,7 +5075,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, image FROM dbo.images";
+            this._commandCollection[0].CommandText = "SELECT Id, Image FROM dbo.Images";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5082,7 +5083,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.imagesDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.ImagesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5095,9 +5096,9 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.imagesDataTable GetData() {
+        public virtual QuizAppProjectDataSet.ImagesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.imagesDataTable dataTable = new QuizAppProjectDataSet.imagesDataTable();
+            QuizAppProjectDataSet.ImagesDataTable dataTable = new QuizAppProjectDataSet.ImagesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5105,7 +5106,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.imagesDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.ImagesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5113,7 +5114,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "images");
+            return this.Adapter.Update(dataSet, "Images");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5135,8 +5136,8 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+        public virtual int Delete(int Original_Id) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5157,12 +5158,12 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(byte[] image) {
-            if ((image == null)) {
-                throw new global::System.ArgumentNullException("image");
+        public virtual int Insert(byte[] Image) {
+            if ((Image == null)) {
+                throw new global::System.ArgumentNullException("Image");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((byte[])(image));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((byte[])(Image));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5184,15 +5185,15 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] image, int Original_id, int id) {
-            if ((image == null)) {
-                throw new global::System.ArgumentNullException("image");
+        public virtual int Update(byte[] Image, int Original_Id, int Id) {
+            if ((Image == null)) {
+                throw new global::System.ArgumentNullException("Image");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte[])(image));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte[])(Image));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5213,8 +5214,8 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] image, int Original_id) {
-            return this.Update(image, Original_id, Original_id);
+        public virtual int Update(byte[] Image, int Original_Id) {
+            return this.Update(Image, Original_Id, Original_Id);
         }
     }
     
@@ -5227,7 +5228,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class test_questionsTableAdapter : global::System.ComponentModel.Component {
+    public partial class TestQuestionsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5241,7 +5242,7 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public test_questionsTableAdapter() {
+        public TestQuestionsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5338,53 +5339,53 @@ SELECT id, player_id, test_id, result, archived, date_taken FROM attempts WHERE 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "test_questions";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("test_id", "test_id");
-            tableMapping.ColumnMappings.Add("question", "question");
-            tableMapping.ColumnMappings.Add("correct_answer", "correct_answer");
-            tableMapping.ColumnMappings.Add("wrong_answers", "wrong_answers");
-            tableMapping.ColumnMappings.Add("img_id", "img_id");
+            tableMapping.DataSetTable = "TestQuestions";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("TestId", "TestId");
+            tableMapping.ColumnMappings.Add("Question", "Question");
+            tableMapping.ColumnMappings.Add("CorrectAnswer", "CorrectAnswer");
+            tableMapping.ColumnMappings.Add("WrongAnswers", "WrongAnswers");
+            tableMapping.ColumnMappings.Add("ImgId", "ImgId");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[test_questions] WHERE (([id] = @Original_id) AND ([test_id] = @Original_test_id) AND ([question] = @Original_question) AND ([correct_answer] = @Original_correct_answer) AND ([wrong_answers] = @Original_wrong_answers) AND ((@IsNull_img_id = 1 AND [img_id] IS NULL) OR ([img_id] = @Original_img_id)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TestQuestions] WHERE (([Id] = @Original_Id) AND ([TestId] = @Original_TestId) AND ([Question] = @Original_Question) AND ([CorrectAnswer] = @Original_CorrectAnswer) AND ([WrongAnswers] = @Original_WrongAnswers) AND ((@IsNull_ImgId = 1 AND [ImgId] IS NULL) OR ([ImgId] = @Original_ImgId)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "question", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_correct_answer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correct_answer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_wrong_answers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wrong_answers", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Question", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CorrectAnswer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CorrectAnswer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WrongAnswers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WrongAnswers", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[test_questions] ([test_id], [question], [correct_answer], [wrong_answers], [img_id]) VALUES (@test_id, @question, @correct_answer, @wrong_answers, @img_id);
-SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_questions WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TestQuestions] ([TestId], [Question], [CorrectAnswer], [WrongAnswers], [ImgId]) VALUES (@TestId, @Question, @CorrectAnswer, @WrongAnswers, @ImgId);
+SELECT Id, TestId, Question, CorrectAnswer, WrongAnswers, ImgId FROM TestQuestions WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "question", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correct_answer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correct_answer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@wrong_answers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wrong_answers", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Question", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CorrectAnswer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CorrectAnswer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WrongAnswers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WrongAnswers", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[test_questions] SET [test_id] = @test_id, [question] = @question, [correct_answer] = @correct_answer, [wrong_answers] = @wrong_answers, [img_id] = @img_id WHERE (([id] = @Original_id) AND ([test_id] = @Original_test_id) AND ([question] = @Original_question) AND ([correct_answer] = @Original_correct_answer) AND ([wrong_answers] = @Original_wrong_answers) AND ((@IsNull_img_id = 1 AND [img_id] IS NULL) OR ([img_id] = @Original_img_id)));
-SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_questions WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TestQuestions] SET [TestId] = @TestId, [Question] = @Question, [CorrectAnswer] = @CorrectAnswer, [WrongAnswers] = @WrongAnswers, [ImgId] = @ImgId WHERE (([Id] = @Original_Id) AND ([TestId] = @Original_TestId) AND ([Question] = @Original_Question) AND ([CorrectAnswer] = @Original_CorrectAnswer) AND ([WrongAnswers] = @Original_WrongAnswers) AND ((@IsNull_ImgId = 1 AND [ImgId] IS NULL) OR ([ImgId] = @Original_ImgId)));
+SELECT Id, TestId, Question, CorrectAnswer, WrongAnswers, ImgId FROM TestQuestions WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "question", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correct_answer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correct_answer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@wrong_answers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wrong_answers", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_test_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "test_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "question", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_correct_answer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correct_answer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_wrong_answers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wrong_answers", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Question", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CorrectAnswer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CorrectAnswer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WrongAnswers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WrongAnswers", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Question", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Question", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CorrectAnswer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CorrectAnswer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WrongAnswers", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WrongAnswers", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5400,8 +5401,8 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM dbo.test" +
-                "_questions";
+            this._commandCollection[0].CommandText = "SELECT Id, TestId, Question, CorrectAnswer, WrongAnswers, ImgId FROM dbo.TestQues" +
+                "tions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5409,7 +5410,7 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.test_questionsDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.TestQuestionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5422,9 +5423,9 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.test_questionsDataTable GetData() {
+        public virtual QuizAppProjectDataSet.TestQuestionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.test_questionsDataTable dataTable = new QuizAppProjectDataSet.test_questionsDataTable();
+            QuizAppProjectDataSet.TestQuestionsDataTable dataTable = new QuizAppProjectDataSet.TestQuestionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5432,7 +5433,7 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.test_questionsDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.TestQuestionsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5440,7 +5441,7 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "test_questions");
+            return this.Adapter.Update(dataSet, "TestQuestions");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5462,30 +5463,30 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_test_id, string Original_question, string Original_correct_answer, string Original_wrong_answers, global::System.Nullable<int> Original_img_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_test_id));
-            if ((Original_question == null)) {
-                throw new global::System.ArgumentNullException("Original_question");
+        public virtual int Delete(int Original_Id, int Original_TestId, string Original_Question, string Original_CorrectAnswer, string Original_WrongAnswers, global::System.Nullable<int> Original_ImgId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_TestId));
+            if ((Original_Question == null)) {
+                throw new global::System.ArgumentNullException("Original_Question");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_question));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Question));
             }
-            if ((Original_correct_answer == null)) {
-                throw new global::System.ArgumentNullException("Original_correct_answer");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_correct_answer));
-            }
-            if ((Original_wrong_answers == null)) {
-                throw new global::System.ArgumentNullException("Original_wrong_answers");
+            if ((Original_CorrectAnswer == null)) {
+                throw new global::System.ArgumentNullException("Original_CorrectAnswer");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_wrong_answers));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_CorrectAnswer));
             }
-            if ((Original_img_id.HasValue == true)) {
+            if ((Original_WrongAnswers == null)) {
+                throw new global::System.ArgumentNullException("Original_WrongAnswers");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_WrongAnswers));
+            }
+            if ((Original_ImgId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_img_id.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_ImgId.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -5511,28 +5512,28 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int test_id, string question, string correct_answer, string wrong_answers, global::System.Nullable<int> img_id) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(test_id));
-            if ((question == null)) {
-                throw new global::System.ArgumentNullException("question");
+        public virtual int Insert(int TestId, string Question, string CorrectAnswer, string WrongAnswers, global::System.Nullable<int> ImgId) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(TestId));
+            if ((Question == null)) {
+                throw new global::System.ArgumentNullException("Question");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(question));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Question));
             }
-            if ((correct_answer == null)) {
-                throw new global::System.ArgumentNullException("correct_answer");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(correct_answer));
-            }
-            if ((wrong_answers == null)) {
-                throw new global::System.ArgumentNullException("wrong_answers");
+            if ((CorrectAnswer == null)) {
+                throw new global::System.ArgumentNullException("CorrectAnswer");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(wrong_answers));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CorrectAnswer));
             }
-            if ((img_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(img_id.Value));
+            if ((WrongAnswers == null)) {
+                throw new global::System.ArgumentNullException("WrongAnswers");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(WrongAnswers));
+            }
+            if ((ImgId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ImgId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -5557,61 +5558,61 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int test_id, string question, string correct_answer, string wrong_answers, global::System.Nullable<int> img_id, int Original_id, int Original_test_id, string Original_question, string Original_correct_answer, string Original_wrong_answers, global::System.Nullable<int> Original_img_id, int id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(test_id));
-            if ((question == null)) {
-                throw new global::System.ArgumentNullException("question");
+        public virtual int Update(int TestId, string Question, string CorrectAnswer, string WrongAnswers, global::System.Nullable<int> ImgId, int Original_Id, int Original_TestId, string Original_Question, string Original_CorrectAnswer, string Original_WrongAnswers, global::System.Nullable<int> Original_ImgId, int Id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TestId));
+            if ((Question == null)) {
+                throw new global::System.ArgumentNullException("Question");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(question));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Question));
             }
-            if ((correct_answer == null)) {
-                throw new global::System.ArgumentNullException("correct_answer");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(correct_answer));
-            }
-            if ((wrong_answers == null)) {
-                throw new global::System.ArgumentNullException("wrong_answers");
+            if ((CorrectAnswer == null)) {
+                throw new global::System.ArgumentNullException("CorrectAnswer");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(wrong_answers));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CorrectAnswer));
             }
-            if ((img_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(img_id.Value));
+            if ((WrongAnswers == null)) {
+                throw new global::System.ArgumentNullException("WrongAnswers");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(WrongAnswers));
+            }
+            if ((ImgId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ImgId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_test_id));
-            if ((Original_question == null)) {
-                throw new global::System.ArgumentNullException("Original_question");
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_TestId));
+            if ((Original_Question == null)) {
+                throw new global::System.ArgumentNullException("Original_Question");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_question));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Question));
             }
-            if ((Original_correct_answer == null)) {
-                throw new global::System.ArgumentNullException("Original_correct_answer");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_correct_answer));
-            }
-            if ((Original_wrong_answers == null)) {
-                throw new global::System.ArgumentNullException("Original_wrong_answers");
+            if ((Original_CorrectAnswer == null)) {
+                throw new global::System.ArgumentNullException("Original_CorrectAnswer");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_wrong_answers));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_CorrectAnswer));
             }
-            if ((Original_img_id.HasValue == true)) {
+            if ((Original_WrongAnswers == null)) {
+                throw new global::System.ArgumentNullException("Original_WrongAnswers");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_WrongAnswers));
+            }
+            if ((Original_ImgId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_img_id.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ImgId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5632,8 +5633,8 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int test_id, string question, string correct_answer, string wrong_answers, global::System.Nullable<int> img_id, int Original_id, int Original_test_id, string Original_question, string Original_correct_answer, string Original_wrong_answers, global::System.Nullable<int> Original_img_id) {
-            return this.Update(test_id, question, correct_answer, wrong_answers, img_id, Original_id, Original_test_id, Original_question, Original_correct_answer, Original_wrong_answers, Original_img_id, Original_id);
+        public virtual int Update(int TestId, string Question, string CorrectAnswer, string WrongAnswers, global::System.Nullable<int> ImgId, int Original_Id, int Original_TestId, string Original_Question, string Original_CorrectAnswer, string Original_WrongAnswers, global::System.Nullable<int> Original_ImgId) {
+            return this.Update(TestId, Question, CorrectAnswer, WrongAnswers, ImgId, Original_Id, Original_TestId, Original_Question, Original_CorrectAnswer, Original_WrongAnswers, Original_ImgId, Original_Id);
         }
     }
     
@@ -5646,7 +5647,7 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class testsTableAdapter : global::System.ComponentModel.Component {
+    public partial class TestsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5660,7 +5661,7 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public testsTableAdapter() {
+        public TestsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5757,58 +5758,58 @@ SELECT id, test_id, question, correct_answer, wrong_answers, img_id FROM test_qu
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tests";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("amount", "amount");
-            tableMapping.ColumnMappings.Add("difficulty", "difficulty");
-            tableMapping.ColumnMappings.Add("category_id", "category_id");
-            tableMapping.ColumnMappings.Add("type", "type");
-            tableMapping.ColumnMappings.Add("img_id", "img_id");
-            tableMapping.ColumnMappings.Add("owner_id", "owner_id");
+            tableMapping.DataSetTable = "Tests";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Amount", "Amount");
+            tableMapping.ColumnMappings.Add("Difficulty", "Difficulty");
+            tableMapping.ColumnMappings.Add("CategoryId", "CategoryId");
+            tableMapping.ColumnMappings.Add("Type", "Type");
+            tableMapping.ColumnMappings.Add("ImgId", "ImgId");
+            tableMapping.ColumnMappings.Add("OwnerId", "OwnerId");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tests] WHERE (([id] = @Original_id) AND ([amount] = @Original_amount) AND ([difficulty] = @Original_difficulty) AND ([category_id] = @Original_category_id) AND ([type] = @Original_type) AND ((@IsNull_img_id = 1 AND [img_id] IS NULL) OR ([img_id] = @Original_img_id)) AND ([owner_id] = @Original_owner_id))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tests] WHERE (([Id] = @Original_Id) AND ([Amount] = @Original_Amount) AND ([Difficulty] = @Original_Difficulty) AND ([CategoryId] = @Original_CategoryId) AND ([Type] = @Original_Type) AND ((@IsNull_ImgId = 1 AND [ImgId] IS NULL) OR ([ImgId] = @Original_ImgId)) AND ([OwnerId] = @Original_OwnerId))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "difficulty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_owner_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Difficulty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CategoryId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OwnerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OwnerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tests] ([amount], [difficulty], [category_id], [type], [img_id], [owner_id]) VALUES (@amount, @difficulty, @category_id, @type, @img_id, @owner_id);
-SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tests] ([Amount], [Difficulty], [CategoryId], [Type], [ImgId], [OwnerId]) VALUES (@Amount, @Difficulty, @CategoryId, @Type, @ImgId, @OwnerId);
+SELECT Id, Amount, Difficulty, CategoryId, Type, ImgId, OwnerId FROM Tests WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "difficulty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@owner_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Difficulty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OwnerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OwnerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tests] SET [amount] = @amount, [difficulty] = @difficulty, [category_id] = @category_id, [type] = @type, [img_id] = @img_id, [owner_id] = @owner_id WHERE (([id] = @Original_id) AND ([amount] = @Original_amount) AND ([difficulty] = @Original_difficulty) AND ([category_id] = @Original_category_id) AND ([type] = @Original_type) AND ((@IsNull_img_id = 1 AND [img_id] IS NULL) OR ([img_id] = @Original_img_id)) AND ([owner_id] = @Original_owner_id));
-SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tests] SET [Amount] = @Amount, [Difficulty] = @Difficulty, [CategoryId] = @CategoryId, [Type] = @Type, [ImgId] = @ImgId, [OwnerId] = @OwnerId WHERE (([Id] = @Original_Id) AND ([Amount] = @Original_Amount) AND ([Difficulty] = @Original_Difficulty) AND ([CategoryId] = @Original_CategoryId) AND ([Type] = @Original_Type) AND ((@IsNull_ImgId = 1 AND [ImgId] IS NULL) OR ([ImgId] = @Original_ImgId)) AND ([OwnerId] = @Original_OwnerId));
+SELECT Id, Amount, Difficulty, CategoryId, Type, ImgId, OwnerId FROM Tests WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "difficulty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@owner_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "difficulty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_owner_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Difficulty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OwnerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OwnerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Difficulty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Difficulty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CategoryId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OwnerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OwnerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5824,8 +5825,7 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM dbo.tests" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT Id, Amount, Difficulty, CategoryId, Type, ImgId, OwnerId FROM dbo.Tests";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5833,7 +5833,7 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.testsDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.TestsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5846,9 +5846,9 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.testsDataTable GetData() {
+        public virtual QuizAppProjectDataSet.TestsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.testsDataTable dataTable = new QuizAppProjectDataSet.testsDataTable();
+            QuizAppProjectDataSet.TestsDataTable dataTable = new QuizAppProjectDataSet.TestsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5856,7 +5856,7 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.testsDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.TestsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5864,7 +5864,7 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tests");
+            return this.Adapter.Update(dataSet, "Tests");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5886,31 +5886,31 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_amount, string Original_difficulty, int Original_category_id, string Original_type, global::System.Nullable<int> Original_img_id, int Original_owner_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_amount));
-            if ((Original_difficulty == null)) {
-                throw new global::System.ArgumentNullException("Original_difficulty");
+        public virtual int Delete(int Original_Id, int Original_Amount, string Original_Difficulty, int Original_CategoryId, string Original_Type, global::System.Nullable<int> Original_ImgId, int Original_OwnerId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Amount));
+            if ((Original_Difficulty == null)) {
+                throw new global::System.ArgumentNullException("Original_Difficulty");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_difficulty));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Difficulty));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_category_id));
-            if ((Original_type == null)) {
-                throw new global::System.ArgumentNullException("Original_type");
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_CategoryId));
+            if ((Original_Type == null)) {
+                throw new global::System.ArgumentNullException("Original_Type");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_type));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Type));
             }
-            if ((Original_img_id.HasValue == true)) {
+            if ((Original_ImgId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_img_id.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_ImgId.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_owner_id));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_OwnerId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5931,28 +5931,28 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int amount, string difficulty, int category_id, string type, global::System.Nullable<int> img_id, int owner_id) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(amount));
-            if ((difficulty == null)) {
-                throw new global::System.ArgumentNullException("difficulty");
+        public virtual int Insert(int Amount, string Difficulty, int CategoryId, string Type, global::System.Nullable<int> ImgId, int OwnerId) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Amount));
+            if ((Difficulty == null)) {
+                throw new global::System.ArgumentNullException("Difficulty");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(difficulty));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Difficulty));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(category_id));
-            if ((type == null)) {
-                throw new global::System.ArgumentNullException("type");
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CategoryId));
+            if ((Type == null)) {
+                throw new global::System.ArgumentNullException("Type");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(type));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Type));
             }
-            if ((img_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(img_id.Value));
+            if ((ImgId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ImgId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(owner_id));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(OwnerId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5973,53 +5973,53 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int amount, string difficulty, int category_id, string type, global::System.Nullable<int> img_id, int owner_id, int Original_id, int Original_amount, string Original_difficulty, int Original_category_id, string Original_type, global::System.Nullable<int> Original_img_id, int Original_owner_id, int id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(amount));
-            if ((difficulty == null)) {
-                throw new global::System.ArgumentNullException("difficulty");
+        public virtual int Update(int Amount, string Difficulty, int CategoryId, string Type, global::System.Nullable<int> ImgId, int OwnerId, int Original_Id, int Original_Amount, string Original_Difficulty, int Original_CategoryId, string Original_Type, global::System.Nullable<int> Original_ImgId, int Original_OwnerId, int Id) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Amount));
+            if ((Difficulty == null)) {
+                throw new global::System.ArgumentNullException("Difficulty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(difficulty));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Difficulty));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(category_id));
-            if ((type == null)) {
-                throw new global::System.ArgumentNullException("type");
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CategoryId));
+            if ((Type == null)) {
+                throw new global::System.ArgumentNullException("Type");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(type));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Type));
             }
-            if ((img_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(img_id.Value));
+            if ((ImgId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ImgId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(owner_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_amount));
-            if ((Original_difficulty == null)) {
-                throw new global::System.ArgumentNullException("Original_difficulty");
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(OwnerId));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Amount));
+            if ((Original_Difficulty == null)) {
+                throw new global::System.ArgumentNullException("Original_Difficulty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_difficulty));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Difficulty));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_category_id));
-            if ((Original_type == null)) {
-                throw new global::System.ArgumentNullException("Original_type");
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_CategoryId));
+            if ((Original_Type == null)) {
+                throw new global::System.ArgumentNullException("Original_Type");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_type));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Type));
             }
-            if ((Original_img_id.HasValue == true)) {
+            if ((Original_ImgId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_img_id.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ImgId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_owner_id));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_OwnerId));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6040,8 +6040,8 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int amount, string difficulty, int category_id, string type, global::System.Nullable<int> img_id, int owner_id, int Original_id, int Original_amount, string Original_difficulty, int Original_category_id, string Original_type, global::System.Nullable<int> Original_img_id, int Original_owner_id) {
-            return this.Update(amount, difficulty, category_id, type, img_id, owner_id, Original_id, Original_amount, Original_difficulty, Original_category_id, Original_type, Original_img_id, Original_owner_id, Original_id);
+        public virtual int Update(int Amount, string Difficulty, int CategoryId, string Type, global::System.Nullable<int> ImgId, int OwnerId, int Original_Id, int Original_Amount, string Original_Difficulty, int Original_CategoryId, string Original_Type, global::System.Nullable<int> Original_ImgId, int Original_OwnerId) {
+            return this.Update(Amount, Difficulty, CategoryId, Type, ImgId, OwnerId, Original_Id, Original_Amount, Original_Difficulty, Original_CategoryId, Original_Type, Original_ImgId, Original_OwnerId, Original_Id);
         }
     }
     
@@ -6054,7 +6054,7 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class usersTableAdapter : global::System.ComponentModel.Component {
+    public partial class UsersTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6068,7 +6068,7 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public usersTableAdapter() {
+        public UsersTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6165,62 +6165,62 @@ SELECT id, amount, difficulty, category_id, type, img_id, owner_id FROM tests WH
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "users";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("email", "email");
-            tableMapping.ColumnMappings.Add("username", "username");
-            tableMapping.ColumnMappings.Add("password", "password");
-            tableMapping.ColumnMappings.Add("score", "score");
-            tableMapping.ColumnMappings.Add("max_score", "max_score");
-            tableMapping.ColumnMappings.Add("img_id", "img_id");
+            tableMapping.DataSetTable = "Users";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("Username", "Username");
+            tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("Score", "Score");
+            tableMapping.ColumnMappings.Add("MaxScore", "MaxScore");
+            tableMapping.ColumnMappings.Add("ImgId", "ImgId");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[users] WHERE (([id] = @Original_id) AND ([email] = @Original_email) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ((@IsNull_score = 1 AND [score] IS NULL) OR ([score] = @Original_score)) AND ((@IsNull_max_score = 1 AND [max_score] IS NULL) OR ([max_score] = @Original_max_score)) AND ((@IsNull_img_id = 1 AND [img_id] IS NULL) OR ([img_id] = @Original_img_id)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Users] WHERE (([Id] = @Original_Id) AND ([Email] = @Original_Email) AND ([Username] = @Original_Username) AND ([Password] = @Original_Password) AND ((@IsNull_Score = 1 AND [Score] IS NULL) OR ([Score] = @Original_Score)) AND ((@IsNull_MaxScore = 1 AND [MaxScore] IS NULL) OR ([MaxScore] = @Original_MaxScore)) AND ((@IsNull_ImgId = 1 AND [ImgId] IS NULL) OR ([ImgId] = @Original_ImgId)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_max_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "max_score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_max_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "max_score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxScore", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxScore", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxScore", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxScore", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[users] ([email], [username], [password], [score], [max_score], [img_id]) VALUES (@email, @username, @password, @score, @max_score, @img_id);
-SELECT id, email, username, password, score, max_score, img_id FROM users WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Users] ([Email], [Username], [Password], [Score], [MaxScore], [ImgId]) VALUES (@Email, @Username, @Password, @Score, @MaxScore, @ImgId);
+SELECT Id, Email, Username, Password, Score, MaxScore, ImgId FROM Users WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@max_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "max_score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxScore", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxScore", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[users] SET [email] = @email, [username] = @username, [password] = @password, [score] = @score, [max_score] = @max_score, [img_id] = @img_id WHERE (([id] = @Original_id) AND ([email] = @Original_email) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ((@IsNull_score = 1 AND [score] IS NULL) OR ([score] = @Original_score)) AND ((@IsNull_max_score = 1 AND [max_score] IS NULL) OR ([max_score] = @Original_max_score)) AND ((@IsNull_img_id = 1 AND [img_id] IS NULL) OR ([img_id] = @Original_img_id)));
-SELECT id, email, username, password, score, max_score, img_id FROM users WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Users] SET [Email] = @Email, [Username] = @Username, [Password] = @Password, [Score] = @Score, [MaxScore] = @MaxScore, [ImgId] = @ImgId WHERE (([Id] = @Original_Id) AND ([Email] = @Original_Email) AND ([Username] = @Original_Username) AND ([Password] = @Original_Password) AND ((@IsNull_Score = 1 AND [Score] IS NULL) OR ([Score] = @Original_Score)) AND ((@IsNull_MaxScore = 1 AND [MaxScore] IS NULL) OR ([MaxScore] = @Original_MaxScore)) AND ((@IsNull_ImgId = 1 AND [ImgId] IS NULL) OR ([ImgId] = @Original_ImgId)));
+SELECT Id, Email, Username, Password, Score, MaxScore, ImgId FROM Users WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@max_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "max_score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_max_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "max_score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_max_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "max_score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_img_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "img_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxScore", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxScore", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxScore", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxScore", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxScore", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxScore", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImgId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImgId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6236,7 +6236,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, email, username, password, score, max_score, img_id FROM dbo.users";
+            this._commandCollection[0].CommandText = "SELECT Id, Email, Username, Password, Score, MaxScore, ImgId FROM dbo.Users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6244,7 +6244,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizAppProjectDataSet.usersDataTable dataTable) {
+        public virtual int Fill(QuizAppProjectDataSet.UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6257,9 +6257,9 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizAppProjectDataSet.usersDataTable GetData() {
+        public virtual QuizAppProjectDataSet.UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizAppProjectDataSet.usersDataTable dataTable = new QuizAppProjectDataSet.usersDataTable();
+            QuizAppProjectDataSet.UsersDataTable dataTable = new QuizAppProjectDataSet.UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6267,7 +6267,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizAppProjectDataSet.usersDataTable dataTable) {
+        public virtual int Update(QuizAppProjectDataSet.UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6275,7 +6275,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QuizAppProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "users");
+            return this.Adapter.Update(dataSet, "Users");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6297,45 +6297,45 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_email, string Original_username, string Original_password, global::System.Nullable<int> Original_score, global::System.Nullable<int> Original_max_score, global::System.Nullable<int> Original_img_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_email == null)) {
-                throw new global::System.ArgumentNullException("Original_email");
+        public virtual int Delete(int Original_Id, string Original_Email, string Original_Username, string Original_Password, global::System.Nullable<int> Original_Score, global::System.Nullable<int> Original_MaxScore, global::System.Nullable<int> Original_ImgId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Email == null)) {
+                throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_email));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Email));
             }
-            if ((Original_username == null)) {
-                throw new global::System.ArgumentNullException("Original_username");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_username));
-            }
-            if ((Original_password == null)) {
-                throw new global::System.ArgumentNullException("Original_password");
+            if ((Original_Username == null)) {
+                throw new global::System.ArgumentNullException("Original_Username");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_password));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Username));
             }
-            if ((Original_score.HasValue == true)) {
+            if ((Original_Password == null)) {
+                throw new global::System.ArgumentNullException("Original_Password");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Password));
+            }
+            if ((Original_Score.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_score.Value));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Score.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_max_score.HasValue == true)) {
+            if ((Original_MaxScore.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_max_score.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_MaxScore.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_img_id.HasValue == true)) {
+            if ((Original_ImgId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_img_id.Value));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_ImgId.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
@@ -6361,39 +6361,39 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string email, string username, string password, global::System.Nullable<int> score, global::System.Nullable<int> max_score, global::System.Nullable<int> img_id) {
-            if ((email == null)) {
-                throw new global::System.ArgumentNullException("email");
+        public virtual int Insert(string Email, string Username, string Password, global::System.Nullable<int> Score, global::System.Nullable<int> MaxScore, global::System.Nullable<int> ImgId) {
+            if ((Email == null)) {
+                throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(email));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Email));
             }
-            if ((username == null)) {
-                throw new global::System.ArgumentNullException("username");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(username));
-            }
-            if ((password == null)) {
-                throw new global::System.ArgumentNullException("password");
+            if ((Username == null)) {
+                throw new global::System.ArgumentNullException("Username");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(password));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Username));
             }
-            if ((score.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(score.Value));
+            if ((Password == null)) {
+                throw new global::System.ArgumentNullException("Password");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Password));
+            }
+            if ((Score.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Score.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((max_score.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(max_score.Value));
+            if ((MaxScore.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(MaxScore.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((img_id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(img_id.Value));
+            if ((ImgId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ImgId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -6418,87 +6418,87 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string email, string username, string password, global::System.Nullable<int> score, global::System.Nullable<int> max_score, global::System.Nullable<int> img_id, int Original_id, string Original_email, string Original_username, string Original_password, global::System.Nullable<int> Original_score, global::System.Nullable<int> Original_max_score, global::System.Nullable<int> Original_img_id, int id) {
-            if ((email == null)) {
-                throw new global::System.ArgumentNullException("email");
+        public virtual int Update(string Email, string Username, string Password, global::System.Nullable<int> Score, global::System.Nullable<int> MaxScore, global::System.Nullable<int> ImgId, int Original_Id, string Original_Email, string Original_Username, string Original_Password, global::System.Nullable<int> Original_Score, global::System.Nullable<int> Original_MaxScore, global::System.Nullable<int> Original_ImgId, int Id) {
+            if ((Email == null)) {
+                throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(email));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Email));
             }
-            if ((username == null)) {
-                throw new global::System.ArgumentNullException("username");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(username));
-            }
-            if ((password == null)) {
-                throw new global::System.ArgumentNullException("password");
+            if ((Username == null)) {
+                throw new global::System.ArgumentNullException("Username");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(password));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Username));
             }
-            if ((score.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(score.Value));
+            if ((Password == null)) {
+                throw new global::System.ArgumentNullException("Password");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Password));
+            }
+            if ((Score.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Score.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((max_score.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(max_score.Value));
+            if ((MaxScore.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(MaxScore.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((img_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(img_id.Value));
+            if ((ImgId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ImgId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
-            if ((Original_email == null)) {
-                throw new global::System.ArgumentNullException("Original_email");
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id));
+            if ((Original_Email == null)) {
+                throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_email));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Email));
             }
-            if ((Original_username == null)) {
-                throw new global::System.ArgumentNullException("Original_username");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_username));
-            }
-            if ((Original_password == null)) {
-                throw new global::System.ArgumentNullException("Original_password");
+            if ((Original_Username == null)) {
+                throw new global::System.ArgumentNullException("Original_Username");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_password));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Username));
             }
-            if ((Original_score.HasValue == true)) {
+            if ((Original_Password == null)) {
+                throw new global::System.ArgumentNullException("Original_Password");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Password));
+            }
+            if ((Original_Score.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_score.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Score.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_max_score.HasValue == true)) {
+            if ((Original_MaxScore.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_max_score.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_MaxScore.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_img_id.HasValue == true)) {
+            if ((Original_ImgId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_img_id.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_ImgId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6519,8 +6519,8 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string email, string username, string password, global::System.Nullable<int> score, global::System.Nullable<int> max_score, global::System.Nullable<int> img_id, int Original_id, string Original_email, string Original_username, string Original_password, global::System.Nullable<int> Original_score, global::System.Nullable<int> Original_max_score, global::System.Nullable<int> Original_img_id) {
-            return this.Update(email, username, password, score, max_score, img_id, Original_id, Original_email, Original_username, Original_password, Original_score, Original_max_score, Original_img_id, Original_id);
+        public virtual int Update(string Email, string Username, string Password, global::System.Nullable<int> Score, global::System.Nullable<int> MaxScore, global::System.Nullable<int> ImgId, int Original_Id, string Original_Email, string Original_Username, string Original_Password, global::System.Nullable<int> Original_Score, global::System.Nullable<int> Original_MaxScore, global::System.Nullable<int> Original_ImgId) {
+            return this.Update(Email, Username, Password, Score, MaxScore, ImgId, Original_Id, Original_Email, Original_Username, Original_Password, Original_Score, Original_MaxScore, Original_ImgId, Original_Id);
         }
     }
     
@@ -6536,19 +6536,19 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         
         private UpdateOrderOption _updateOrder;
         
-        private attempt_responsesTableAdapter _attempt_responsesTableAdapter;
+        private AttemptResponsesTableAdapter _attemptResponsesTableAdapter;
         
-        private attemptsTableAdapter _attemptsTableAdapter;
+        private AttemptsTableAdapter _attemptsTableAdapter;
         
-        private categoriesTableAdapter _categoriesTableAdapter;
+        private CategoriesTableAdapter _categoriesTableAdapter;
         
-        private imagesTableAdapter _imagesTableAdapter;
+        private ImagesTableAdapter _imagesTableAdapter;
         
-        private test_questionsTableAdapter _test_questionsTableAdapter;
+        private TestQuestionsTableAdapter _testQuestionsTableAdapter;
         
-        private testsTableAdapter _testsTableAdapter;
+        private TestsTableAdapter _testsTableAdapter;
         
-        private usersTableAdapter _usersTableAdapter;
+        private UsersTableAdapter _usersTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -6570,12 +6570,12 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public attempt_responsesTableAdapter attempt_responsesTableAdapter {
+        public AttemptResponsesTableAdapter AttemptResponsesTableAdapter {
             get {
-                return this._attempt_responsesTableAdapter;
+                return this._attemptResponsesTableAdapter;
             }
             set {
-                this._attempt_responsesTableAdapter = value;
+                this._attemptResponsesTableAdapter = value;
             }
         }
         
@@ -6584,7 +6584,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public attemptsTableAdapter attemptsTableAdapter {
+        public AttemptsTableAdapter AttemptsTableAdapter {
             get {
                 return this._attemptsTableAdapter;
             }
@@ -6598,7 +6598,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public categoriesTableAdapter categoriesTableAdapter {
+        public CategoriesTableAdapter CategoriesTableAdapter {
             get {
                 return this._categoriesTableAdapter;
             }
@@ -6612,7 +6612,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public imagesTableAdapter imagesTableAdapter {
+        public ImagesTableAdapter ImagesTableAdapter {
             get {
                 return this._imagesTableAdapter;
             }
@@ -6626,12 +6626,12 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public test_questionsTableAdapter test_questionsTableAdapter {
+        public TestQuestionsTableAdapter TestQuestionsTableAdapter {
             get {
-                return this._test_questionsTableAdapter;
+                return this._testQuestionsTableAdapter;
             }
             set {
-                this._test_questionsTableAdapter = value;
+                this._testQuestionsTableAdapter = value;
             }
         }
         
@@ -6640,7 +6640,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public testsTableAdapter testsTableAdapter {
+        public TestsTableAdapter TestsTableAdapter {
             get {
                 return this._testsTableAdapter;
             }
@@ -6654,7 +6654,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public usersTableAdapter usersTableAdapter {
+        public UsersTableAdapter UsersTableAdapter {
             get {
                 return this._usersTableAdapter;
             }
@@ -6682,9 +6682,9 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._attempt_responsesTableAdapter != null) 
-                            && (this._attempt_responsesTableAdapter.Connection != null))) {
-                    return this._attempt_responsesTableAdapter.Connection;
+                if (((this._attemptResponsesTableAdapter != null) 
+                            && (this._attemptResponsesTableAdapter.Connection != null))) {
+                    return this._attemptResponsesTableAdapter.Connection;
                 }
                 if (((this._attemptsTableAdapter != null) 
                             && (this._attemptsTableAdapter.Connection != null))) {
@@ -6698,9 +6698,9 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                             && (this._imagesTableAdapter.Connection != null))) {
                     return this._imagesTableAdapter.Connection;
                 }
-                if (((this._test_questionsTableAdapter != null) 
-                            && (this._test_questionsTableAdapter.Connection != null))) {
-                    return this._test_questionsTableAdapter.Connection;
+                if (((this._testQuestionsTableAdapter != null) 
+                            && (this._testQuestionsTableAdapter.Connection != null))) {
+                    return this._testQuestionsTableAdapter.Connection;
                 }
                 if (((this._testsTableAdapter != null) 
                             && (this._testsTableAdapter.Connection != null))) {
@@ -6723,7 +6723,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._attempt_responsesTableAdapter != null)) {
+                if ((this._attemptResponsesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._attemptsTableAdapter != null)) {
@@ -6735,7 +6735,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 if ((this._imagesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._test_questionsTableAdapter != null)) {
+                if ((this._testQuestionsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._testsTableAdapter != null)) {
@@ -6756,7 +6756,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         private int UpdateUpdatedRows(QuizAppProjectDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._imagesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.images.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Images.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -6765,7 +6765,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._categoriesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.categories.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Categories.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -6774,7 +6774,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -6783,7 +6783,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._testsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tests.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Tests.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -6792,7 +6792,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._attemptsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.attempts.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Attempts.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -6800,21 +6800,21 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._test_questionsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.test_questions.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._testQuestionsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TestQuestions.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._test_questionsTableAdapter.Update(updatedRows));
+                    result = (result + this._testQuestionsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._attempt_responsesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.attempt_responses.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._attemptResponsesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AttemptResponses.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._attempt_responsesTableAdapter.Update(updatedRows));
+                    result = (result + this._attemptResponsesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6829,7 +6829,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         private int UpdateInsertedRows(QuizAppProjectDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._imagesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.images.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Images.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._imagesTableAdapter.Update(addedRows));
@@ -6837,7 +6837,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._categoriesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.categories.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Categories.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._categoriesTableAdapter.Update(addedRows));
@@ -6845,7 +6845,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._usersTableAdapter.Update(addedRows));
@@ -6853,7 +6853,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._testsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tests.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Tests.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._testsTableAdapter.Update(addedRows));
@@ -6861,26 +6861,26 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._attemptsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.attempts.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Attempts.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._attemptsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._test_questionsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.test_questions.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._testQuestionsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TestQuestions.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._test_questionsTableAdapter.Update(addedRows));
+                    result = (result + this._testQuestionsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._attempt_responsesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.attempt_responses.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._attemptResponsesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AttemptResponses.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._attempt_responsesTableAdapter.Update(addedRows));
+                    result = (result + this._attemptResponsesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6894,24 +6894,24 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(QuizAppProjectDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._attempt_responsesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.attempt_responses.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._attemptResponsesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AttemptResponses.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._attempt_responsesTableAdapter.Update(deletedRows));
+                    result = (result + this._attemptResponsesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._test_questionsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.test_questions.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._testQuestionsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TestQuestions.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._test_questionsTableAdapter.Update(deletedRows));
+                    result = (result + this._testQuestionsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
             if ((this._attemptsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.attempts.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Attempts.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._attemptsTableAdapter.Update(deletedRows));
@@ -6919,7 +6919,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._testsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tests.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Tests.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._testsTableAdapter.Update(deletedRows));
@@ -6927,7 +6927,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._usersTableAdapter.Update(deletedRows));
@@ -6935,7 +6935,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._categoriesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.categories.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Categories.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._categoriesTableAdapter.Update(deletedRows));
@@ -6943,7 +6943,7 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 }
             }
             if ((this._imagesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.images.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Images.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._imagesTableAdapter.Update(deletedRows));
@@ -6989,8 +6989,8 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._attempt_responsesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._attempt_responsesTableAdapter.Connection) == false))) {
+            if (((this._attemptResponsesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._attemptResponsesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -7009,8 +7009,8 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._test_questionsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._test_questionsTableAdapter.Connection) == false))) {
+            if (((this._testQuestionsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._testQuestionsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -7056,13 +7056,13 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._attempt_responsesTableAdapter != null)) {
-                    revertConnections.Add(this._attempt_responsesTableAdapter, this._attempt_responsesTableAdapter.Connection);
-                    this._attempt_responsesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._attempt_responsesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._attempt_responsesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._attempt_responsesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._attempt_responsesTableAdapter.Adapter);
+                if ((this._attemptResponsesTableAdapter != null)) {
+                    revertConnections.Add(this._attemptResponsesTableAdapter, this._attemptResponsesTableAdapter.Connection);
+                    this._attemptResponsesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._attemptResponsesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._attemptResponsesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._attemptResponsesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._attemptResponsesTableAdapter.Adapter);
                     }
                 }
                 if ((this._attemptsTableAdapter != null)) {
@@ -7092,13 +7092,13 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                         adaptersWithAcceptChangesDuringUpdate.Add(this._imagesTableAdapter.Adapter);
                     }
                 }
-                if ((this._test_questionsTableAdapter != null)) {
-                    revertConnections.Add(this._test_questionsTableAdapter, this._test_questionsTableAdapter.Connection);
-                    this._test_questionsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._test_questionsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._test_questionsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._test_questionsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._test_questionsTableAdapter.Adapter);
+                if ((this._testQuestionsTableAdapter != null)) {
+                    revertConnections.Add(this._testQuestionsTableAdapter, this._testQuestionsTableAdapter.Connection);
+                    this._testQuestionsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._testQuestionsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._testQuestionsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._testQuestionsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._testQuestionsTableAdapter.Adapter);
                     }
                 }
                 if ((this._testsTableAdapter != null)) {
@@ -7177,9 +7177,9 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._attempt_responsesTableAdapter != null)) {
-                    this._attempt_responsesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._attempt_responsesTableAdapter]));
-                    this._attempt_responsesTableAdapter.Transaction = null;
+                if ((this._attemptResponsesTableAdapter != null)) {
+                    this._attemptResponsesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._attemptResponsesTableAdapter]));
+                    this._attemptResponsesTableAdapter.Transaction = null;
                 }
                 if ((this._attemptsTableAdapter != null)) {
                     this._attemptsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._attemptsTableAdapter]));
@@ -7193,9 +7193,9 @@ SELECT id, email, username, password, score, max_score, img_id FROM users WHERE 
                     this._imagesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._imagesTableAdapter]));
                     this._imagesTableAdapter.Transaction = null;
                 }
-                if ((this._test_questionsTableAdapter != null)) {
-                    this._test_questionsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._test_questionsTableAdapter]));
-                    this._test_questionsTableAdapter.Transaction = null;
+                if ((this._testQuestionsTableAdapter != null)) {
+                    this._testQuestionsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testQuestionsTableAdapter]));
+                    this._testQuestionsTableAdapter.Transaction = null;
                 }
                 if ((this._testsTableAdapter != null)) {
                     this._testsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testsTableAdapter]));

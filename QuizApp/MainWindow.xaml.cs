@@ -31,7 +31,7 @@ namespace QuizApp
         {
             InitializeComponent();
         }
-        /*private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             DlgTakeTest inputDialog = new DlgTakeTest();
             if (inputDialog.ShowDialog() == true)

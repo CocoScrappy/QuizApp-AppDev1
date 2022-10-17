@@ -103,6 +103,8 @@
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryTemp.cs" />
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="DlgCreateTest.xaml.cs">
       <DependentUpon>DlgCreateTest.xaml</DependentUpon>
     </Compile>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using QuizApp.UserManagement;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,17 @@ namespace QuizApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Registration RegistrationWindow = new Registration();
+            RegistrationWindow.Show();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

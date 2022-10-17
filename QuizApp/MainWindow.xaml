@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+        <!--<Button Name="Login" Click="LoginPageRedirect_Click">
+            Login
+        </Button>-->
+        <Button Name="Register" Click="Registration_Click">
+            Registration
+        </Button>
+        </StackPanel>
     </Grid>
 </Window>

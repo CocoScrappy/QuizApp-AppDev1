@@ -22,8 +22,10 @@ namespace QuizApp
     
         public int Id { get; set; }
         public string Name { get; set; }
+        public Nullable<int> ImgId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Test> Tests { get; set; }
+        public virtual Image Image { get; set; }
     }
 }

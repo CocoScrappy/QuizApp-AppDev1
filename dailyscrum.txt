@@ -1,6 +1,19 @@
 
 ---- SCRUM 5 ----
 
+2022/10/17 Alina 
+
+1. Done / not done since last scrum: 
+
+- Because of conflict debugging, did not progress since yesterday
+
+2. To do until next Scrum: 
+- Finish implementing changing "pages" 
+- Style Louis work
+
+3. Need assistance / figure things out 
+- Still figuring out conflict with my personal custom resource libraries and Material Design's resource library
+
 2022/10/17 Louis 
 
 1. Done / not done since last scrum: 
@@ -18,6 +31,22 @@
 
 
 ---- SCRUM 4 ----
+2022/10/16 Alina 
+
+1. Done / not done since last scrum: 
+
+- Created the basic UI for the main window
+- Created custom resource libraries in the themes folder
+- Installed Material Design
+- Solved conflicts related to merge
+
+2. To do until next Scrum: 
+
+- Resolve conflicts, 
+- Finish implementing changing "pages" 
+
+3. Need assistance / figure things out 
+- Still figuring out conflict with my personal custom resource libraries and Material Design's resource library
 
 2022/10/16 Dmitry  
 
@@ -58,6 +87,22 @@
 
 
 ---- SCRUM 3 ---- 
+
+2022/10/15 Alina 
+
+1. Done / not done since last scrum: 
+
+- Watched tutorials about designing a modern UI in WPF
+
+- Setup project with new DB
+
+2. To do until next Scrum: 
+
+- Create UI for main window
+
+3. Need assistance / figure things out 
+
+
 
 2022/10/15 Dmitry 
 

@@ -51,20 +51,21 @@ namespace QuizApp
             
             //find test entity
             ////FIXME:: Find for dynamic testId
-            Test = Globals.DbContextAutoGen.Tests.Where(t => t.Id == 7).OfType<Test>().FirstOrDefault();
+            Test = Globals.DbContextAutoGen.Tests.Where(t => t.Id == 11).OfType<Test>().FirstOrDefault();
             if (Test == null)
             {
                 MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             // populate questions list
-            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == 7).OfType<TestQuestion>().ToList();
+            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == 11).OfType<TestQuestion>().ToList();
             if (TestQuestions == null || TestQuestions.Count() == 0)
             {
                 MessageBox.Show(this, "No questions were found for this Test", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             CurrentIndex = 0;
+            AnsweredCorrectly = 0;
             ListLenght = TestQuestions.Count();
             PaintCurrentQuestion();
             PlayerResponses = new List<AttemptRespons>();
@@ -87,24 +88,36 @@ namespace QuizApp
             {
                 answers.Add(wrongAnswer);
             }
-
-            //shuffle answer positions
+            //reset button styles
+            BeforeAnsweredControls();
+            if(wrongAnswers.Length == 1)
+            {// setting up for True / False Questions
+                BtnAnswer1.Content = "True";
+                BtnAnswer2.Content = "False";
+                BtnAnswer3.Visibility = Visibility.Hidden;
+                BtnAnswer4.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+            //shuffle answer positions for multiple choice
             List<int> positions = new List<int> { 1, 2, 3, 0 };
             Random rand = new Random();
             List<int> shuffledPositions = positions.OrderBy(_ => rand.Next()).ToList();
 
-            BeforeAnsweredControls();
-
-            BtnNext.IsEnabled = false;
-            BtnNext.Visibility = Visibility.Hidden;
             BtnAnswer1.Content = answers[shuffledPositions[0]];
             BtnAnswer2.Content = answers[shuffledPositions[1]];
             BtnAnswer3.Content = answers[shuffledPositions[2]];
             BtnAnswer4.Content = answers[shuffledPositions[3]];
+            }
+
+            
         }
         //Style when going to next question
         private void BeforeAnsweredControls()
         {
+            BtnNext.IsEnabled = false;
+            BtnNext.Visibility = Visibility.Hidden;
+
             BtnAnswer1.Background = default;
             BtnAnswer2.Background = default;
             BtnAnswer3.Background = default;
@@ -114,6 +127,9 @@ namespace QuizApp
             BtnAnswer2.IsEnabled = true;
             BtnAnswer3.IsEnabled = true;
             BtnAnswer4.IsEnabled = true;
+
+            BtnAnswer3.Visibility = Visibility.Visible;
+            BtnAnswer4.Visibility = Visibility.Visible;
         }
         //style after answering question and waiting to go to next
         private void AfterAnsweredControls()
@@ -135,7 +151,7 @@ namespace QuizApp
             if (CheckAnswer(answer))
             {
                 BtnAnswer1.Background = Brushes.Green;
-                AnsweredCorrectly = +1;
+                AnsweredCorrectly++;
                 isCorrect = true;
             }
             else
@@ -156,7 +172,7 @@ namespace QuizApp
             if (CheckAnswer(answer))
             {
                 BtnAnswer2.Background = Brushes.Green;
-                AnsweredCorrectly = +1;
+                AnsweredCorrectly++;
                 isCorrect = true;
             }
             else
@@ -176,7 +192,7 @@ namespace QuizApp
             if (CheckAnswer(answer))
             {
                 BtnAnswer3.Background = Brushes.Green;
-                AnsweredCorrectly = +1;
+                AnsweredCorrectly++;
                 isCorrect = true;
             }
             else
@@ -196,7 +212,7 @@ namespace QuizApp
             if (CheckAnswer(answer))
             {
                 BtnAnswer4.Background = Brushes.Green;
-                AnsweredCorrectly = +1;
+                AnsweredCorrectly++;
                 isCorrect = true;
             }
             else

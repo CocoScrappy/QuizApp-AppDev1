@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -66,6 +67,7 @@ namespace QuizApp
             CurrentIndex = 0;
             ListLenght = TestQuestions.Count();
             PaintCurrentQuestion();
+            PlayerResponses = new List<AttemptRespons>();
 
         }
 
@@ -75,7 +77,7 @@ namespace QuizApp
             LblQuestionNumber.Content = QuestionNumber;
 
             //Find out Question parameters
-            TxblQuestion.Text = TestQuestions[CurrentIndex].Question;
+            TxblQuestion.Text = HttpUtility.HtmlDecode(TestQuestions[CurrentIndex].Question);
             //create answer list with Correct answer at index 0
             List<string> answers = new List<string> { TestQuestions[CurrentIndex].CorrectAnswer };
 
@@ -225,6 +227,7 @@ namespace QuizApp
             }
             else
             {
+                SaveAttempt();
                 BtnNext.Content = "Show Results";
                 BtnNext.Width += 45;
                 DlgTestResults testResults = new DlgTestResults(AnsweredCorrectly, ListLenght);
@@ -239,6 +242,7 @@ namespace QuizApp
 
         private void SaveAttempt()
         {
+            Attempt Attempt = new Attempt();
 
             Attempt.TestId = Test.Id;
             Attempt.PlayerId = 1;

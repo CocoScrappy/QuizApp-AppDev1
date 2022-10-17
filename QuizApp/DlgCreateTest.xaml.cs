@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -163,9 +164,9 @@ namespace QuizApp
                     //Get Test Id back for Test Questions fields
                     TestQuestion dbQuestion = new TestQuestion();
                     dbQuestion.TestId = testId;
-                    dbQuestion.Question = question.Question;
-                    dbQuestion.CorrectAnswer = question.Correct_Answer;
-                    dbQuestion.WrongAnswers = wrong;
+                    dbQuestion.Question = HttpUtility.HtmlDecode(question.Question);
+                    dbQuestion.CorrectAnswer = HttpUtility.HtmlDecode(question.Correct_Answer);
+                    dbQuestion.WrongAnswers = HttpUtility.HtmlDecode(wrong);
                     
                 try { 
                     //Add and Save to database

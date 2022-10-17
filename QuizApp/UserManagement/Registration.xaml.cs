@@ -29,7 +29,7 @@ namespace QuizApp.UserManagement
         }
 
 
-        private QuizAppProjectEntities quizAppProjectEntities;
+        //private QuizAppProjectEntities quizAppProjectEntities;
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
@@ -51,11 +51,11 @@ namespace QuizApp.UserManagement
                     byte[] bits = new byte[height * stride];
                     bmp.CopyPixels(bits, stride, 0);
                     Image avatar = new Image { Image1 = bits }; // ArgumentException
-                    using (var context = new QuizAppProjectEntities())
+                    using (Globals.DbContextAutoGen)
                     {
-                        context.Images.Add(avatar); // adds the image to the DbSet in memory
-                        context.SaveChanges(); // commits the changes to the database
-                        imgId = context.Images.Where(Images => Images.Image1 == bits).Single().Id;
+                        Globals.DbContextAutoGen.Images.Add(avatar); // adds the image to the DbSet in memory
+                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+                        imgId = Globals.DbContextAutoGen.Images.Where(Images => Images.Image1 == bits).Single().Id;
                     }
                 }
                 string myPassword = Pass.Password;
@@ -66,19 +66,19 @@ namespace QuizApp.UserManagement
                 if (imgId != -1)
                 {
                     User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
-                    using (var context = new QuizAppProjectEntities())
+                    using (Globals.DbContextAutoGen)
                     {
-                        context.Users.Add(newUser); // adds the image to the DbSet in memory
-                        context.SaveChanges(); // commits the changes to the database
+                        Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
+                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
                     }
                 }
                 else
                 {
                     User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
-                    using (var context = new QuizAppProjectEntities())
+                    using (Globals.DbContextAutoGen)
                     {
-                        context.Users.Add(newUser); // adds the image to the DbSet in memory
-                        context.SaveChanges(); // commits the changes to the database
+                        Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
+                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
                     }
                 }
 

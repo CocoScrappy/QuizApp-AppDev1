@@ -300,8 +300,6 @@
           <Property Name="ImgId" Type="Int32" />
           <NavigationProperty Name="Image" Relationship="Self.FK__Categorie__ImgId__797309D9" FromRole="Categories" ToRole="Images" />
           <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__CategoryI__74AE54BC" FromRole="Categories" ToRole="Tests" />
-          <Property Name="ImgId" Type="Int32" />
-          <NavigationProperty Name="Image" Relationship="QuizAppProjectModel.FK__Categorie__ImgId__797309D9" FromRole="Category" ToRole="Image" />
         </EntityType>
         <EntityType Name="Image">
           <Key>
@@ -313,7 +311,6 @@
           <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__ImgId__72C60C4A" FromRole="Images" ToRole="TestQuestions" />
           <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__ImgId__75A278F5" FromRole="Images" ToRole="Tests" />
           <NavigationProperty Name="Users" Relationship="Self.FK__Users__ImgId__778AC167" FromRole="Images" ToRole="Users" />
-          <NavigationProperty Name="Categories" Relationship="QuizAppProjectModel.FK__Categorie__ImgId__797309D9" FromRole="Image" ToRole="Category" />
         </EntityType>
         <EntityType Name="TestQuestion">
           <Key>
@@ -545,23 +542,7 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Tests" EntitySet="Tests" />
           </AssociationSet>
-          <AssociationSet Name="FK__Categorie__ImgId__797309D9" Association="QuizAppProjectModel.FK__Categorie__ImgId__797309D9">
-            <End Role="Image" EntitySet="Images" />
-            <End Role="Category" EntitySet="Categories" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK__Categorie__ImgId__797309D9">
-          <End Type="QuizAppProjectModel.Image" Role="Image" Multiplicity="0..1" />
-          <End Type="QuizAppProjectModel.Category" Role="Category" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Image">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Category">
-              <PropertyRef Name="ImgId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -594,7 +575,6 @@
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="QuizAppProjectModel.Category">
               <MappingFragment StoreEntitySet="Categories">
-                <ScalarProperty Name="ImgId" ColumnName="ImgId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ImgId" ColumnName="ImgId" />

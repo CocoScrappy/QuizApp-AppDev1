@@ -9,17 +9,17 @@ namespace QuizApp
 {
     internal class Globals
     {
-        private static QuizAppProjectEntities _DbContextSingleton;
+        private static QuizAppProjectEntities1 _DbContextSingleton;
 
         private static HttpClient _clientSingleton;
 
-        public static QuizAppProjectEntities DbContextAutoGen
+        public static QuizAppProjectEntities1 DbContextAutoGen
         {
             get
             {
                 if( _DbContextSingleton == null)
                 {
-                    _DbContextSingleton = new QuizAppProjectEntities();
+                    _DbContextSingleton = new QuizAppProjectEntities1();
                 }
                 return _DbContextSingleton;
             }

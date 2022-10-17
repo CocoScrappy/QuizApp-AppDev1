@@ -19,10 +19,8 @@ namespace QuizApp
         {
             this.Tests = new HashSet<Test>();
         }
-    
         public int Id { get; set; }
         public string Name { get; set; }
-    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Test> Tests { get; set; }
     }

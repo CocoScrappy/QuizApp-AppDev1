@@ -47,6 +47,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.9.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.0.9\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.6.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.6.1\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -65,6 +74,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -92,8 +102,24 @@
     <Compile Include="Category.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="CategoryTemp.cs" />
+    <Compile Include="DlgCreateTest.xaml.cs">
+      <DependentUpon>DlgCreateTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgTakeTest.xaml.cs">
+      <DependentUpon>DlgTakeTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DlgTestResults.xaml.cs">
+      <DependentUpon>DlgTestResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Image.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuizAppProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="QuizApp_dbContext.Context.cs">
       <AutoGen>True</AutoGen>
@@ -122,6 +148,16 @@
     <Compile Include="UserManagement\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Page Include="DlgCreateTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DlgTakeTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DlgTestResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,6 +170,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Theme\TextBoxTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\MenuButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserManagement\Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,11 +201,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <EntityDeploy Include="QuizApp_dbContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuizApp_dbContext.Designer.cs</LastGenOutput>
@@ -169,9 +208,52 @@
     <None Include="QuizApp_dbContext.edmx.diagram">
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>
     </None>
+    <Resource Include="Fonts\Poppins\Poppins-Black.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-BlackItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-Bold.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-BoldItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-ExtraLight.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-Italic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-Light.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-LightItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-Medium.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-MediumItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-Regular.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-SemiBold.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-Thin.ttf" />
+    <Resource Include="Fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuizAppProjectDataSet.xsc">
+      <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuizAppProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuizAppProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuizAppProjectDataSet.xss">
+      <DependentUpon>QuizAppProjectDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="MVVM\Model\" />
+    <Folder Include="MVVM\ViewModel\" />
+    <Folder Include="MVVM\View\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="QuizApp_dbContext.Context.tt">
@@ -198,6 +280,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets'))" />
   </Target>
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" />
 </Project>

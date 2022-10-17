@@ -297,6 +297,8 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ImgId" Type="Int32" />
+          <NavigationProperty Name="Image" Relationship="Self.FK__Categorie__ImgId__797309D9" FromRole="Categories" ToRole="Images" />
           <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__CategoryI__74AE54BC" FromRole="Categories" ToRole="Tests" />
           <Property Name="ImgId" Type="Int32" />
           <NavigationProperty Name="Image" Relationship="QuizAppProjectModel.FK__Categorie__ImgId__797309D9" FromRole="Category" ToRole="Image" />
@@ -307,6 +309,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK__Categorie__ImgId__797309D9" FromRole="Images" ToRole="Categories" />
           <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__ImgId__72C60C4A" FromRole="Images" ToRole="TestQuestions" />
           <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__ImgId__75A278F5" FromRole="Images" ToRole="Tests" />
           <NavigationProperty Name="Users" Relationship="Self.FK__Users__ImgId__778AC167" FromRole="Images" ToRole="Users" />
@@ -406,6 +409,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Categorie__ImgId__797309D9">
+          <End Role="Images" Type="Self.Image" Multiplicity="0..1" />
+          <End Role="Categories" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Categories">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Tests__CategoryI__74AE54BC">
           <End Role="Categories" Type="Self.Category" Multiplicity="1" />
           <End Role="Tests" Type="Self.Test" Multiplicity="*" />
@@ -478,7 +493,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuizAppProjectEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuizAppProjectEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AttemptResponses" EntityType="Self.AttemptRespons" />
           <EntitySet Name="Attempts" EntityType="Self.Attempt" />
           <EntitySet Name="Categories" EntityType="Self.Category" />
@@ -501,6 +516,10 @@
           <AssociationSet Name="FK__Attempts__TestId__71D1E811" Association="Self.FK__Attempts__TestId__71D1E811">
             <End Role="Tests" EntitySet="Tests" />
             <End Role="Attempts" EntitySet="Attempts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Categorie__ImgId__797309D9" Association="Self.FK__Categorie__ImgId__797309D9">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="Categories" EntitySet="Categories" />
           </AssociationSet>
           <AssociationSet Name="FK__Tests__CategoryI__74AE54BC" Association="Self.FK__Tests__CategoryI__74AE54BC">
             <End Role="Categories" EntitySet="Categories" />
@@ -548,7 +567,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuizAppProjectModelStoreContainer" CdmEntityContainer="QuizAppProjectEntities">
+        <EntityContainerMapping StorageEntityContainer="QuizAppProjectModelStoreContainer" CdmEntityContainer="QuizAppProjectEntities1">
           <EntitySetMapping Name="AttemptResponses">
             <EntityTypeMapping TypeName="QuizAppProjectModel.AttemptRespons">
               <MappingFragment StoreEntitySet="AttemptResponses">
@@ -578,6 +597,7 @@
                 <ScalarProperty Name="ImgId" ColumnName="ImgId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImgId" ColumnName="ImgId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

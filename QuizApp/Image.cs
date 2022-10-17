@@ -17,6 +17,7 @@ namespace QuizApp
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Image()
         {
+            this.Categories = new HashSet<Category>();
             this.TestQuestions = new HashSet<TestQuestion>();
             this.Tests = new HashSet<Test>();
             this.Users = new HashSet<User>();
@@ -26,6 +27,8 @@ namespace QuizApp
         public int Id { get; set; }
         public byte[] Image1 { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Category> Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TestQuestion> TestQuestions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

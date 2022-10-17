@@ -1,3 +1,22 @@
+
+---- SCRUM 5 ----
+
+2022/10/17 Louis 
+
+1. Done / not done since last scrum: 
+
+- dialog take test
+- display questions from testId
+- show final result
+
+2. To do until next Scrum: 
+
+- save answers and attempts to database 
+
+3. Need assistance / figure things out 
+- changing button style programatically (style templates)
+
+
 ---- SCRUM 4 ----
 
 2022/10/16 Dmitry  

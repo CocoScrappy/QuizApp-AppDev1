@@ -1,5 +1,24 @@
 ---- SCRUM 4 ----
 
+2022/10/16 Dmitry  
+
+1. Done / not done since last scrum: 
+
+- User registration - DONE
+- User Login - NOT DONE
+- Come up with overall file structure for the project  - Partially Done
+
+2. To do until next Scrum: 
+
+- User Login
+- Come up with overall file structure for the project
+- Integrate everyone's codes
+
+3. Need assistance / figure things out 
+
+- have merge conflicts we all need to look at
+
+
 2022/10/16 Louis 
 
 1. Done / not done since last scrum: 
@@ -21,7 +40,7 @@
 
 ---- SCRUM 3 ---- 
 
-2022/10/13 Dmitry  -  SCRUM lost when copying
+2022/10/15 Dmitry 
 
 1. Done / not done since last scrum: 
 
@@ -33,7 +52,8 @@
 
 2. To do until next Scrum: 
 
-- User registration and Login
+- User registration 
+- User Login
 - Come up with overall file structure for the project
 
 3. Need assistance / figure things out 

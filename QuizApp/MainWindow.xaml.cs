@@ -24,7 +24,6 @@ namespace QuizApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        HttpClient client = new HttpClient();
 
         public MainWindow()
         {
@@ -32,7 +31,7 @@ namespace QuizApp
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DlgCreateTest inputDialog = new DlgCreateTest();
+            DlgTakeTest inputDialog = new DlgTakeTest();
             if (inputDialog.ShowDialog() == true)
                 BtnCreateDialog.Content = "Success!";
         }

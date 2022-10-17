@@ -22,6 +22,7 @@
         <AssociationConnector Association="QuizAppProjectModel.FK__Users__ImgId__778AC167" ManuallyRouted="false" />
         <AssociationConnector Association="QuizAppProjectModel.FK__TestQuest__TestI__73BA3083" ManuallyRouted="false" />
         <AssociationConnector Association="QuizAppProjectModel.FK__Tests__OwnerId__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuizAppProjectModel.FK__Categorie__ImgId__797309D9" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

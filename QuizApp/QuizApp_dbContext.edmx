@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuizAppProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuizAppProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AttemptResponses">
           <Key>
             <PropertyRef Name="Id" />
@@ -32,6 +32,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ImgId" Type="int" />
         </EntityType>
         <EntityType Name="Images">
           <Key>
@@ -120,6 +121,18 @@
             </Principal>
             <Dependent Role="Attempts">
               <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Categorie__ImgId__797309D9">
+          <End Role="Images" Type="Self.Images" Multiplicity="0..1" />
+          <End Role="Categories" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Images">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Categories">
+              <PropertyRef Name="ImgId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -219,6 +232,10 @@
             <End Role="Tests" EntitySet="Tests" />
             <End Role="Attempts" EntitySet="Attempts" />
           </AssociationSet>
+          <AssociationSet Name="FK__Categorie__ImgId__797309D9" Association="Self.FK__Categorie__ImgId__797309D9">
+            <End Role="Images" EntitySet="Images" />
+            <End Role="Categories" EntitySet="Categories" />
+          </AssociationSet>
           <AssociationSet Name="FK__TestQuest__ImgId__72C60C4A" Association="Self.FK__TestQuest__ImgId__72C60C4A">
             <End Role="Images" EntitySet="Images" />
             <End Role="TestQuestions" EntitySet="TestQuestions" />
@@ -244,8 +261,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuizAppProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -282,6 +298,8 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__CategoryI__74AE54BC" FromRole="Categories" ToRole="Tests" />
+          <Property Name="ImgId" Type="Int32" />
+          <NavigationProperty Name="Image" Relationship="QuizAppProjectModel.FK__Categorie__ImgId__797309D9" FromRole="Category" ToRole="Image" />
         </EntityType>
         <EntityType Name="Image">
           <Key>
@@ -292,6 +310,7 @@
           <NavigationProperty Name="TestQuestions" Relationship="Self.FK__TestQuest__ImgId__72C60C4A" FromRole="Images" ToRole="TestQuestions" />
           <NavigationProperty Name="Tests" Relationship="Self.FK__Tests__ImgId__75A278F5" FromRole="Images" ToRole="Tests" />
           <NavigationProperty Name="Users" Relationship="Self.FK__Users__ImgId__778AC167" FromRole="Images" ToRole="Users" />
+          <NavigationProperty Name="Categories" Relationship="QuizAppProjectModel.FK__Categorie__ImgId__797309D9" FromRole="Image" ToRole="Category" />
         </EntityType>
         <EntityType Name="TestQuestion">
           <Key>
@@ -507,7 +526,23 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Tests" EntitySet="Tests" />
           </AssociationSet>
+          <AssociationSet Name="FK__Categorie__ImgId__797309D9" Association="QuizAppProjectModel.FK__Categorie__ImgId__797309D9">
+            <End Role="Image" EntitySet="Images" />
+            <End Role="Category" EntitySet="Categories" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK__Categorie__ImgId__797309D9">
+          <End Type="QuizAppProjectModel.Image" Role="Image" Multiplicity="0..1" />
+          <End Type="QuizAppProjectModel.Category" Role="Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Image">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ImgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -540,6 +575,7 @@
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="QuizAppProjectModel.Category">
               <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="ImgId" ColumnName="ImgId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>

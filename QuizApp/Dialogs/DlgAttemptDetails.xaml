@@ -1,0 +1,39 @@
+﻿<Window x:Class="QuizApp.Dialogs.DlgAttemptDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizApp.Dialogs"
+        mc:Ignorable="d"
+        Title="DlgAttemptDetails" Height="450" Width="800"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <ListView Name="LvAttemptDetails" Margin="0,0,0,77">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="#" 
+                                    Width="30" 
+                                    DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Question" 
+                                    Width="300" 
+                                    DisplayMemberBinding="{Binding Question}"/>
+                    <GridViewColumn Header="Correct Answer" 
+                                    Width="120" 
+                                    DisplayMemberBinding="{Binding CorrectAnswer}"/>
+                    <GridViewColumn Header="Incorrect Answers" 
+                                    Width="120" 
+                                    DisplayMemberBinding="{Binding IncorrectAnswers}"/>
+                    <GridViewColumn Header="Actual Answer" 
+                                    Width="120" 
+                                    DisplayMemberBinding="{Binding PlayerAnswer}"/>
+                    <GridViewColumn Header="Success?" 
+                                    Width="50" 
+                                    DisplayMemberBinding="{Binding IsCorrect}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button IsCancel="True" Content="Close" HorizontalAlignment="Left" Margin="738,384,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

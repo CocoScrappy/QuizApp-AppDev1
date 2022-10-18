@@ -84,8 +84,8 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource QuizzleTextbox}"/>
-            
-            
+            <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="657,23,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
 
             <!--Area of layout where content changes!-->    
             <ContentControl Grid.Row="1"

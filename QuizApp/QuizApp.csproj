@@ -108,13 +108,16 @@
     <Compile Include="CategoryTemp.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
-    <Compile Include="DlgCreateTest.xaml.cs">
+    <Compile Include="Dialogs\DlgAttemptDetails.xaml.cs">
+      <DependentUpon>DlgAttemptDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCreateTest.xaml.cs">
       <DependentUpon>DlgCreateTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DlgTakeTest.xaml.cs">
+    <Compile Include="Dialogs\DlgTakeTest.xaml.cs">
       <DependentUpon>DlgTakeTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DlgTestResults.xaml.cs">
+    <Compile Include="Dialogs\DlgTestResults.xaml.cs">
       <DependentUpon>DlgTestResults.xaml</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
@@ -166,13 +169,17 @@
     <Compile Include="UserManagement\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Page Include="DlgCreateTest.xaml">
+    <Page Include="Dialogs\DlgAttemptDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\DlgCreateTest.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DlgTakeTest.xaml">
+    <Page Include="Dialogs\DlgTakeTest.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DlgTestResults.xaml">
+    <Page Include="Dialogs\DlgTestResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -297,9 +304,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

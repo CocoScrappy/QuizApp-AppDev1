@@ -51,14 +51,14 @@ namespace QuizApp
             
             //find test entity
             ////FIXME:: Find for dynamic testId
-            Test = Globals.DbContextAutoGen.Tests.Where(t => t.Id == 11).OfType<Test>().FirstOrDefault();
+            Test = Globals.DbContextAutoGen.Tests.Where(t => t.Id == 14).OfType<Test>().FirstOrDefault();
             if (Test == null)
             {
                 MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             // populate questions list
-            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == 11).OfType<TestQuestion>().ToList();
+            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == 14).OfType<TestQuestion>().ToList();
             if (TestQuestions == null || TestQuestions.Count() == 0)
             {
                 MessageBox.Show(this, "No questions were found for this Test", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -261,9 +261,11 @@ namespace QuizApp
             Attempt Attempt = new Attempt();
 
             Attempt.TestId = Test.Id;
-            Attempt.PlayerId = 1;
+            Attempt.PlayerId = 2;
             Attempt.DateTaken = DateTime.Now;
             Attempt.Archived = 0;
+            double result = ((double)AnsweredCorrectly/(double)ListLenght) * 100;
+            Attempt.Result = (int)result;
 
             try
             {

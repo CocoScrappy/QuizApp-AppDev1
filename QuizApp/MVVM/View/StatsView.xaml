@@ -7,11 +7,51 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <TextBlock Text="My Stats"
+    <StackPanel>
+        <TextBlock Text="My Stats"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    FontFamily="/Fonts/Poppins/#Poppins"
                    />
+        <StackPanel Orientation="Horizontal">
+        <Grid>
+        <ListView Name="LvAttempts"
+                  Margin="0, 0, 0 0"
+                  SelectionMode="Single"
+                  Width="610"
+                  >
+                    <ListView.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Name="MiDetails" Header="View Details" Click="MiDetails_Click"/>
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Date Taken" 
+                                        Width="76" 
+                                        DisplayMemberBinding="{Binding DateTaken}"/>
+                        <GridViewColumn Header="Difficulty" 
+                                        Width="55"
+                                        DisplayMemberBinding="{Binding Test.Difficulty}"/>
+                        <GridViewColumn Header="Category" 
+                                        Width="220"
+                                        DisplayMemberBinding="{Binding Test.Category.Name}"/>
+                        <GridViewColumn Header="Type" 
+                                        Width="95"
+                                        DisplayMemberBinding="{Binding Test.Type}"/>
+                        <GridViewColumn Header="Owner" 
+                                        Width="100"
+                                        DisplayMemberBinding="{Binding Test.User.Username}"/>
+                        <GridViewColumn Header="Result" 
+                                        Width="50"
+                                        DisplayMemberBinding="{Binding Path=Result, StringFormat={}{00}\%}"/>
+                    </GridView>
+                </ListView.View>
+            
+        </ListView>
+        </Grid>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

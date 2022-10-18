@@ -10,22 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuizApp
+namespace QuizApp.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for DlgTestResults.xaml
+    /// Interaction logic for NewQuizView.xaml
     /// </summary>
-    public partial class DlgTestResults : Window
+    public partial class NewQuizView : UserControl
     {
-        public DlgTestResults(int correctAnswers, int numberOfQuestions)
+        public NewQuizView()
         {
             InitializeComponent();
-            TxblFinalScore.Text = $"Your final score is:\n {correctAnswers} Out of {numberOfQuestions} questions!";
-
         }
-
-        
     }
 }

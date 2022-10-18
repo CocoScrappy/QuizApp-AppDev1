@@ -6,17 +6,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MainWindow"
+        xmlns:viewModel="clr-namespace:QuizApp.MVVM.ViewModel"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown"
+        Name="window"
 
+    >
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
 
     <Border Background="#29348E"
             CornerRadius="20">
+
+        <!-- Grid layout with 2 columns & 2 rows -->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -27,6 +37,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
+            <!--Logo-->
             <TextBlock Text="Qwizzle"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
@@ -34,7 +45,8 @@
                    Foreground="White"
                    FontSize="28"
                    FontFamily="/Fonts/Poppins/#Poppins"/>
-
+            
+            <!--Left side navigation-->
             <StackPanel Grid.Row="1">
 
                 <RadioButton Content="Created Quizes"
@@ -43,25 +55,28 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True" 
-                             
+                             Command="{Binding HomeQuizViewCommand}"
                              />
                 <RadioButton Content="New Quiz"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding NewQuizViewCommand}"
                              />
                 <RadioButton
                              Content="My stats"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"
+                             Style="{StaticResource                 MenuButtonTheme}"
+                             Command="{Binding StatsViewCommand}"
                             
                 />
 
             </StackPanel>
-
+            
+            <!--Search box-->
             <TextBox Width="250"
                      Height="40"
                      VerticalContentAlignment="Center"
@@ -69,8 +84,16 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource QuizzleTextbox}"/>
+            
 
 
+            <!--Area of layout where content changes!-->    
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+            
+            
 
 
             <!--<ContentControl Grid.Row="1"

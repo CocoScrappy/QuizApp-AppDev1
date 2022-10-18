@@ -47,6 +47,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -56,22 +59,22 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=4.6.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignThemes.4.6.1\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    <Reference Include="ShowMeTheXAML, Version=2.0.0.62, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ShowMeTheXAML.2.0.0\lib\net472\ShowMeTheXAML.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -104,18 +107,36 @@
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryTemp.cs" />
-    <Compile Include="DlgCreateTest.xaml.cs">
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Dialogs\DlgAttemptDetails.xaml.cs">
+      <DependentUpon>DlgAttemptDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCreateTest.xaml.cs">
       <DependentUpon>DlgCreateTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DlgTakeTest.xaml.cs">
+    <Compile Include="Dialogs\DlgTakeTest.xaml.cs">
       <DependentUpon>DlgTakeTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DlgTestResults.xaml.cs">
+    <Compile Include="Dialogs\DlgTestResults.xaml.cs">
       <DependentUpon>DlgTestResults.xaml</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Image.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\ViewModel\HomeQuizViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\NewQuizViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\StatsViewModel.cs" />
+    <Compile Include="MVVM\View\HomeQuizView.xaml.cs">
+      <DependentUpon>HomeQuizView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\NewQuizView.xaml.cs">
+      <DependentUpon>NewQuizView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\StatsView.xaml.cs">
+      <DependentUpon>StatsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="QuizAppProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -152,13 +173,17 @@
     <Compile Include="UserManagement\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Page Include="DlgCreateTest.xaml">
+    <Page Include="Dialogs\DlgAttemptDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\DlgCreateTest.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DlgTakeTest.xaml">
+    <Page Include="Dialogs\DlgTakeTest.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DlgTestResults.xaml">
+    <Page Include="Dialogs\DlgTestResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +199,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\HomeQuizView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\NewQuizView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\StatsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\TextBoxTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -262,6 +299,7 @@
     <Folder Include="MVVM\ViewModel\" />
     <Folder Include="MVVM\View\" />
     <Folder Include="Partials\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ProfileDefaultPic.JPG" />

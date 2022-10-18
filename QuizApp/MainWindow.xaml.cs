@@ -30,13 +30,19 @@ namespace QuizApp
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
         }
-        /*private void Button_Click(object sender, RoutedEventArgs e)
+
+        // Allows user to move the window around the screen
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DlgTakeTest inputDialog = new DlgTakeTest();
-            if (inputDialog.ShowDialog() == true)
-                BtnCreateDialog.Content = "Success!";
-        }*/
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+
+        }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
@@ -49,5 +55,8 @@ namespace QuizApp
             Login LoginWindow = new Login();
             LoginWindow.Show();
         }
+          
+
+       
     }
 }

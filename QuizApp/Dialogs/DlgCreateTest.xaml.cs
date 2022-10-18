@@ -88,12 +88,13 @@ namespace QuizApp
             }
             test.Difficulty = ComboDifficulty.Text;
             //Validate Type
-            if (ComboType.SelectedItem == null) return;
             string type = "";
-            if (ComboType.SelectedItem.ToString() == "Multiple Choice") type = "&type=multiple";
-            if (ComboType.SelectedItem.ToString() == "True / False") type = "&type=boolean";
+            if (ComboType.SelectedItem == null) return;
+            if (ComboType.Text == "Multiple Choice") type = "&type=multiple";
+            if (ComboType.Text == "True / False") type = "&type=boolean";
             test.Type = ComboType.Text;
             string query = $"https://opentdb.com/api.php?" + strAmount + strCategory + difficulty + type;
+            Console.WriteLine(query);
             int testId = 0;
             test.OwnerId = 1;
             try

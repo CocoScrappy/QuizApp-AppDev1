@@ -43,7 +43,8 @@ namespace QuizApp
         public DlgTakeTest()
         {
             InitializeComponent();
-            
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

@@ -22,6 +22,7 @@ namespace QuizApp
         public DlgTestResults(int correctAnswers, int numberOfQuestions)
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             TxblFinalScore.Text = $"Your final score is:\n {correctAnswers} Out of {numberOfQuestions} questions!";
 
         }

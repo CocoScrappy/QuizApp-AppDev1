@@ -28,6 +28,8 @@ namespace QuizApp
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

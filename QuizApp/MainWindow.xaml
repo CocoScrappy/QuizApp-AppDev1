@@ -6,18 +6,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MainWindow"
+        xmlns:viewModel="clr-namespace:QuizApp.MVVM.ViewModel"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
-        MouseDown="Window_MouseDown">
+        MouseDown="Window_MouseDown"
 
+    >
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
 
     <Border Background="#29348E"
             CornerRadius="20">
+        <!-- Grid layout with 2 columns & 2 rows -->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -28,6 +34,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
+            <!--Logo-->
             <TextBlock Text="Qwizzle"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Left"
@@ -35,7 +42,8 @@
                    Foreground="White"
                    FontSize="28"
                    FontFamily="/Fonts/Poppins/#Poppins"/>
-
+            
+            <!--Left side navigation-->
             <StackPanel Grid.Row="1">
 
                 <RadioButton Content="Created Quizes"
@@ -44,7 +52,6 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True" 
-                             
                              />
                 <RadioButton Content="New Quiz"
                              Height="50"
@@ -62,7 +69,8 @@
                 />
 
             </StackPanel>
-
+            
+            <!--Search box-->
             <TextBox Width="250"
                      Height="40"
                      VerticalContentAlignment="Center"
@@ -70,18 +78,16 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource QuizzleTextbox}"/>
+            
             <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="195,123,0,0" Grid.Row="1" VerticalAlignment="Top" Height="86" Width="154" Click="Button_Click"/>
 
-
-
-
-
-
-
-
-            <!--<ContentControl Grid.Row="1"
+            <!--Area of layout where content changes!-->    
+            <ContentControl Grid.Row="1"
                             Grid.Column="1"
-                            Margin="10"/>-->
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+            
+            
         </Grid>
 
 

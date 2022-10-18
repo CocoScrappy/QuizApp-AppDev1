@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:QuizApp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MainWindow"
         xmlns:viewModel="clr-namespace:QuizApp.MVVM.ViewModel"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None"
@@ -14,6 +15,7 @@
         Background="Transparent"
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
+        Name="window"
 
     >
 
@@ -23,6 +25,7 @@
 
     <Border Background="#29348E"
             CornerRadius="20">
+
         <!-- Grid layout with 2 columns & 2 rows -->
         <Grid>
             <Grid.ColumnDefinitions>
@@ -52,6 +55,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True" 
+                             Command="{Binding HomeQuizViewCommand}"
                              />
                 <RadioButton Content="New Quiz"
                              Height="50"
@@ -64,7 +68,8 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"
+                             Style="{StaticResource                 MenuButtonTheme}"
+                             Command="{Binding StatsViewCommand}"
                             
                 />
 
@@ -79,7 +84,7 @@
                      Grid.Column="1"
                      Style="{StaticResource QuizzleTextbox}"/>
             
-            <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="195,123,0,0" Grid.Row="1" VerticalAlignment="Top" Height="86" Width="154" Click="Button_Click"/>
+            
 
             <!--Area of layout where content changes!-->    
             <ContentControl Grid.Row="1"

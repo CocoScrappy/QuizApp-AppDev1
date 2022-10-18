@@ -32,6 +32,7 @@ namespace QuizApp
 
         }
 
+        // Allows user to move the window around the screen
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -40,12 +41,12 @@ namespace QuizApp
             }
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            DlgTakeTest inputDialog = new DlgTakeTest();
-            if (inputDialog.ShowDialog() == true) ;
-                //BtnCreateDialog.Content = "Success!";
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    DlgTakeTest inputDialog = new DlgTakeTest();
+        //    if (inputDialog.ShowDialog() == true) ;
+        //        //BtnCreateDialog.Content = "Success!";
+        //}
 
     }
 

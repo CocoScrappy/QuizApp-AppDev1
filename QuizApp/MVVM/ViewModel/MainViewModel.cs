@@ -9,7 +9,13 @@ namespace QuizApp.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
+        public RelayCommand HomeQuizViewCommand { get; set; }
+        public RelayCommand StatsViewCommand { get; set; }
+        public RelayCommand NewQuizViewCommand { get; set; }
+
         public HomeQuizViewModel HomeQuizVM { get; set; }
+        public StatsViewModel StatsVM { get; set; }
+        public NewQuizViewModel NewQuizVM { get; set; }
 
         private object _currentView;
 
@@ -26,7 +32,23 @@ namespace QuizApp.MVVM.ViewModel
         public MainViewModel()
         {
             HomeQuizVM = new HomeQuizViewModel();
-            CurrentView = HomeQuizVM;      
+            StatsVM = new StatsViewModel();
+            CurrentView = HomeQuizVM;
+            HomeQuizViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = HomeQuizVM;
+
+            });
+            StatsViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = StatsVM;
+
+            });
+            NewQuizViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = NewQuizVM;
+
+            });
         }
     }
 }

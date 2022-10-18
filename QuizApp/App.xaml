@@ -13,10 +13,14 @@
                 <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
 
-            <DataTemplate DataType="{x:Type viewModel:MainViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:HomeQuizViewModel}">
                 <view:HomeQuizView/>
-
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:StatsViewModel}">
+                <view:StatsView/>
+            </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -44,6 +44,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -104,8 +107,16 @@
     </Compile>
     <Compile Include="MVVM\ViewModel\HomeQuizViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\NewQuizViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\StatsViewModel.cs" />
     <Compile Include="MVVM\View\HomeQuizView.xaml.cs">
       <DependentUpon>HomeQuizView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\NewQuizView.xaml.cs">
+      <DependentUpon>NewQuizView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\StatsView.xaml.cs">
+      <DependentUpon>StatsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="QuizAppProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -159,6 +170,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MVVM\View\HomeQuizView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\NewQuizView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\StatsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

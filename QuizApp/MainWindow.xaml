@@ -76,6 +76,10 @@
             <!--<ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"/>-->
+            <StackPanel>
+                <Button Name="Register" Click="Registration_Click">Register</Button>
+                <Button Name="Login" Click="Login_Click">Login</Button>
+            </StackPanel>
         </Grid>
 
 

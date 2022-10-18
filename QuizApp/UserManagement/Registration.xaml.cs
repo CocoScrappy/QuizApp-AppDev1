@@ -1,20 +1,11 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 
 namespace QuizApp.UserManagement
 {
@@ -28,10 +19,9 @@ namespace QuizApp.UserManagement
             InitializeComponent();
         }
 
+        //private QuizAppProjectEntities1 quizAppProjectEntities;
 
-        //private QuizAppProjectEntities quizAppProjectEntities;
-
-        private void Register_Click(object sender, RoutedEventArgs e)
+        private void RegisterBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -42,49 +32,54 @@ namespace QuizApp.UserManagement
                 int imgId = -1; // default if image was not added
                 if ((BitmapImage)userAvatar.Source != null)
                 {
-                    var bmp = userAvatar.Source as BitmapImage;
+                    System.Drawing.Image AvatarImg = ConvertImageSourceToImage(userAvatar.Source);
+                    byte[] bits = ImageToByteArray(AvatarImg);
+                    Image avatar = new Image { Image1 = bits };
 
-                    int height = bmp.PixelHeight;
-                    int width = bmp.PixelWidth;
-                    int stride = width * ((bmp.Format.BitsPerPixel + 7) / 8);
-
-                    byte[] bits = new byte[height * stride];
-                    bmp.CopyPixels(bits, stride, 0);
-                    Image avatar = new Image { Image1 = bits }; // ArgumentException
-                    using (Globals.DbContextAutoGen)
+                    using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
                     {
-                        Globals.DbContextAutoGen.Images.Add(avatar); // adds the image to the DbSet in memory
-                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
-                        imgId = Globals.DbContextAutoGen.Images.Where(Images => Images.Image1 == bits).Single().Id;
+                        context.Images.Add(avatar); // adds the image to the DbSet in memory
+                        context.SaveChanges(); // commits the changes to the database
+                        Image imgMostRecent = context.Images.Where(Images => Images.Image1 == bits).First();
+                        //stud.studentID = u.ID; can just get the id of most recent image this way 
+                        imgId = imgMostRecent.Id;
                     }
+
                 }
                 string myPassword = Pass.Password;
                 string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
                 string myHash = BCrypt.Net.BCrypt.HashPassword(myPassword, mySalt);
-                //bool doesPasswordMatch = BCrypt.Net.BCrypt.CheckPassword(myPassword, myHash);
 
                 if (imgId != -1)
                 {
                     User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
-                    using (Globals.DbContextAutoGen)
+                    //using (Globals.DbContextAutoGen)
+                    using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
                     {
-                        Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
-                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+                        context.Users.Add(newUser); // adds the image to the DbSet in memory
+                        context.SaveChanges(); // commits the changes to the database
                     }
                 }
                 else
                 {
                     User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
-                    using (Globals.DbContextAutoGen)
+                    //using (Globals.DbContextAutoGen)
+                    using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
                     {
-                        Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
-                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+                        context.Users.Add(newUser); // adds the image to the DbSet in memory
+                        context.SaveChanges(); // commits the changes to the database
                     }
                 }
 
-
                 //clear inputs
                 ResetRegistrationFields();
+
+                Login login = new Login();
+                //this will open your child window
+                login.Show();
+                //this will close parent window. Registration window in this case
+                this.Close();
+
             }
             catch (ArgumentException ex)
             {
@@ -119,7 +114,6 @@ namespace QuizApp.UserManagement
             userAvatar.Source = null;
         }
 
-
         private bool ValidateInputs()
         {
             if (!Regex.IsMatch(Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) //, RegexOptions.IgnoreCase))
@@ -136,15 +130,11 @@ namespace QuizApp.UserManagement
 
             if ((ConfirmPass.Password == "") || (Pass.Password == ""))
             {
-                //MessageBox.Show(this, "Passwords do not match!", "Input error",
-                //MessageBoxButton.OK, MessageBoxImage.Error);
                 throw new ArgumentException("One or both of the password fields empty");
             }
 
             if (ConfirmPass.Password != Pass.Password)
             {
-                //MessageBox.Show(this, "Passwords do not match!", "Input error",
-                //MessageBoxButton.OK, MessageBoxImage.Error);
                 Pass.Password = "";
                 ConfirmPass.Password = "";
                 throw new ArgumentException("Passwords do not match");
@@ -152,5 +142,27 @@ namespace QuizApp.UserManagement
 
             return true;
         }
+
+        public byte[] ImageToByteArray(System.Drawing.Image images)
+        {
+            using (var _memorystream = new MemoryStream())
+            {
+                images.Save(_memorystream, images.RawFormat);
+                return _memorystream.ToArray();
+            }
+        }
+
+        public static System.Drawing.Image ConvertImageSourceToImage(ImageSource image)
+        {
+            if (image == null) return null;
+
+            MemoryStream memoryStream = new MemoryStream();
+            BmpBitmapEncoder bmpBitmapEncoder = new BmpBitmapEncoder();
+            bmpBitmapEncoder.Frames.Add(BitmapFrame.Create((BitmapSource)image));
+            bmpBitmapEncoder.Save(memoryStream);
+
+            return System.Drawing.Image.FromStream(memoryStream);
+        }
+
     }
 }

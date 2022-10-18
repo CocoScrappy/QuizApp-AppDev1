@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp.UserManagement"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="800">
+        Title="Registration" Height="450" Width="800"
+        WindowStyle="None">
     <Grid>
 
         <StackPanel>
             <Image Margin="12,12,16,71" Name="userAvatar"
-                Stretch="Fill" />
+                Stretch="Fill" Height="150" Width="150"  />
             <Label>Email</Label>
             <TextBox Name="Email"></TextBox>
             <Label>Username</Label>
@@ -21,7 +22,7 @@
             <PasswordBox Name="ConfirmPass"></PasswordBox>
             <Button Height="23" HorizontalAlignment="Left"
                 Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click">_Load</Button>
-            <Button Name="Register" Click="Register_Click">
+            <Button Name="Register" Click="RegisterBtn_Click">
                 Register
             </Button>
         </StackPanel>

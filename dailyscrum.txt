@@ -1,5 +1,41 @@
+---- SCRUM 6 ----
+
+2022/10/18 Dmitry  
+
+1. Done / not done since last scrum: 
+
+- User Login - Almost DONE
+- Come up with overall file structure for the project - Using ALina's MVVM
+- Integrate everyone's codes - DONE
+
+2. To do until next Scrum: 
+
+- User Login - properly store and retrieve user avatars
+- Come up with overall file structure for the project
+- Integrate everyone's codes once again
+- move to the quiz side and pick a user story there
+
+3. Need assistance / figure things out 
+
+- saving and retrieving pictures, will ask Gregory
+
+2022/10/18 Louis 
+
+1. Done / not done since last scrum: 
+
+- saved answers and attempts to database
+- fixed fetching types in DlgCreateTest
+- Added code for True / False questions in DlgTakeTest
+
+2. To do until next Scrum: 
+
+- test using views as normal windows (with logic in code behind)
+
+3. Need assistance / figure things out 
+- working in conjonction with MVVM
 
 ---- SCRUM 5 ----
+
 
 2022/10/17 Alina 
 

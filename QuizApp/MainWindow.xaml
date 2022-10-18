@@ -69,7 +69,7 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource QuizzleTextbox}"/>
-            <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="239,312,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
+            <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="650,0,0,0" VerticalAlignment="Center" Click="Button_Click" RenderTransformOrigin="0.537,0.541"/>
 
 
 

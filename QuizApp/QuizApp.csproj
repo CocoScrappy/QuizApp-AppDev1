@@ -68,15 +68,15 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -111,13 +111,16 @@
     <Compile Include="CategoryTemp.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
-    <Compile Include="DlgCreateTest.xaml.cs">
+    <Compile Include="Dialogs\DlgAttemptDetails.xaml.cs">
+      <DependentUpon>DlgAttemptDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgCreateTest.xaml.cs">
       <DependentUpon>DlgCreateTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DlgTakeTest.xaml.cs">
+    <Compile Include="Dialogs\DlgTakeTest.xaml.cs">
       <DependentUpon>DlgTakeTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DlgTestResults.xaml.cs">
+    <Compile Include="Dialogs\DlgTestResults.xaml.cs">
       <DependentUpon>DlgTestResults.xaml</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
@@ -169,13 +172,17 @@
     <Compile Include="UserManagement\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Page Include="DlgCreateTest.xaml">
+    <Page Include="Dialogs\DlgAttemptDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\DlgCreateTest.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DlgTakeTest.xaml">
+    <Page Include="Dialogs\DlgTakeTest.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DlgTestResults.xaml">
+    <Page Include="Dialogs\DlgTestResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

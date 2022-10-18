@@ -20,7 +20,11 @@
             <DataTemplate DataType="{x:Type viewModel:StatsViewModel}">
                 <view:StatsView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:NewQuizViewModel}">
+                <view:NewQuizView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

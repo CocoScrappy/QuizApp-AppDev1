@@ -33,7 +33,10 @@ namespace QuizApp.MVVM.ViewModel
         {
             HomeQuizVM = new HomeQuizViewModel();
             StatsVM = new StatsViewModel();
+            NewQuizVM = new NewQuizViewModel();
+
             CurrentView = HomeQuizVM;
+
             HomeQuizViewCommand = new RelayCommand(o =>
             {
                 CurrentView = HomeQuizVM;

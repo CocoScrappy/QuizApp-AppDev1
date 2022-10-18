@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\JAC course stuff\13_DotNet\QuizApp\repo\QuizApp\QuizApp_dbContext.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Documents Backup\FULL STACK DEVELOPER COURSE\App Dev 1 - Gregory Prokopski\Project - QuizApp\project_repo\QuizApp\QuizApp_dbContext.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,5 +1,7 @@
 ﻿// using Newtonsoft.Json;
 // using Newtonsoft.Json.Linq;
+using Microsoft.Win32;
+using QuizApp.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +50,18 @@ namespace QuizApp
         //        //BtnCreateDialog.Content = "Success!";
         //}
 
-    }
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Registration RegistrationWindow = new Registration();
+            RegistrationWindow.Show();
+        }
 
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+          
+
+       
+    }
 }

@@ -1,5 +1,21 @@
 ---- SCRUM 7 ----
 
+2022/10/19 Dmitry  
+
+1. Done / not done since last scrum: 
+
+- User Login - properly store and retrieve user avatars - Done
+- User can see the empty red fields that couldn't get validated - Working
+- Solve slow registration/logins as much as possible - Working
+
+2. To do until next Scrum: 
+- User can see the pictures for quiz categories
+- Solve slow registration/logins as much as possible 
+
+
+3. Need assistance / figure things out 
+All good for now
+
 2022/10/18 Louis 
 
 1. Done / not done since last scrum: 

@@ -1,54 +1,151 @@
-﻿<UserControl x:Class="QuizApp.MVVM.View.HomeQuizView"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuizApp.MVVM.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MVVM.View.HomeQuizView"
              mc:Ignorable="d" 
-             d:DesignHeight="460" d:DesignWidth="800">
+             d:DesignHeight="460" d:DesignWidth="800"
+            Loaded="UserControl_Loaded"
+    
+    >
     <StackPanel>
         <TextBlock Text="My Quizzes"
-                   Foreground="White"
-                   FontSize="28"
+                   Foreground="#FF353535"
+                   FontSize="24"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    FontFamily="/Fonts/Poppins/#Poppins"
                    />
-        <StackPanel Orientation="Horizontal"
+        <ScrollViewer HorizontalAlignment="Left" 
+                      VerticalAlignment="Top" 
+                      HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      >
+
+
+
+            <ItemsControl Name="IcUserTests">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
-            
-                <!--Temp style - Not styled yet-->
-                <Button Content="Start Quiz!" 
-                        Width="400"
-                        Height="200"
-                        Background="Aqua"
-                        Click="Button_Click" />
-                
-            
-            
-            
 
-        </StackPanel>
+                            <!--User's own created quizzes go HERE -->
+                    <Button
+                    Width="350"
+                    Height="200"
+                    Margin="0,0,10,0"
+                    Background="Aqua"
+                    Tag="{Binding}"
+                    Click="Button_Click" 
+                    >
+                        <Grid>
+                              <Image Source="{Binding Category.Image.Image1}"
+                               Height="200"
+                               Opacity=".7"/>
+                            <StackPanel>
+                            <TextBlock Foreground="White" 
+                                   Text="User Tests"
+                                   FontSize="25"/>
+                            <TextBlock Foreground="White" 
+                                   Text="{Binding Category.Name}"
+                                   FontSize="25"/>
+                            <TextBlock Foreground="White" 
+                                   Text="{Binding Difficulty}"
+                                   FontSize="18"/>
+                            <TextBlock Foreground="White" 
+                                   Text="{Binding User.Username}" TextWrapping="Wrap"
+                                   FontSize="18" />
+                            <Image Source="{Binding User.Image.Image1}"
+                               Height="50"
+                               Width="50"/>
+                             </StackPanel>
+                             </Grid>
+                        </Button>
 
-        <StackPanel>
-            <TextBlock Text="Community Quizzes"
-                   Foreground="White"
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <!--End of cards for user's own created quizzes-->
+            
+        </ScrollViewer>
+        <!--End of this scroll section-->
+
+
+           
+            <StackPanel>
+                <TextBlock Text="Community Quizzes"
+                   Foreground="#FF353535"
                    FontSize="20"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    FontFamily="/Fonts/Poppins/#Poppins"
                    />
-            <StackPanel Orientation="Horizontal">
-                <Border Width="150"
-                    Height="130"
-                    Background="BlueViolet"
-                    CornerRadius="10"
-                    />
+            <!--New scroll section-->
+                <ScrollViewer HorizontalAlignment="Left" 
+                      VerticalAlignment="Top" 
+                      HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ItemsControl Name="IcCommunityTests">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
 
+                            <StackPanel Orientation="Horizontal">
+                        <!--Community quizzes - quizzes created by other users go here-->
+                        <!--1 card start-->
+                        <Button Width="150"
+                                Height="130"
+                                Margin="0,0,10,0"
+                                Background="Aqua"
+                                Click="Button_Click"
+                                Tag="{Binding}"
+                                >
+                            <Grid>
+                                  <Image Source="{Binding Category.Image.Image1}"
+                                    Height="200"
+                                    Opacity=".7"/>
+                                <StackPanel>
+                                    <TextBlock Foreground="White" 
+                                        Text="{Binding Category.Name}"
+                                        FontSize="14"/>
+                                    <TextBlock Foreground="White" 
+                                        Text="{Binding Difficulty}"
+                                        FontSize="12"/>
+                                    <TextBlock Foreground="White" 
+                                        Text="{Binding User.Username}"
+                                        FontSize="12" />
+                                    <TextBlock Foreground="White" 
+                                        Text="{Binding Id}"
+                                        FontSize="12" Visibility="Hidden" />
+                                    <Image Source="{Binding User.Image.Image1}"
+                                        Height="50"
+                                        Width="50"/>
+                                </StackPanel>
+                            </Grid>
+                        </Button>
+                        <!--1 card end-->
 
+                </StackPanel> 
+                 <!--End of cards Stack panel container-->
+
+        
+            </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            </ScrollViewer>
             </StackPanel>
+        
 
-        </StackPanel>
-                    
     </StackPanel>
 </UserControl>

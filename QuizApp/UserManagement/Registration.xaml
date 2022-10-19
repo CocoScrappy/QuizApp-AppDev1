@@ -12,17 +12,16 @@
         <StackPanel>
             <Image Margin="12,12,16,71" Name="userAvatar"
                 Stretch="Fill" Height="150" Width="150"  />
-            <Label>Email</Label>
-            <TextBox Name="TbxEmail"></TextBox>
-            <Label>Username</Label>
-            <TextBox Name="TbxUsername"></TextBox>
-            <Label>Password</Label>
-            <PasswordBox Name="PbxPass"></PasswordBox>
-            <Label>Confirm Password</Label>
-            <PasswordBox Name="PbxConfirmPass"></PasswordBox>
-            <Button Height="23" HorizontalAlignment="Left"
-                Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click">_Load</Button>
-            <Button Name="Register" Click="BtnRegister_Click">
+            <Label Name="LblEmail" HorizontalAlignment="Center">Email</Label>
+            <TextBox Name="TbxEmail" HorizontalAlignment="Center" Width="300"></TextBox>
+            <Label Name="LblUsername" HorizontalAlignment="Center">Username</Label>
+            <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
+            <Label Name="LblPassword" HorizontalAlignment="Center">Password</Label>
+            <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+            <Label Name="LblConfirmPass" HorizontalAlignment="Center">Confirm Password</Label>
+            <PasswordBox Name="PbxConfirmPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+            <Button Height="23" Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click" HorizontalAlignment="Center">_Load</Button>
+            <Button Name="Register" Click="BtnRegister_Click" HorizontalAlignment="Center">
                 Register
             </Button>
         </StackPanel>

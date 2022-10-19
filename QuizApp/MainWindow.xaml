@@ -5,8 +5,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp"
+        xmlns:converter="clr-namespace:QuizApp.Converters"
+        
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MainWindow"
         xmlns:viewModel="clr-namespace:QuizApp.MVVM.ViewModel"
+      
         xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Height="600" Width="920"
@@ -22,6 +25,10 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+
+    <Window.Resources>
+        <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
 
     <Border Background="#29348E"
             CornerRadius="20">
@@ -45,7 +52,81 @@
                    Foreground="White"
                    FontSize="28"
                    FontFamily="/Fonts/Poppins/#Poppins"/>
-            
+
+            <!--Minimize / Close buttons-->
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Grid.Column="1" 
+                        Cursor="Hand">
+
+                <Grid>
+                    <Ellipse
+                     Grid.Column="1"
+                     Height="15"
+                     Width="15"
+                     Margin="0,10,10,0" MouseLeftButtonDown="MinimizeButton_MouseLeftDown"
+                     ToolTip="Minimize"
+                     >
+                        <Ellipse.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFFFB95"/>
+                                <GradientStop Color="Yellow" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <!--The desired behavior isn't working because it is not possible to have events on elements that are not visible--> 
+                    <materialDesign:PackIcon 
+                        Kind="WindowMinimize" 
+                        Name="Btn_min"
+                        Margin="0,12,0,0" 
+                        Height="12" 
+                        Width="15"
+                        Foreground="#FF565656"
+                        Visibility="{Binding Path=IsMouseOver, 
+                        ElementName=Btn_min, 
+                        Converter={StaticResource                   BooleanToVisibilityConverter}}"/>
+
+                </Grid>
+
+                <Grid>
+                    <Ellipse
+                     Height="15"
+                     Width="15"
+                     Margin="0,10,10,0" MouseLeftButtonDown="CloseButton_MouseLeftDown" 
+                     ToolTip="Close"
+                     >
+                        <Ellipse.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFF5151"/>
+                                <GradientStop Color="Red" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+
+                    <materialDesign:PackIcon 
+                    Kind="WindowClose" 
+                    Name="Btn_close"
+                    Foreground="#FF565656"
+                    Margin="0,10,0,0"           
+                    RenderTransformOrigin="0.5,0.516" 
+                    Height="16" 
+                    Width="15"
+                    Visibility="{Binding Path=IsMouseOver, 
+                    ElementName=Btn_close, 
+                    Converter={StaticResource BooleanToVisibilityConverter}}"
+/>
+
+
+                </Grid>
+                
+                
+
+            </StackPanel>
+
+
+
             <!--Left side navigation-->
             <StackPanel Grid.Row="1">
 
@@ -69,13 +150,13 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource                 MenuButtonTheme}"
+                             Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding StatsViewCommand}"
                             
                 />
 
             </StackPanel>
-            
+
             <!--Search box-->
             <TextBox Width="250"
                      Height="40"
@@ -84,16 +165,16 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource QuizzleTextbox}"/>
-            
 
 
-            <!--Area of layout where content changes!-->    
+
+            <!--Area of layout where content changes!-->
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-            
-            
+
+
         </Grid>
 
 

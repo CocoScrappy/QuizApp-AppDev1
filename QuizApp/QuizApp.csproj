@@ -109,6 +109,7 @@
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryTemp.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Dialogs\DlgAttemptDetails.xaml.cs">

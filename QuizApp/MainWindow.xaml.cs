@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -54,8 +55,23 @@ namespace QuizApp
         {
 
         }
-          
 
-       
+        private void MinimizeButton_MouseLeftDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                this.WindowState = WindowState.Minimized;
+            }
+            catch (XamlParseException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void CloseButton_MouseLeftDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }

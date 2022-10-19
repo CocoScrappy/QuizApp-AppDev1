@@ -7,6 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MVVM.View.HomeQuizView"
              mc:Ignorable="d" 
              d:DesignHeight="460" d:DesignWidth="800"
+            Loaded="UserControl_Loaded"
     
     >
     <StackPanel>
@@ -19,94 +20,61 @@
                    />
         <ScrollViewer HorizontalAlignment="Left" 
                       VerticalAlignment="Top" 
-                      HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                      HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      >
 
-        <StackPanel Orientation="Horizontal"
+
+
+            <ItemsControl Name="IcUserTests">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
 
-            <!--User's own created quizzes go HERE -->
-                 <Button
+                            <!--User's own created quizzes go HERE -->
+                    <Button
                     Width="350"
                     Height="200"
                     Margin="0,0,10,0"
                     Background="Aqua"
-                    Click="Button_Click" >
-                    <Grid>
-                        <Image Source="/Images/nature.jpg"
+                    Tag="{Binding}"
+                    Click="Button_Click" 
+                    >
+                        <Grid>
+                              <Image Source="{Binding Category.Image.Image1}"
                                Height="200"
                                Opacity=".7"/>
-                        <StackPanel>
+                            <StackPanel>
                             <TextBlock Foreground="White" 
-                                   Text="Category Name"
+                                   Text="User Tests"
                                    FontSize="25"/>
                             <TextBlock Foreground="White" 
-                                   Text="Difficulty level"
+                                   Text="{Binding Category.Name}"
+                                   FontSize="25"/>
+                            <TextBlock Foreground="White" 
+                                   Text="{Binding Difficulty}"
                                    FontSize="18"/>
                             <TextBlock Foreground="White" 
-                                   Text="User Name"
+                                   Text="{Binding User.Username}" TextWrapping="Wrap"
                                    FontSize="18" />
-                            <Image Source="/Images/girlavatar.jpg"
+                            <Image Source="{Binding User.Image.Image1}"
                                Height="50"
                                Width="50"/>
-                        </StackPanel>
-                    </Grid>
-                </Button>
+                             </StackPanel>
+                             </Grid>
+                        </Button>
 
-                <Button
-                    Width="350"
-                    Height="200"
-                    Margin="0,0,10,0"
-                    Background="Aqua"
-                    Click="Button_Click" >
-                    <Grid>
-                        <Image Source="/Images/nature.jpg"
-                               Height="200"
-                               Opacity=".7"/>
-                        <StackPanel>
-                            <TextBlock Foreground="White" 
-                                   Text="Category Name"
-                                   FontSize="25"/>
-                            <TextBlock Foreground="White" 
-                                   Text="Difficulty level"
-                                   FontSize="18"/>
-                            <TextBlock Foreground="White" 
-                                   Text="User Name"
-                                   FontSize="18" />
-                            <Image Source="/Images/girlavatar.jpg"
-                               Height="50"
-                               Width="50"/>
                         </StackPanel>
-                    </Grid>
-                </Button>
-
-                <Button
-                    Width="350"
-                    Height="200"
-                    Margin="0,0,10,0"
-                    Background="Aqua"
-                    Click="Button_Click" >
-                    <Grid>
-                        <Image Source="/Images/nature.jpg"
-                               Height="200"
-                               Opacity=".7"/>
-                        <StackPanel>
-                            <TextBlock Foreground="White" 
-                                   Text="Category Name"
-                                   FontSize="25"/>
-                            <TextBlock Foreground="White" 
-                                   Text="Difficulty level"
-                                   FontSize="18"/>
-                            <TextBlock Foreground="White" 
-                                   Text="User Name"
-                                   FontSize="18" />
-                            <Image Source="/Images/girlavatar.jpg"
-                               Height="50"
-                               Width="50"/>
-                        </StackPanel>
-                    </Grid>
-                </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
             <!--End of cards for user's own created quizzes-->
-            </StackPanel>
+            
         </ScrollViewer>
         <!--End of this scroll section-->
 
@@ -123,177 +91,59 @@
             <!--New scroll section-->
                 <ScrollViewer HorizontalAlignment="Left" 
                       VerticalAlignment="Top" 
-                      HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"> 
-                    
-                    
-                    <StackPanel Orientation="Horizontal">
+                      HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ItemsControl Name="IcCommunityTests">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+
+                            <StackPanel Orientation="Horizontal">
                         <!--Community quizzes - quizzes created by other users go here-->
                         <!--1 card start-->
                         <Button Width="150"
                                 Height="130"
                                 Margin="0,0,10,0"
                                 Background="Aqua"
-                                Click="Button_Click" >
+                                Click="Button_Click"
+                                Tag="{Binding}"
+                                >
                             <Grid>
-                                <Image Source="/Images/nature.jpg"
+                                  <Image Source="{Binding Category.Image.Image1}"
                                     Height="200"
                                     Opacity=".7"/>
                                 <StackPanel>
                                     <TextBlock Foreground="White" 
-                                        Text="Category Name"
+                                        Text="{Binding Category.Name}"
                                         FontSize="14"/>
                                     <TextBlock Foreground="White" 
-                                        Text="Difficulty level"
+                                        Text="{Binding Difficulty}"
                                         FontSize="12"/>
                                     <TextBlock Foreground="White" 
-                                        Text="User Name"
+                                        Text="{Binding User.Username}"
                                         FontSize="12" />
-                                    <Image Source="/Images/girlavatar.jpg"
-                                    Height="50"
-                                    Width="50"/>
+                                    <TextBlock Foreground="White" 
+                                        Text="{Binding Id}"
+                                        FontSize="12" Visibility="Hidden" />
+                                    <Image Source="{Binding User.Image.Image1}"
+                                        Height="50"
+                                        Width="50"/>
                                 </StackPanel>
                             </Grid>
                         </Button>
                         <!--1 card end-->
 
-                        <Button Width="150"
-                                Height="130"
-                                Margin="0,0,10,0"
-                                Background="Aqua"
-                                Click="Button_Click" >
-                            <Grid>
-                                <Image Source="/Images/nature.jpg"
-                                        Height="200"
-                                        Opacity=".7"/>
-                                <StackPanel>
-                                    <TextBlock Foreground="White" 
-                                            Text="Category Name"
-                                            FontSize="14"/>
-                                    <TextBlock Foreground="White" 
-                                            Text="Difficulty level"
-                                            FontSize="12"/>
-                                    <TextBlock Foreground="White" 
-                                            Text="User Name"
-                                            FontSize="12" />
-                                    <Image Source="/Images/girlavatar.jpg"
-                                        Height="50"
-                                        Width="50"/>
-                                </StackPanel>
-                            </Grid>
-                        </Button>
-
-
-                    <Button Width="150"
-                            Height="130"
-                            Margin="0,0,10,0"
-                            Background="Aqua"
-                            Click="Button_Click" >
-                        <Grid>
-                            <Image Source="/Images/nature.jpg"
-                                        Height="200"
-                                        Opacity=".7"/>
-                            <StackPanel>
-                                <TextBlock Foreground="White" 
-                                            Text="Category Name"
-                                            FontSize="14"/>
-                                <TextBlock Foreground="White" 
-                                            Text="Difficulty level"
-                                            FontSize="12"/>
-                                <TextBlock Foreground="White" 
-                                            Text="User Name"
-                                            FontSize="12" />
-                                <Image Source="/Images/girlavatar.jpg"
-                                        Height="50"
-                                        Width="50"/>
-                            </StackPanel>
-                        </Grid>
-                    </Button>
-
-                    <Button Width="150"
-                            Height="130"
-                            Margin="0,0,10,0"
-                            Background="Aqua"
-                            Click="Button_Click" >
-                        <Grid>
-                            <Image Source="/Images/nature.jpg"
-                                        Height="200"
-                                        Opacity=".7"/>
-                            <StackPanel>
-                                <TextBlock Foreground="White" 
-                                            Text="Category Name"
-                                            FontSize="14"/>
-                                <TextBlock Foreground="White" 
-                                            Text="Difficulty level"
-                                            FontSize="12"/>
-                                <TextBlock Foreground="White" 
-                                            Text="User Name"
-                                            FontSize="12" />
-                                <Image Source="/Images/girlavatar.jpg"
-                                        Height="50"
-                                        Width="50"/>
-                            </StackPanel>
-                        </Grid>
-                    </Button>
-
-                    <Button Width="150"
-                            Height="130"
-                            Margin="0,0,10,0"
-                            Background="Aqua"
-                            Click="Button_Click" >
-                        <Grid>
-                            <Image Source="/Images/nature.jpg"
-                                        Height="200"
-                                        Opacity=".7"/>
-                            <StackPanel>
-                                <TextBlock Foreground="White" 
-                                            Text="Category Name"
-                                            FontSize="14"/>
-                                <TextBlock Foreground="White" 
-                                            Text="Difficulty level"
-                                            FontSize="12"/>
-                                <TextBlock Foreground="White" 
-                                            Text="User Name"
-                                            FontSize="12" />
-                                <Image Source="/Images/girlavatar.jpg"
-                                        Height="50"
-                                        Width="50"/>
-                            </StackPanel>
-                        </Grid>
-                    </Button>
-
-                    <Button Width="150"
-                            Height="130"
-                            Margin="0,0,10,0"
-                            Background="Aqua"
-                            Click="Button_Click" >
-                        <Grid>
-                            <Image Source="/Images/nature.jpg"
-                                        Height="200"
-                                        Opacity=".7"/>
-                            <StackPanel>
-                                <TextBlock Foreground="White" 
-                                            Text="Category Name"
-                                            FontSize="14"/>
-                                <TextBlock Foreground="White" 
-                                            Text="Difficulty level"
-                                            FontSize="12"/>
-                                <TextBlock Foreground="White" 
-                                            Text="User Name"
-                                            FontSize="12" />
-                                <Image Source="/Images/girlavatar.jpg"
-                                        Height="50"
-                                        Width="50"/>
-                            </StackPanel>
-                        </Grid>
-                    </Button>
-
-
-
                 </StackPanel> 
                  <!--End of cards Stack panel container-->
 
-                    
-                </ScrollViewer>
+        
+            </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            </ScrollViewer>
             </StackPanel>
         
 

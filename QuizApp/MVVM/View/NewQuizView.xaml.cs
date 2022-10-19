@@ -24,5 +24,11 @@ namespace QuizApp.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DlgCreateTest createDialog = new DlgCreateTest();
+            if (createDialog.ShowDialog() == true) ;
+        }
     }
 }

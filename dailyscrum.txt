@@ -1,3 +1,19 @@
+---- SCRUM 7 ----
+
+2022/10/18 Louis 
+
+1. Done / not done since last scrum: 
+
+- created reviews dialog
+- created details review dialog
+
+2. To do until next Scrum: 
+
+- list of quiz cards in created quiz
+
+3. Need assistance / figure things out 
+- doing card dynamically with Alina
+
 ---- SCRUM 6 ----
 
 2022/10/18 Alina  

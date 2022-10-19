@@ -67,7 +67,7 @@ namespace QuizApp
                 category = ComboCategory.SelectedIndex + 9;
                 strCategory = $"&category={category}";
             }
-            test.CategoryId = ComboCategory.SelectedIndex;
+            test.CategoryId = ComboCategory.SelectedIndex + 1;
             //Validate Difficulty
             if (ComboDifficulty.SelectedItem == null)
             {

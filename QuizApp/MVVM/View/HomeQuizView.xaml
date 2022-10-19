@@ -42,7 +42,7 @@
                     Height="200"
                     Margin="0,0,10,0"
                     Background="Aqua"
-                        Tag="{Binding}"
+                    Tag="{Binding}"
                     Click="Button_Click" 
                     >
                         <Grid>
@@ -108,9 +108,11 @@
                                 Height="130"
                                 Margin="0,0,10,0"
                                 Background="Aqua"
-                                Click="Button_Click" >
+                                Click="Button_Click"
+                                Tag="{Binding}"
+                                >
                             <Grid>
-                                <Image Source="/Images/nature.jpg"
+                                  <Image Source="{Binding Category.Image.Image1}"
                                     Height="200"
                                     Opacity=".7"/>
                                 <StackPanel>
@@ -126,7 +128,7 @@
                                     <TextBlock Foreground="White" 
                                         Text="{Binding Id}"
                                         FontSize="12" Visibility="Hidden" />
-                                    <Image Source="/Images/girlavatar.jpg"
+                                    <Image Source="{Binding User.Image.Image1}"
                                         Height="50"
                                         Width="50"/>
                                 </StackPanel>

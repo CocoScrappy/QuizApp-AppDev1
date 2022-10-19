@@ -30,14 +30,14 @@ namespace QuizApp.MVVM.View
         {
             Test test = ((Button)sender).Tag as Test;
             Console.WriteLine(test.Category.Image.Id.ToString());
-           //DlgTakeTest inputDialog = new DlgTakeTest(test);
-           //if (inputDialog.ShowDialog() == true) ;
+           DlgTakeTest inputDialog = new DlgTakeTest(test);
+           if (inputDialog.ShowDialog() == true) ;
             //BtnCreateDialog.Content = "Success!";
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(u => u.Id == 3).FirstOrDefault();
+            Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(u => u.Id == 23).FirstOrDefault();
             List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id).ToList();
             IcUserTests.ItemsSource = userTests;
             foreach(Test test in userTests)
@@ -45,6 +45,7 @@ namespace QuizApp.MVVM.View
                 Console.WriteLine(test.Category.Name);
             }
             List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(t => t.OwnerId != Globals.CurrentUser.Id).ToList();
+            IcCommunityTests.ItemsSource = communityTests;
             
         }
     }

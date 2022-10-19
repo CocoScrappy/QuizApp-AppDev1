@@ -96,7 +96,7 @@ namespace QuizApp
             string query = $"https://opentdb.com/api.php?" + strAmount + strCategory + difficulty + type;
             Console.WriteLine(query);
             int testId = 0;
-            test.OwnerId = 1;
+            test.OwnerId = Globals.CurrentUser.Id;
             try
             {
                 //SaveTest returns the new Test Id so we can use it in TestQuestions

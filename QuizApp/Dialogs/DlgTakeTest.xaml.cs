@@ -45,6 +45,9 @@ namespace QuizApp
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
+            
+
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -70,7 +73,8 @@ namespace QuizApp
             ListLenght = TestQuestions.Count();
             PaintCurrentQuestion();
             PlayerResponses = new List<AttemptRespons>();
-
+            // FOR TESTING REMOVE ME 
+            Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(u => u.Id == 2).FirstOrDefault();
         }
 
         private void PaintCurrentQuestion()
@@ -262,7 +266,7 @@ namespace QuizApp
             Attempt Attempt = new Attempt();
 
             Attempt.TestId = Test.Id;
-            Attempt.PlayerId = 2;
+            Attempt.PlayerId = Globals.CurrentUser.Id;
             Attempt.DateTaken = DateTime.Now;
             Attempt.Archived = 0;
             double result = ((double)AnsweredCorrectly/(double)ListLenght) * 100;
@@ -273,6 +277,8 @@ namespace QuizApp
                 Globals.DbContextAutoGen.Attempts.Add(Attempt);
                 Globals.DbContextAutoGen.SaveChanges();
                 SavePlayerResponses(Attempt.Id);
+                //increase score based on test difficulty
+                UpdateUserScore();
             }
             catch (SystemException ex)
             {
@@ -295,6 +301,26 @@ namespace QuizApp
             {
                 throw;
             }
+        }
+
+        private void UpdateUserScore()
+        {
+            if(Globals.CurrentUser.Score == null) Globals.CurrentUser.Score = 0;
+            int increase = 0;
+            switch (Test.Difficulty)
+            {
+                case "Easy":
+                    increase = 1;
+                    break;
+                case "Medium":
+                    increase = 2;
+                    break;
+                case "Hard":
+                    increase = 3;
+                    break;
+            }
+            Globals.CurrentUser.Score += increase;
+            Globals.DbContextAutoGen.SaveChanges();
         }
 
 

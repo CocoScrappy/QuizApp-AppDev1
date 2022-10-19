@@ -23,7 +23,7 @@ namespace QuizApp
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            TxblFinalScore.Text = $"Your final score is:\n {correctAnswers} Out of {numberOfQuestions} questions!";
+            TxblFinalScore.Text = $"{Globals.CurrentUser.Username}, your final score is:\n {correctAnswers} Out of {numberOfQuestions} questions!";
 
         }
 

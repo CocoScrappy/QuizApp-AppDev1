@@ -26,9 +26,7 @@ namespace QuizApp.UserManagement
                     return;
                 }
 
-                using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
-                {
-                    Globals.CurrentUser = context.Users.Where(Users => Users.Username == TbxUsername.Text).FirstOrDefault();
+                    Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(Users => Users.Username == TbxUsername.Text).FirstOrDefault();
 
                     if (Globals.CurrentUser == null)
                     {
@@ -47,25 +45,21 @@ namespace QuizApp.UserManagement
                         if (Globals.CurrentUser.ImgId != null)
                         {
 
-                            byte[] ImgBytes = context.Images.Where(Images => Images.Id == Globals.CurrentUser.ImgId).Single().Image1;
+                            byte[] ImgBytes = Globals.DbContextAutoGen.Images.Where(Images => Images.Id == Globals.CurrentUser.ImgId).Single().Image1;
                             userAvatar.Source = ToImage(ImgBytes);
-                            LblUsername.Content = Globals.CurrentUser.Username;
+                            LblUsernameCurrent.Content = Globals.CurrentUser.Username;
                         }
                         else
                         {
                             userAvatar.Source = new BitmapImage(new Uri("pack://application:,,,/images/ProfileDefaultPic.JPG"));
-                            LblUsername.Content = Globals.CurrentUser.Username;
+                            LblUsernameCurrent.Content = Globals.CurrentUser.Username;
                         }
                     }
                     else
                     {
-                        PbxPass.Password = "";
-                        TbxUsername.BorderBrush = System.Windows.Media.Brushes.Red;
-                        PbxPass.BorderBrush = System.Windows.Media.Brushes.Red;
                         MessageBox.Show(this, "Wrong username or password!", "Input error",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                }
                 
             }
             catch (ArgumentException ex)
@@ -95,11 +89,19 @@ namespace QuizApp.UserManagement
                 TbxUsername.BorderBrush = System.Windows.Media.Brushes.Red;
                 throw new ArgumentException("Username must be 2-20 characters long, no semicolons");
             }
+            else
+            {
+                TbxUsername.BorderBrush = System.Windows.Media.Brushes.Black;
+            }
 
             if (PbxPass.Password == "")
             {
                 PbxPass.BorderBrush = System.Windows.Media.Brushes.Red;
                 throw new ArgumentException("Password field is empty");
+            }
+            else
+            {
+                PbxPass.BorderBrush = System.Windows.Media.Brushes.Black;
             }
 
             return true;

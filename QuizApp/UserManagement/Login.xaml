@@ -9,12 +9,12 @@
         WindowStyle="None">
     <Grid>
         <StackPanel>
-            <Label>Username</Label>
-            <TextBox Name="TbxUsername"></TextBox>
-            <Label>Password</Label>
-            <PasswordBox Name="PbxPass"></PasswordBox>
-            <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login"></Button>
-            <Label Content="" Name="LblUsername" HorizontalAlignment="Center"></Label>
+            <Label Name="LblUsername" HorizontalAlignment="Center">Username</Label>
+            <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
+            <Label Name="LblPass" HorizontalAlignment="Center">Password</Label>
+            <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+            <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login" HorizontalAlignment="Center"></Button>
+            <Label Content="" Name="LblUsernameCurrent" HorizontalAlignment="Center"></Label>
             
             <Image Margin="12,12,16,71" Name="userAvatar"
                 Stretch="Fill" Height="150" Width="150"  />

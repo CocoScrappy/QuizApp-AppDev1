@@ -49,14 +49,12 @@ namespace QuizApp.UserManagement
                     byte[] bits = ImageToByteArray(AvatarImg);
                     Image avatar = new Image { Image1 = bits };
 
-                    using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
-                    {
-                        context.Images.Add(avatar); // adds the image to the DbSet in memory
-                        context.SaveChanges(); // commits the changes to the database
-                        Image MostRecentImg = context.Images.Where(Images => Images.Image1 == bits).First();
-                        //stud.studentID = u.ID; can just get the id of most recent image this way
-                        imgId = MostRecentImg.Id;
-                    }
+
+                    Globals.DbContextAutoGen.Images.Add(avatar); // adds the image to the DbSet in memory
+                    Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+                    Image MostRecentImg = Globals.DbContextAutoGen.Images.Where(Images => Images.Image1 == bits).First();
+                    //stud.studentID = u.ID; can just get the id of most recent image this way
+                    imgId = MostRecentImg.Id;
 
                 }
                 string myPassword = PbxPass.Password;
@@ -66,20 +64,15 @@ namespace QuizApp.UserManagement
                 if (imgId != -1)
                 {
                     User newUser = new User { Email = TbxEmail.Text, Username = TbxUsername.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
-                    using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
-                    {
-                        context.Users.Add(newUser); // adds the image to the DbSet in memory
-                        context.SaveChanges(); // commits the changes to the database
-                    }
+                    Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
+                    Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+
                 }
                 else
                 {
                     User newUser = new User { Email = TbxEmail.Text, Username = TbxUsername.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
-                    using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
-                    {
-                        context.Users.Add(newUser); // adds the image to the DbSet in memory
-                        context.SaveChanges(); // commits the changes to the database
-                    }
+                    Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
+                    Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
                 }
 
                 //clear inputs
@@ -130,25 +123,60 @@ namespace QuizApp.UserManagement
             if (!Regex.IsMatch(TbxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) //, RegexOptions.IgnoreCase))
             {
                 TbxEmail.Text = "";
+                TbxEmail.BorderBrush = Brushes.Red;
                 throw new ArgumentException("Email must be a valid email up to 100 characters");
+            }
+            else
+            {
+                TbxEmail.BorderBrush = Brushes.Black;
             }
 
             if (!Regex.IsMatch(TbxUsername.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
             {
                 TbxUsername.Text = "";
+                TbxUsername.BorderBrush = Brushes.Red;
                 throw new ArgumentException("Username must be 2-20 characters long, no semicolons");
             }
-
-            if ((PbxConfirmPass.Password == "") || (PbxPass.Password == ""))
+            else
             {
-                throw new ArgumentException("One or both of the password fields empty");
+                TbxUsername.BorderBrush = Brushes.Black;
+            }
+
+            if (PbxPass.Password == "")
+            {
+                PbxPass.Password = "";
+                PbxPass.BorderBrush = Brushes.Red;
+                throw new ArgumentException("Password field is empty");
+            }
+            else
+            {
+                PbxPass.BorderBrush = Brushes.Black;
+            }
+
+            if (PbxConfirmPass.Password == "")
+            {
+                PbxConfirmPass.Password = "";
+                PbxConfirmPass.BorderBrush = Brushes.Red;
+                throw new ArgumentException("Confirm Password field is empty");
+            }
+            else
+            {
+                PbxConfirmPass.BorderBrush = Brushes.Black;
             }
 
             if (PbxConfirmPass.Password != PbxPass.Password)
             {
                 PbxPass.Password = "";
                 PbxConfirmPass.Password = "";
+                PbxConfirmPass.BorderBrush = Brushes.Red;
+                PbxPass.BorderBrush = Brushes.Red;
+
                 throw new ArgumentException("Passwords do not match");
+            }
+            else
+            {
+                PbxConfirmPass.BorderBrush = Brushes.Black;
+                PbxPass.BorderBrush = Brushes.Black;
             }
 
             return true;
@@ -177,20 +205,14 @@ namespace QuizApp.UserManagement
 
         private User UsernameExists()
         {
-            using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
-            {
-                User Duplicate = context.Users.Where(Users => Users.Username == TbxUsername.Text ).FirstOrDefault();
-                return Duplicate;
-            }
+            User Duplicate = Globals.DbContextAutoGen.Users.Where(Users => Users.Username == TbxUsername.Text ).FirstOrDefault();
+            return Duplicate;
         }
 
         private User EmailExists()
         {
-            using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
-            {
-                User Duplicate = context.Users.Where(Users => Users.Email == TbxEmail.Text).FirstOrDefault();
-                return Duplicate;
-            }
+            User Duplicate = Globals.DbContextAutoGen.Users.Where(Users => Users.Email == TbxEmail.Text).FirstOrDefault();
+            return Duplicate;
         }
     }
 }

@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp.UserManagement"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="800">
+        Title="Registration" Height="450" Width="800"
+        WindowStyle="None">
     <Grid>
 
         <StackPanel>
             <Image Margin="12,12,16,71" Name="userAvatar"
-                Stretch="Fill" />
-            <Label>Email</Label>
-            <TextBox Name="Email"></TextBox>
-            <Label>Username</Label>
-            <TextBox Name="Username"></TextBox>
-            <Label>Password</Label>
-            <PasswordBox Name="Pass"></PasswordBox>
-            <Label>Confirm Password</Label>
-            <PasswordBox Name="ConfirmPass"></PasswordBox>
-            <Button Height="23" HorizontalAlignment="Left"
-                Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click">_Load</Button>
-            <Button Name="Register" Click="Register_Click">
+                Stretch="Fill" Height="150" Width="150"  />
+            <Label Name="LblEmail" HorizontalAlignment="Center">Email</Label>
+            <TextBox Name="TbxEmail" HorizontalAlignment="Center" Width="300"></TextBox>
+            <Label Name="LblUsername" HorizontalAlignment="Center">Username</Label>
+            <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
+            <Label Name="LblPassword" HorizontalAlignment="Center">Password</Label>
+            <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+            <Label Name="LblConfirmPass" HorizontalAlignment="Center">Confirm Password</Label>
+            <PasswordBox Name="PbxConfirmPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+            <Button Height="23" Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click" HorizontalAlignment="Center">_Load</Button>
+            <Button Name="Register" Click="BtnRegister_Click" HorizontalAlignment="Center">
                 Register
             </Button>
         </StackPanel>

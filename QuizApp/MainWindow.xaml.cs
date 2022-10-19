@@ -53,7 +53,8 @@ namespace QuizApp
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-
+            Login LoginWindow = new Login();
+            LoginWindow.Show();
         }
 
         private void MinimizeButton_MouseLeftDown(object sender, MouseButtonEventArgs e)

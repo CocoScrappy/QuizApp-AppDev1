@@ -1,20 +1,11 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 
 namespace QuizApp.UserManagement
 {
@@ -28,10 +19,7 @@ namespace QuizApp.UserManagement
             InitializeComponent();
         }
 
-
-        //private QuizAppProjectEntities quizAppProjectEntities;
-
-        private void Register_Click(object sender, RoutedEventArgs e)
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -39,52 +27,63 @@ namespace QuizApp.UserManagement
                 {
                     return;
                 }
+
+                if (UsernameExists() != null) {
+                    MessageBox.Show(this, "Username already exists", "Input error", MessageBoxButton.OK, MessageBoxImage.Information);
+                    TbxUsername.Text = "";
+                    return;
+                }
+
+                if (EmailExists() != null)
+                {
+                    MessageBox.Show(this, "Email already exists", "Input error", MessageBoxButton.OK, MessageBoxImage.Information);
+                    TbxEmail.Text = "";
+                    return;
+                }
+
+
                 int imgId = -1; // default if image was not added
                 if ((BitmapImage)userAvatar.Source != null)
                 {
-                    var bmp = userAvatar.Source as BitmapImage;
+                    System.Drawing.Image AvatarImg = ConvertImageSourceToImage(userAvatar.Source);
+                    byte[] bits = ImageToByteArray(AvatarImg);
+                    Image avatar = new Image { Image1 = bits };
 
-                    int height = bmp.PixelHeight;
-                    int width = bmp.PixelWidth;
-                    int stride = width * ((bmp.Format.BitsPerPixel + 7) / 8);
 
-                    byte[] bits = new byte[height * stride];
-                    bmp.CopyPixels(bits, stride, 0);
-                    Image avatar = new Image { Image1 = bits }; // ArgumentException
-                    using (Globals.DbContextAutoGen)
-                    {
-                        Globals.DbContextAutoGen.Images.Add(avatar); // adds the image to the DbSet in memory
-                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
-                        imgId = Globals.DbContextAutoGen.Images.Where(Images => Images.Image1 == bits).Single().Id;
-                    }
+                    Globals.DbContextAutoGen.Images.Add(avatar); // adds the image to the DbSet in memory
+                    Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+                    Image MostRecentImg = Globals.DbContextAutoGen.Images.Where(Images => Images.Image1 == bits).First();
+                    //stud.studentID = u.ID; can just get the id of most recent image this way
+                    imgId = MostRecentImg.Id;
+
                 }
-                string myPassword = Pass.Password;
+                string myPassword = PbxPass.Password;
                 string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
                 string myHash = BCrypt.Net.BCrypt.HashPassword(myPassword, mySalt);
-                //bool doesPasswordMatch = BCrypt.Net.BCrypt.CheckPassword(myPassword, myHash);
 
                 if (imgId != -1)
                 {
-                    User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
-                    using (Globals.DbContextAutoGen)
-                    {
-                        Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
-                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
-                    }
+                    User newUser = new User { Email = TbxEmail.Text, Username = TbxUsername.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
+                    Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
+                    Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
+
                 }
                 else
                 {
-                    User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
-                    using (Globals.DbContextAutoGen)
-                    {
-                        Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
-                        Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
-                    }
+                    User newUser = new User { Email = TbxEmail.Text, Username = TbxUsername.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
+                    Globals.DbContextAutoGen.Users.Add(newUser); // adds the image to the DbSet in memory
+                    Globals.DbContextAutoGen.SaveChanges(); // commits the changes to the database
                 }
-
 
                 //clear inputs
                 ResetRegistrationFields();
+
+                Login login = new Login();
+                //this will open your child window
+                login.Show();
+                //this will close parent window. Registration window in this case
+                this.Close();
+
             }
             catch (ArgumentException ex)
             {
@@ -112,45 +111,108 @@ namespace QuizApp.UserManagement
 
         private void ResetRegistrationFields()
         {
-            Email.Text = "";
-            Username.Text = "";
-            Pass.Password = "";
-            ConfirmPass.Password = "";
+            TbxEmail.Text = "";
+            TbxUsername.Text = "";
+            PbxPass.Password = "";
+            PbxConfirmPass.Password = "";
             userAvatar.Source = null;
         }
 
-
         private bool ValidateInputs()
         {
-            if (!Regex.IsMatch(Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) //, RegexOptions.IgnoreCase))
+            if (!Regex.IsMatch(TbxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) //, RegexOptions.IgnoreCase))
             {
-                Email.Text = "";
+                TbxEmail.Text = "";
+                TbxEmail.BorderBrush = Brushes.Red;
                 throw new ArgumentException("Email must be a valid email up to 100 characters");
             }
-
-            if (!Regex.IsMatch(Username.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
+            else
             {
-                Username.Text = "";
+                TbxEmail.BorderBrush = Brushes.Black;
+            }
+
+            if (!Regex.IsMatch(TbxUsername.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
+            {
+                TbxUsername.Text = "";
+                TbxUsername.BorderBrush = Brushes.Red;
                 throw new ArgumentException("Username must be 2-20 characters long, no semicolons");
             }
-
-            if ((ConfirmPass.Password == "") || (Pass.Password == ""))
+            else
             {
-                //MessageBox.Show(this, "Passwords do not match!", "Input error",
-                //MessageBoxButton.OK, MessageBoxImage.Error);
-                throw new ArgumentException("One or both of the password fields empty");
+                TbxUsername.BorderBrush = Brushes.Black;
             }
 
-            if (ConfirmPass.Password != Pass.Password)
+            if (PbxPass.Password == "")
             {
-                //MessageBox.Show(this, "Passwords do not match!", "Input error",
-                //MessageBoxButton.OK, MessageBoxImage.Error);
-                Pass.Password = "";
-                ConfirmPass.Password = "";
+                PbxPass.Password = "";
+                PbxPass.BorderBrush = Brushes.Red;
+                throw new ArgumentException("Password field is empty");
+            }
+            else
+            {
+                PbxPass.BorderBrush = Brushes.Black;
+            }
+
+            if (PbxConfirmPass.Password == "")
+            {
+                PbxConfirmPass.Password = "";
+                PbxConfirmPass.BorderBrush = Brushes.Red;
+                throw new ArgumentException("Confirm Password field is empty");
+            }
+            else
+            {
+                PbxConfirmPass.BorderBrush = Brushes.Black;
+            }
+
+            if (PbxConfirmPass.Password != PbxPass.Password)
+            {
+                PbxPass.Password = "";
+                PbxConfirmPass.Password = "";
+                PbxConfirmPass.BorderBrush = Brushes.Red;
+                PbxPass.BorderBrush = Brushes.Red;
+
                 throw new ArgumentException("Passwords do not match");
+            }
+            else
+            {
+                PbxConfirmPass.BorderBrush = Brushes.Black;
+                PbxPass.BorderBrush = Brushes.Black;
             }
 
             return true;
+        }
+
+        private byte[] ImageToByteArray(System.Drawing.Image images)
+        {
+            using (var _memorystream = new MemoryStream())
+            {
+                images.Save(_memorystream, images.RawFormat);
+                return _memorystream.ToArray();
+            }
+        }
+
+        private static System.Drawing.Image ConvertImageSourceToImage(ImageSource image)
+        {
+            if (image == null) return null;
+
+            MemoryStream memoryStream = new MemoryStream();
+            BmpBitmapEncoder bmpBitmapEncoder = new BmpBitmapEncoder();
+            bmpBitmapEncoder.Frames.Add(BitmapFrame.Create((BitmapSource)image));
+            bmpBitmapEncoder.Save(memoryStream);
+
+            return System.Drawing.Image.FromStream(memoryStream);
+        }
+
+        private User UsernameExists()
+        {
+            User Duplicate = Globals.DbContextAutoGen.Users.Where(Users => Users.Username == TbxUsername.Text ).FirstOrDefault();
+            return Duplicate;
+        }
+
+        private User EmailExists()
+        {
+            User Duplicate = Globals.DbContextAutoGen.Users.Where(Users => Users.Email == TbxEmail.Text).FirstOrDefault();
+            return Duplicate;
         }
     }
 }

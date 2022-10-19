@@ -136,7 +136,7 @@
                              Command="{Binding NewQuizViewCommand}"
                              />
                 <RadioButton
-                             Content="My stats"
+                             Content="My Stats"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
@@ -149,7 +149,7 @@
 
             <Image Grid.Row="1"
                    Source="/Images/quizperson.png" 
-                   Margin="8,246,8,25"/>
+                   Margin="19,263,19,40"/>
 
 
             <!--Top white section-->

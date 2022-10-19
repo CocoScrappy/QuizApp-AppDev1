@@ -292,7 +292,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Images\nature.jpg" />
     <Resource Include="Images\quizperson.png" />
+    <Resource Include="Images\girlavatar.jpg" />
     <Content Include="QuizApp_dbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>

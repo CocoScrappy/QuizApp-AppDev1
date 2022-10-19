@@ -13,16 +13,16 @@
             <Image Margin="12,12,16,71" Name="userAvatar"
                 Stretch="Fill" Height="150" Width="150"  />
             <Label>Email</Label>
-            <TextBox Name="Email"></TextBox>
+            <TextBox Name="TbxEmail"></TextBox>
             <Label>Username</Label>
-            <TextBox Name="Username"></TextBox>
+            <TextBox Name="TbxUsername"></TextBox>
             <Label>Password</Label>
-            <PasswordBox Name="Pass"></PasswordBox>
+            <PasswordBox Name="PbxPass"></PasswordBox>
             <Label>Confirm Password</Label>
-            <PasswordBox Name="ConfirmPass"></PasswordBox>
+            <PasswordBox Name="PbxConfirmPass"></PasswordBox>
             <Button Height="23" HorizontalAlignment="Left"
                 Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click">_Load</Button>
-            <Button Name="Register" Click="RegisterBtn_Click">
+            <Button Name="Register" Click="BtnRegister_Click">
                 Register
             </Button>
         </StackPanel>

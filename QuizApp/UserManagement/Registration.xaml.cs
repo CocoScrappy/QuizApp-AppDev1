@@ -19,9 +19,7 @@ namespace QuizApp.UserManagement
             InitializeComponent();
         }
 
-        //private QuizAppProjectEntities1 quizAppProjectEntities;
-
-        private void RegisterBtn_Click(object sender, RoutedEventArgs e)
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -29,6 +27,21 @@ namespace QuizApp.UserManagement
                 {
                     return;
                 }
+
+                if (UsernameExists() != null) {
+                    MessageBox.Show(this, "Username already exists", "Input error", MessageBoxButton.OK, MessageBoxImage.Information);
+                    TbxUsername.Text = "";
+                    return;
+                }
+
+                if (EmailExists() != null)
+                {
+                    MessageBox.Show(this, "Email already exists", "Input error", MessageBoxButton.OK, MessageBoxImage.Information);
+                    TbxEmail.Text = "";
+                    return;
+                }
+
+
                 int imgId = -1; // default if image was not added
                 if ((BitmapImage)userAvatar.Source != null)
                 {
@@ -40,20 +53,19 @@ namespace QuizApp.UserManagement
                     {
                         context.Images.Add(avatar); // adds the image to the DbSet in memory
                         context.SaveChanges(); // commits the changes to the database
-                        Image imgMostRecent = context.Images.Where(Images => Images.Image1 == bits).First();
-                        //stud.studentID = u.ID; can just get the id of most recent image this way 
-                        imgId = imgMostRecent.Id;
+                        Image MostRecentImg = context.Images.Where(Images => Images.Image1 == bits).First();
+                        //stud.studentID = u.ID; can just get the id of most recent image this way
+                        imgId = MostRecentImg.Id;
                     }
 
                 }
-                string myPassword = Pass.Password;
+                string myPassword = PbxPass.Password;
                 string mySalt = BCrypt.Net.BCrypt.GenerateSalt();
                 string myHash = BCrypt.Net.BCrypt.HashPassword(myPassword, mySalt);
 
                 if (imgId != -1)
                 {
-                    User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
-                    //using (Globals.DbContextAutoGen)
+                    User newUser = new User { Email = TbxEmail.Text, Username = TbxUsername.Text, Password = myHash, Score = 0, MaxScore = 0, ImgId = imgId }; // ArgumentException
                     using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
                     {
                         context.Users.Add(newUser); // adds the image to the DbSet in memory
@@ -62,8 +74,7 @@ namespace QuizApp.UserManagement
                 }
                 else
                 {
-                    User newUser = new User { Email = Email.Text, Username = Username.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
-                    //using (Globals.DbContextAutoGen)
+                    User newUser = new User { Email = TbxEmail.Text, Username = TbxUsername.Text, Password = myHash, Score = 0, MaxScore = 0 }; // ArgumentException
                     using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
                     {
                         context.Users.Add(newUser); // adds the image to the DbSet in memory
@@ -107,43 +118,43 @@ namespace QuizApp.UserManagement
 
         private void ResetRegistrationFields()
         {
-            Email.Text = "";
-            Username.Text = "";
-            Pass.Password = "";
-            ConfirmPass.Password = "";
+            TbxEmail.Text = "";
+            TbxUsername.Text = "";
+            PbxPass.Password = "";
+            PbxConfirmPass.Password = "";
             userAvatar.Source = null;
         }
 
         private bool ValidateInputs()
         {
-            if (!Regex.IsMatch(Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) //, RegexOptions.IgnoreCase))
+            if (!Regex.IsMatch(TbxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) //, RegexOptions.IgnoreCase))
             {
-                Email.Text = "";
+                TbxEmail.Text = "";
                 throw new ArgumentException("Email must be a valid email up to 100 characters");
             }
 
-            if (!Regex.IsMatch(Username.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
+            if (!Regex.IsMatch(TbxUsername.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
             {
-                Username.Text = "";
+                TbxUsername.Text = "";
                 throw new ArgumentException("Username must be 2-20 characters long, no semicolons");
             }
 
-            if ((ConfirmPass.Password == "") || (Pass.Password == ""))
+            if ((PbxConfirmPass.Password == "") || (PbxPass.Password == ""))
             {
                 throw new ArgumentException("One or both of the password fields empty");
             }
 
-            if (ConfirmPass.Password != Pass.Password)
+            if (PbxConfirmPass.Password != PbxPass.Password)
             {
-                Pass.Password = "";
-                ConfirmPass.Password = "";
+                PbxPass.Password = "";
+                PbxConfirmPass.Password = "";
                 throw new ArgumentException("Passwords do not match");
             }
 
             return true;
         }
 
-        public byte[] ImageToByteArray(System.Drawing.Image images)
+        private byte[] ImageToByteArray(System.Drawing.Image images)
         {
             using (var _memorystream = new MemoryStream())
             {
@@ -152,7 +163,7 @@ namespace QuizApp.UserManagement
             }
         }
 
-        public static System.Drawing.Image ConvertImageSourceToImage(ImageSource image)
+        private static System.Drawing.Image ConvertImageSourceToImage(ImageSource image)
         {
             if (image == null) return null;
 
@@ -164,5 +175,22 @@ namespace QuizApp.UserManagement
             return System.Drawing.Image.FromStream(memoryStream);
         }
 
+        private User UsernameExists()
+        {
+            using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
+            {
+                User Duplicate = context.Users.Where(Users => Users.Username == TbxUsername.Text ).FirstOrDefault();
+                return Duplicate;
+            }
+        }
+
+        private User EmailExists()
+        {
+            using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
+            {
+                User Duplicate = context.Users.Where(Users => Users.Email == TbxEmail.Text).FirstOrDefault();
+                return Duplicate;
+            }
+        }
     }
 }

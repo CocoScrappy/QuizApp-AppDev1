@@ -10,11 +10,11 @@
     <Grid>
         <StackPanel>
             <Label>Username</Label>
-            <TextBox Name="Username"></TextBox>
+            <TextBox Name="TbxUsername"></TextBox>
             <Label>Password</Label>
-            <PasswordBox Name="Pass"></PasswordBox>
-            <Button Name="LoginBtn" Click="LoginBtn_Click" Content="Login"></Button>
-            <Label Content="" Name="UsernameLbl" HorizontalAlignment="Center"></Label>
+            <PasswordBox Name="PbxPass"></PasswordBox>
+            <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login"></Button>
+            <Label Content="" Name="LblUsername" HorizontalAlignment="Center"></Label>
             
             <Image Margin="12,12,16,71" Name="userAvatar"
                 Stretch="Fill" Height="150" Width="150"  />

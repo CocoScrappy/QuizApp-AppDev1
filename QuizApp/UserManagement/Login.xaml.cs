@@ -17,7 +17,7 @@ namespace QuizApp.UserManagement
             InitializeComponent();
         }
 
-        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -28,37 +28,40 @@ namespace QuizApp.UserManagement
 
                 using (QuizAppProjectEntities1 context = new QuizAppProjectEntities1())
                 {
-                    string userHash = Globals.DbContextAutoGen.Users.Where(Users => Users.Username == Username.Text).Single().Password;
-                    if (userHash == null)
+                    Globals.CurrentUser = context.Users.Where(Users => Users.Username == TbxUsername.Text).FirstOrDefault();
+
+                    if (Globals.CurrentUser == null)
                     {
                         MessageBox.Show(this, "Wrong username or password!", "Input error",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
 
-                    string userPassword = Pass.Password;
+                    string userHash = Globals.CurrentUser.Password;
+                    string userPassword = PbxPass.Password;
                     bool doesPasswordMatch = BCrypt.Net.BCrypt.Verify(userPassword, userHash);
 
                     if (doesPasswordMatch)
                     {
-                        Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(Users => Users.Username == Username.Text).Single();
 
                         if (Globals.CurrentUser.ImgId != null)
                         {
 
-                            byte[] ImgBytes = Globals.DbContextAutoGen.Images.Where(Images => Images.Id == Globals.CurrentUser.ImgId).Single().Image1;
+                            byte[] ImgBytes = context.Images.Where(Images => Images.Id == Globals.CurrentUser.ImgId).Single().Image1;
                             userAvatar.Source = ToImage(ImgBytes);
-                            UsernameLbl.Content = Globals.CurrentUser.Username;
+                            LblUsername.Content = Globals.CurrentUser.Username;
                         }
                         else
                         {
                             userAvatar.Source = new BitmapImage(new Uri("pack://application:,,,/images/ProfileDefaultPic.JPG"));
-                            UsernameLbl.Content = Globals.CurrentUser.Username;
+                            LblUsername.Content = Globals.CurrentUser.Username;
                         }
                     }
                     else
                     {
-                        Pass.Password = "";
+                        PbxPass.Password = "";
+                        TbxUsername.BorderBrush = System.Windows.Media.Brushes.Red;
+                        PbxPass.BorderBrush = System.Windows.Media.Brushes.Red;
                         MessageBox.Show(this, "Wrong username or password!", "Input error",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                     }
@@ -86,14 +89,16 @@ namespace QuizApp.UserManagement
 
         private bool ValidateInputs()
         {
-            if (!Regex.IsMatch(Username.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
+            if (!Regex.IsMatch(TbxUsername.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
             {
-                Username.Text = "";
+                TbxUsername.Text = "";
+                TbxUsername.BorderBrush = System.Windows.Media.Brushes.Red;
                 throw new ArgumentException("Username must be 2-20 characters long, no semicolons");
             }
 
-            if (Pass.Password == "")
+            if (PbxPass.Password == "")
             {
+                PbxPass.BorderBrush = System.Windows.Media.Brushes.Red;
                 throw new ArgumentException("Password field is empty");
             }
 

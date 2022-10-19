@@ -107,6 +107,7 @@
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryTemp.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Dialogs\DlgAttemptDetails.xaml.cs">
@@ -298,8 +299,13 @@
     <Folder Include="MVVM\Model\" />
     <Folder Include="Partials\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\ProfileDefaultPic.JPG" />
+    <Resource Include="Images\nature.jpg" />
+    <Resource Include="Images\quizperson.png" />
+    <Resource Include="Images\girlavatar.jpg" />
+    <Resource Include="Images\ideagirl.png" />
     <Content Include="QuizApp_dbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>

@@ -1,6 +1,6 @@
 ---- SCRUM 7 ----
 
-2022/10/18 Dmitry  
+2022/10/19 Dmitry  
 
 1. Done / not done since last scrum: 
 

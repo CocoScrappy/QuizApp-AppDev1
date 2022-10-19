@@ -9,7 +9,7 @@
              d:DesignHeight="460" d:DesignWidth="800">
     <StackPanel>
         <TextBlock Text="My Quizzes"
-                   Foreground="White"
+                   Foreground="#FF353535"
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
@@ -34,7 +34,7 @@
 
         <StackPanel>
             <TextBlock Text="Community Quizzes"
-                   Foreground="White"
+                   Foreground="#FF353535"
                    FontSize="20"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"

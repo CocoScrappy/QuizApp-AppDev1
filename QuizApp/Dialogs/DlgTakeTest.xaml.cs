@@ -40,11 +40,16 @@ namespace QuizApp
                 return $"{CurrentIndex + 1}/{ListLenght}";
             }
         }
-        public DlgTakeTest()
+        public DlgTakeTest(Test test)
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-
+            Test = test;
+            if (Test == null)
+            {
+                MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -52,14 +57,9 @@ namespace QuizApp
             
             //find test entity
             ////FIXME:: Find for dynamic testId
-            Test = Globals.DbContextAutoGen.Tests.Where(t => t.Id == 14).OfType<Test>().FirstOrDefault();
-            if (Test == null)
-            {
-                MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            
             // populate questions list
-            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == 14).OfType<TestQuestion>().ToList();
+            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == Test.Id).OfType<TestQuestion>().ToList();
             if (TestQuestions == null || TestQuestions.Count() == 0)
             {
                 MessageBox.Show(this, "No questions were found for this Test", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);

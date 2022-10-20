@@ -304,6 +304,8 @@
     <Resource Include="Images\quizperson.png" />
     <Resource Include="Images\girlavatar.jpg" />
     <Resource Include="Images\ideagirl.png" />
+    <Resource Include="Images\hiking.png" />
+    <Resource Include="Images\people.png" />
     <Content Include="QuizApp_dbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuizApp_dbContext.edmx</DependentUpon>

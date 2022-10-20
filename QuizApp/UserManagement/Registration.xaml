@@ -9,56 +9,108 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         FontFamily="/Fonts/Poppins/#Poppins">
-
-    <StackPanel HorizontalAlignment="Center" 
-                VerticalAlignment="top">
-
+    <Grid>
+        <StackPanel  VerticalAlignment="Center">
         <StackPanel HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Orientation="Horizontal"
+                    Width="500">
+
+            <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Left" Margin="10,10, 0, 0"  Width="150"
+                    >
+                <Image Margin="12,12,16,71" Name="userAvatar"
+            Stretch="Fill" Height="75" Width="75"  />
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center">Choose your avatar</TextBlock>
+                <Button Name="BtnLoad" Click="BtnLoad_Click" Foreground="White">
+                    _Load
+                </Button>
+
+            </StackPanel>
+
+
+            <StackPanel HorizontalAlignment="Left" 
                     VerticalAlignment="Center"
                     Margin="10,10,10,10"
                     >
 
-            <StackPanel HorizontalAlignment="Center" 
+                <StackPanel HorizontalAlignment="Center" 
                         VerticalAlignment="Center"
                         Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Email" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
-                <Label Name="LblEmail" HorizontalAlignment="Center" Foreground="#FF353535">
-                    Email
-                </Label>
-            </StackPanel>
-            
-            
-            <TextBox Name="TbxEmail" HorizontalAlignment="Center" Width="300"></TextBox>
+                    <materialDesign:PackIcon Kind="Email" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                    <Label Name="LblEmail" HorizontalAlignment="Center" Foreground="#FF353535">
+                        Email
+                    </Label>
+                </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" 
+
+                <TextBox Name="TbxEmail" HorizontalAlignment="Center" Width="300"></TextBox>
+
+                <StackPanel HorizontalAlignment="Center" 
                         VerticalAlignment="Center"
                         Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Account" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
-                <Label Name="LblUsername" 
+                    <materialDesign:PackIcon Kind="Account" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                    <Label Name="LblUsername" 
                        HorizontalAlignment="Center" 
                        Foreground="#FF353535">
-                    Username
-                </Label>
+                        Username
+                    </Label>
+                </StackPanel>
+
+                <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
+
+                <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="key" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                    <Label Name="LblPassword" 
+                       HorizontalAlignment="Center"
+                       Foreground="#FF353535">
+                        Password
+                    </Label>
+                </StackPanel>
+
+
+                <PasswordBox Name="PbxPass" 
+                         HorizontalAlignment="Center" Width="300"></PasswordBox>
+
+                <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Check" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                    <Label Name="LblConfirmPass" 
+                       HorizontalAlignment="Center"
+                       Foreground="#FF353535">
+                        Confirm Password
+                    </Label>
+                </StackPanel>
+
+                <PasswordBox Name="PbxConfirmPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+
+                <StackPanel HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal"
+                Margin="0,40,0,0"
+                    >
+                    <Button Name="BtnBackToMain" Click="BtnBackToMain_Click" HorizontalAlignment="Center" Margin="0,0,4,0"
+                        Foreground="White" Background="#FFA2A3A7" BorderBrush="#FFA2A3A7">
+                        BackToMain
+                    </Button>
+                    <Button Name="Register" Click="BtnRegister_Click" HorizontalAlignment="Center" 
+                        Foreground="White">
+                        Register
+                    </Button>
+
+
+
+                </StackPanel>
             </StackPanel>
-           
-            <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
-            
-            
-            <Label Name="LblPassword" HorizontalAlignment="Center">Password</Label>
-            <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
-            <Label Name="LblConfirmPass" HorizontalAlignment="Center">Confirm Password</Label>
-            <PasswordBox Name="PbxConfirmPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
-            
-            
-            
-            <Button Height="23" Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click" HorizontalAlignment="Center">_Load</Button>
-            <Button Name="Register" Click="BtnRegister_Click" HorizontalAlignment="Center">Register</Button>
-            <Button Name="BtnBackToMain" Click="BtnBackToMain_Click" HorizontalAlignment="Center">BackToMain</Button>
-            
-            
+
+
         </StackPanel>
-        <Image Margin="12,12,16,71" Name="userAvatar"
-                Stretch="Fill" Height="150" Width="150"  />
+        
     </StackPanel>
-    
+        <Image
+               Source="/Images/hiking.png" Margin="-16,-40,548,222"/>
+    </Grid>
 </Window>

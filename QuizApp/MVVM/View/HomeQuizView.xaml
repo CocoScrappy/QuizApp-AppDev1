@@ -11,12 +11,13 @@
     
     >
     <StackPanel>
-        <TextBlock Text="My Quizzes"
+        <TextBlock Text="Your created quizzes"
                    Foreground="#FF353535"
-                   FontSize="22"
+                   FontSize="20"
                    HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
+                   Margin="0,15,0,15"
                    FontFamily="/Fonts/Poppins/#Poppins"
+                   FontWeight="SemiBold"
                    />
         <ScrollViewer HorizontalAlignment="Left" 
                       VerticalAlignment="Top" 
@@ -83,10 +84,11 @@
             <StackPanel>
                 <TextBlock Text="Community Quizzes"
                    Foreground="#FF353535"
-                   FontSize="20"
+                   FontSize="16"
                    HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
+                   Margin="0,15,0,15"
                    FontFamily="/Fonts/Poppins/#Poppins"
+                   FontWeight="SemiBold"
                    />
             <!--New scroll section-->
                 <ScrollViewer HorizontalAlignment="Left" 

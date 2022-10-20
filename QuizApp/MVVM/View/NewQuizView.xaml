@@ -14,11 +14,12 @@
                 VerticalAlignment="Center"
                 Margin="0,0,0,100">
         
-        <TextBlock     Text="Design your own Quizzle"
+        <TextBlock Text="Design your own Quizzle"
                    Foreground="#FF353535"
                    FontSize="22"
                    HorizontalAlignment="Center"
-                   Margin="0,0,0,30"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,25"
                    
                    />
         <TextBlock     Text="Choose the category, difficulty level, and number of questions you want."

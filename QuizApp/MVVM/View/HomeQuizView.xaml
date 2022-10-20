@@ -7,6 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="QuizApp.MVVM.View.HomeQuizView"
              mc:Ignorable="d" 
              d:DesignHeight="460" d:DesignWidth="800"
+               FontFamily="/Fonts/Poppins/#Poppins"
             Loaded="UserControl_Loaded"
     
     >
@@ -48,10 +49,20 @@
                         Click="Button_Click" 
                     >
                         <Grid>
-                              <Image Source="{Binding Category.Image.Image1}"
+                                    <Image Source="{Binding Category.Image.Image1}"
                                      Height="200"
-                                     Opacity=".7"
-                                     Stretch="Fill"/>
+                                     Stretch="Fill">
+                                        <Image.OpacityMask>
+                                            <LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.75,0.75">
+                                                <LinearGradientBrush.GradientStops>
+                                                    <GradientStop Offset="1" Color="#DE4A7B"/>
+                                                    <GradientStop Offset="0" Color="Transparent"/>
+                                                    
+                                                </LinearGradientBrush.GradientStops>
+                                            </LinearGradientBrush>
+                                        </Image.OpacityMask>
+
+                                    </Image>
                                     <StackPanel Margin="4,4,4,4">
                                         <TextBlock Foreground="White" 
                                            Text="{Binding Category.Name}"
@@ -59,6 +70,7 @@
                                         <TextBlock Foreground="White" 
                                            Text="{Binding Difficulty}"
                                            FontSize="18"/>
+
                                         <TextBlock Foreground="White" 
                                            Text="{Binding User.Username}" TextWrapping="Wrap"
                                            FontSize="18" />
@@ -121,16 +133,24 @@
                                 Height="130"
                                 Margin="0,0,10,0"
                                  Padding="0"
-                                Background="#618CFB"
                                 Click="Button_Click"
                                 Tag="{Binding}"
                                 >
-                            <Grid>
-                                  <Image Source="{Binding Category.Image.Image1}"
+                                    <Grid>
+                                        <Image Source="{Binding Category.Image.Image1}"
                                         Height="200"
-                                        Opacity=".7"
-                                         Stretch="Fill"/>
-                                <StackPanel Margin="4,4,4,4">
+                                         Stretch="Fill">
+                                            <Image.OpacityMask>
+                                            <LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.75,0.75">
+                                                <LinearGradientBrush.GradientStops>
+                                                    <GradientStop Offset="1" Color="#DE4A7B"/>
+                                                    <GradientStop Offset="0" Color="Transparent"/>
+
+                                                </LinearGradientBrush.GradientStops>
+                                            </LinearGradientBrush>
+                                            </Image.OpacityMask>
+                                        </Image>
+                                        <StackPanel Margin="4,4,4,4">
                                     <TextBlock Foreground="White" 
                                         Text="{Binding Category.Name}"
                                         FontSize="14"/>
@@ -144,8 +164,8 @@
                                         Text="{Binding Id}"
                                         FontSize="12" Visibility="Hidden" />
                                             <Image Source="{Binding User.Image.Image1}"
-                                                    Height="50"
-                                                    Width="50"
+                                                    Height="30"
+                                                    Width="30"
                                                     HorizontalAlignment="Left"
                                                     VerticalAlignment="Bottom"
                                                     Margin="0,4,0,0">

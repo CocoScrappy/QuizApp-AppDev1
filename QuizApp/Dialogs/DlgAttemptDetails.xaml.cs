@@ -33,7 +33,9 @@ namespace QuizApp.Dialogs
         public DlgAttemptDetails(Attempt attempt)
         {
             InitializeComponent();
-            if(attempt == null)
+            //WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            if (attempt == null)
             {
                 MessageBox.Show(this, "An error occured when retrieving this attempt details", "Missing Record", MessageBoxButton.OK, MessageBoxImage.Error);
             }

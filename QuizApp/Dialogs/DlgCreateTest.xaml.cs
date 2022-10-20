@@ -26,6 +26,7 @@ namespace QuizApp
         public DlgCreateTest()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
          private void Window_Loaded(object sender, RoutedEventArgs e)
         {

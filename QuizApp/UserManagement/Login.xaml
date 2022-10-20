@@ -4,18 +4,62 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp.UserManagement"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800"
-        WindowStyle="None">
-    <Grid>
-        <StackPanel>
-            <Label Name="LblUsername" HorizontalAlignment="Center">Username</Label>
-            <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
-            <Label Name="LblPass" HorizontalAlignment="Center">Password</Label>
-            <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
-            <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login" HorizontalAlignment="Center"></Button>
+        Height="450" Width="800"
+        WindowStyle="None"
+        c
+        ResizeMode="NoResize">
 
-            <Button Name="BtnRegister" Click="Registration_Click" HorizontalAlignment="Center">Register</Button>
+    <Grid>
+
+
+        <StackPanel HorizontalAlignment="Center" 
+                VerticalAlignment="Center">
+
+            <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    >
+                <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Account" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                    <Label Name="LblUsername" Foreground="#FF353535" >
+                        Username
+                    </Label>
+                </StackPanel>
+
+                <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
+
+                <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Key" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                    <Label Name="LblPass" Foreground="#FF353535">
+                        Password
+                    </Label>
+                </StackPanel>
+                <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300" ></PasswordBox>
+            </StackPanel>
+
+
+
+            <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal"
+                    Margin="10,40,10,10"
+                    >
+                <Button Foreground="White" Name="BtnRegister" Click="Registration_Click" Content="Register" Margin="0,0,4,0" Background="#FFA2A3A7" BorderBrush="#FFA2A3A7" />
+                <Button Foreground="White" Name="BtnLogin" Click="BtnLogin_Click" Content="Login"    />
+
+
+            </StackPanel>
+
+
         </StackPanel>
+        <Image Source="/Images/people.png" Margin="547,214,-15,-32"/>
     </Grid>
+
+
 </Window>

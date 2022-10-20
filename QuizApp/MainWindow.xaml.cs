@@ -28,6 +28,7 @@ namespace QuizApp
                 BtnLogin.Visibility = Visibility.Visible;
                 BtnLogout.Visibility = Visibility.Collapsed;
                 StackPnlMenu.Visibility = Visibility.Hidden;
+                TbxSearch.Visibility = Visibility.Hidden;
             }
             else
             {
@@ -36,8 +37,9 @@ namespace QuizApp
                 StackPnlMenu.Visibility = Visibility.Visible;
 
 
-                BtnLogin.Visibility = Visibility.Collapsed;
+                BtnLogin.Visibility = Visibility.Hidden;
                 BtnLogout.Visibility = Visibility.Visible;
+                TbxSearch.Visibility = Visibility.Visible;
 
                 if (Globals.CurrentUser.ImgId == null)
                 {
@@ -111,6 +113,11 @@ namespace QuizApp
             image.StreamSource = new MemoryStream(array);
             image.EndInit();
             return image;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

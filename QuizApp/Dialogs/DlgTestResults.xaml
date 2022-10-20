@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp"
         mc:Ignorable="d"
-        Title="DlgTestResults" Height="275" Width="537">
+        Height="275" Width="537"
+        FontFamily="/Fonts/Poppins/#Poppins"
+>
     <Grid>
         <TextBlock TextWrapping="Wrap" FontSize="36" TextDecorations="Underline" TextAlignment="Center" Margin="0,0,0,186"><Run Language="en-ca" Text="CONGRATS !"/></TextBlock>
-        <Button IsCancel="true" Content="Quit" HorizontalAlignment="Left" Margin="405,226,0,0" VerticalAlignment="Top" />
+        <Button IsCancel="true" Content="Quit" HorizontalAlignment="Left" Margin="405,226,0,0" VerticalAlignment="Top" Foreground="White" />
         <TextBlock Name="TxblFinalScore" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Width="448" Height="68" TextAlignment="Center" FontSize="24"/>
 
     </Grid>

@@ -8,14 +8,22 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <StackPanel>
-        <TextBlock Text="My Stats"
-                   Foreground="White"
-                   FontSize="28"
-                   HorizontalAlignment="Left"
+        <TextBlock Text="Keep track of your progress"
+                   Foreground="#FF353535"
+                   FontSize="20"
+                   HorizontalAlignment="Center"
+                   Margin="0,40,0,10"
+                   FontFamily="/Fonts/Poppins/#Poppins"
+                   FontWeight="SemiBold"
+                   />
+        <TextBlock Text="Right click on a quiz attempt for more details"
+                   Foreground="#FF353535"
+                   FontSize="16"
+                   HorizontalAlignment="Center"
                    Margin="0,0,0,20"
                    FontFamily="/Fonts/Poppins/#Poppins"
                    />
-        <StackPanel Orientation="Horizontal">
+        <!--<StackPanel>-->
         <Grid>
         <ListView Name="LvAttempts"
                   Margin="0, 0, 0 0"
@@ -52,6 +60,6 @@
             
         </ListView>
         </Grid>
-        </StackPanel>
+        <!--</StackPanel>-->
     </StackPanel>
 </UserControl>

@@ -5,19 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp"
         mc:Ignorable="d"
-        Title="DlgTakeQuiz" Height="349" Width="616"
-        Loaded="Window_Loaded">
-    <Grid>
-        <TextBlock Name="TxblQuestion" Margin="0,10,0,0" TextWrapping="Wrap" Text="TextBlock" Height="71" Width="542" VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center"/>
-        <Button Name="BtnAnswer1" Content="Answer1" HorizontalAlignment="Left" Margin="43,142,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer1_Click"/>
-        <Button Name="BtnAnswer2"  Content="Answer2" HorizontalAlignment="Left" Margin="343,142,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer2_Click"/>
-        <Button Name="BtnAnswer3" Content="Answer3" HorizontalAlignment="Left" Margin="43,215,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer3_Click"/>
-        <Button Name="BtnAnswer4" Content="Answer4" HorizontalAlignment="Left" Margin="343,215,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer4_Click"/>
-        <Button Name="BtnCancel" IsCancel="true" Content="Quit" HorizontalAlignment="Left" Margin="545,287,0,0" VerticalAlignment="Top" Width="32"/>
-        <Button Name="BtnNext" IsEnabled="False" Visibility="hidden" Click="BtnNext_Click" Content="Next" HorizontalAlignment="Center" Margin="0,282,0,0" VerticalAlignment="Top" Width="36"/>
-        <Button Name="BtnDone" IsDefault="True" Visibility="Hidden" Content="" HorizontalAlignment="Left" Margin="500,288,0,0" VerticalAlignment="Top"/>
-        <Label Name="LblQuestionNumber" Content="" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="45" Height="35"/>
-        
+        Height="349" Width="616"
+        Loaded="Window_Loaded"
+        WindowStyle="None"
+        FontFamily="/Fonts/Poppins/#Poppins"
+        ResizeMode="NoResize"
+        >
 
-    </Grid>
+    <Border Background="#FFEEF0FD"
+            CornerRadius="20"
+            >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="517*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="49*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Name="TxblQuestion" 
+                       TextWrapping="Wrap" 
+                       Text="TextBlock" 
+                       Height="71" 
+                       Width="542" 
+                       Margin="0,20,0,20"
+                       VerticalAlignment="Top" 
+                       HorizontalAlignment="Center" 
+                       TextAlignment="Center" 
+                       Grid.ColumnSpan="3"
+                       FontSize="18"/>
+            <Label Name="LblQuestionNumber" Content="" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="45" Height="35"/>
+            
+            <Button Name="BtnAnswer1" Content="Answer1" HorizontalAlignment="Left" Margin="43,142,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer1_Click"/>
+            <Button Name="BtnAnswer2"  Content="Answer2" HorizontalAlignment="Left" Margin="343,142,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer2_Click" Grid.ColumnSpan="2"/>
+            <Button Name="BtnAnswer3" Content="Answer3" HorizontalAlignment="Left" Margin="43,215,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer3_Click"/>
+            <Button Name="BtnAnswer4" Content="Answer4" HorizontalAlignment="Left" Margin="343,215,0,0" VerticalAlignment="Top" Height="57" Width="215" Click="BtnAnswer4_Click" Grid.ColumnSpan="2"/>
+            <Button Name="BtnCancel" IsCancel="true" Content="Quit" HorizontalAlignment="Left" Margin="470,287,0,0" VerticalAlignment="Top" Width="107" Grid.ColumnSpan="3"/>
+
+            <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal"
+                    Margin="10,10,10,10"
+                    >
+                <Button Name="BtnNext" IsEnabled="False" Visibility="Hidden" Click="BtnNext_Click" Content="Next" Foreground="White"/>
+                <Button Name="BtnDone" IsDefault="True" Visibility="Hidden" Content="" HorizontalAlignment="Left" Background="#FFA2A3A7" BorderBrush="#FFA2A3A7" Foreground="White" />
+            </StackPanel>
+
+            <!--<StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal"
+                    Margin="10,0,10,10"
+                    >
+            <Button Foreground="White" IsCancel="true" Content="_Cancel" Margin="0,0,4,0" Background="#FFA2A3A7" BorderBrush="#FFA2A3A7"  />
+            <Button Foreground="White" IsDefault="True" Name="BtnCreateTest" Content="Create your Test!"  Click="BtnCreateTest_Click"  />
+            
+        </StackPanel>-->
+
+            
+
+
+        </Grid>
+    </Border>
 </Window>

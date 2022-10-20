@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace QuizApp.UserManagement
@@ -15,6 +16,13 @@ namespace QuizApp.UserManagement
         public Login()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Registration RegistrationWindow = new Registration();
+            RegistrationWindow.Show();
+            this.Hide();
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
@@ -41,26 +49,18 @@ namespace QuizApp.UserManagement
 
                     if (doesPasswordMatch)
                     {
-
-                        if (Globals.CurrentUser.ImgId != null)
-                        {
-
-                            byte[] ImgBytes = Globals.DbContextAutoGen.Images.Where(Images => Images.Id == Globals.CurrentUser.ImgId).Single().Image1;
-                            userAvatar.Source = ToImage(ImgBytes);
-                            LblUsernameCurrent.Content = Globals.CurrentUser.Username;
-                        }
-                        else
-                        {
-                            userAvatar.Source = new BitmapImage(new Uri("pack://application:,,,/images/ProfileDefaultPic.JPG"));
-                            LblUsernameCurrent.Content = Globals.CurrentUser.Username;
-                        }
-                    }
+                        MainWindow mainWindow = new MainWindow();
+                        //this will open your child window
+                        mainWindow.Show();
+                        //this will close parent window. Registration window in this case
+                        this.Close();
+                }
                     else
                     {
                         MessageBox.Show(this, "Wrong username or password!", "Input error",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                
+
             }
             catch (ArgumentException ex)
             {
@@ -86,22 +86,22 @@ namespace QuizApp.UserManagement
             if (!Regex.IsMatch(TbxUsername.Text, @"^[^;]{2,20}$")) //, RegexOptions.IgnoreCase))
             {
                 TbxUsername.Text = "";
-                TbxUsername.BorderBrush = System.Windows.Media.Brushes.Red;
+                TbxUsername.BorderBrush = Brushes.Red;
                 throw new ArgumentException("Username must be 2-20 characters long, no semicolons");
             }
             else
             {
-                TbxUsername.BorderBrush = System.Windows.Media.Brushes.Black;
+                TbxUsername.BorderBrush = Brushes.Black;
             }
 
             if (PbxPass.Password == "")
             {
-                PbxPass.BorderBrush = System.Windows.Media.Brushes.Red;
+                PbxPass.BorderBrush = Brushes.Red;
                 throw new ArgumentException("Password field is empty");
             }
             else
             {
-                PbxPass.BorderBrush = System.Windows.Media.Brushes.Black;
+                PbxPass.BorderBrush = Brushes.Black;
             }
 
             return true;
@@ -114,6 +114,18 @@ namespace QuizApp.UserManagement
             image.StreamSource = new MemoryStream(array);
             image.EndInit();
             return image;
+        }
+
+        private static System.Drawing.Image ConvertImageSourceToImage(ImageSource image)
+        {
+            if (image == null) return null;
+
+            MemoryStream memoryStream = new MemoryStream();
+            BmpBitmapEncoder bmpBitmapEncoder = new BmpBitmapEncoder();
+            bmpBitmapEncoder.Frames.Add(BitmapFrame.Create((BitmapSource)image));
+            bmpBitmapEncoder.Save(memoryStream);
+
+            return System.Drawing.Image.FromStream(memoryStream);
         }
     }
 }

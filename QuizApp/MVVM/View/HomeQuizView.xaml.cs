@@ -5,14 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace QuizApp.MVVM.View
 {
@@ -37,16 +30,16 @@ namespace QuizApp.MVVM.View
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(u => u.Id == 23).FirstOrDefault();
-            List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id).ToList();
-            IcUserTests.ItemsSource = userTests;
-            foreach(Test test in userTests)
-            {
-                Console.WriteLine(test.Category.Name);
+            if (Globals.CurrentUser != null) { 
+                List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id).ToList();
+                IcUserTests.ItemsSource = userTests;
+                foreach(Test test in userTests)
+                {
+                    Console.WriteLine(test.Category.Name);
+                }
+                List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(t => t.OwnerId != Globals.CurrentUser.Id).ToList();
+                IcCommunityTests.ItemsSource = communityTests;
             }
-            List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(t => t.OwnerId != Globals.CurrentUser.Id).ToList();
-            IcCommunityTests.ItemsSource = communityTests;
-            
         }
     }
 }

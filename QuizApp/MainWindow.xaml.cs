@@ -92,7 +92,8 @@ namespace QuizApp
 
         private void CloseButton_MouseLeftDown(object sender, MouseButtonEventArgs e)
         {
-            Close();
+            Globals.CurrentUser = null;
+            this.Close();
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)

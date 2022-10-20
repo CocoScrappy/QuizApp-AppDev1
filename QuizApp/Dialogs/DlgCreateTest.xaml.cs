@@ -148,8 +148,6 @@ namespace QuizApp
 
                 foreach (JToken q in questions)
                 {
-
-                 
                     TempTestQuestion question = new TempTestQuestion();
                     //deserialize Json to Category Entity Objects
                     question = q.ToObject<TempTestQuestion>();
@@ -167,8 +165,7 @@ namespace QuizApp
                     dbQuestion.TestId = testId;
                     dbQuestion.Question = HttpUtility.HtmlDecode(question.Question);
                     dbQuestion.CorrectAnswer = HttpUtility.HtmlDecode(question.Correct_Answer);
-                    dbQuestion.WrongAnswers = HttpUtility.HtmlDecode(wrong);
-                    
+                    dbQuestion.WrongAnswers = HttpUtility.HtmlDecode(wrong); 
                 try { 
                     //Add and Save to database
                     Globals.DbContextAutoGen.TestQuestions.Add(dbQuestion);

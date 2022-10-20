@@ -28,6 +28,7 @@ namespace QuizApp
                 BtnLogin.Visibility = Visibility.Visible;
                 BtnLogout.Visibility = Visibility.Collapsed;
                 StackPnlMenu.Visibility = Visibility.Hidden;
+                TbxSearch.Visibility = Visibility.Hidden;
             }
             else
             {
@@ -36,8 +37,9 @@ namespace QuizApp
                 StackPnlMenu.Visibility = Visibility.Visible;
 
 
-                BtnLogin.Visibility = Visibility.Collapsed;
+                BtnLogin.Visibility = Visibility.Hidden;
                 BtnLogout.Visibility = Visibility.Visible;
+                TbxSearch.Visibility = Visibility.Visible;
 
                 if (Globals.CurrentUser.ImgId == null)
                 {

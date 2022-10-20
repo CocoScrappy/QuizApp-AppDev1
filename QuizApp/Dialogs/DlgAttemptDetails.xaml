@@ -5,35 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp.Dialogs"
         mc:Ignorable="d"
-        Title="DlgAttemptDetails" Height="450" Width="800"
+        Height="450" Width="800"
         ResizeMode="NoResize"
+        FontFamily="/Fonts/Poppins/#Poppins"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
         >
-    <Grid>
-        <ListView Name="LvAttemptDetails" Margin="0,0,0,77">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="#" 
+
+        <Grid>
+            <ListView Name="LvAttemptDetails" Margin="0,0,0,77">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="#" 
                                     Width="30" 
                                     DisplayMemberBinding="{Binding Id}"/>
-                    <GridViewColumn Header="Question" 
+                        <GridViewColumn Header="Question" 
                                     Width="300" 
                                     DisplayMemberBinding="{Binding Question}"/>
-                    <GridViewColumn Header="Correct Answer" 
+                        <GridViewColumn Header="Correct Answer" 
                                     Width="120" 
                                     DisplayMemberBinding="{Binding CorrectAnswer}"/>
-                    <GridViewColumn Header="Incorrect Answers" 
+                        <GridViewColumn Header="Incorrect Answers" 
                                     Width="120" 
                                     DisplayMemberBinding="{Binding IncorrectAnswers}"/>
-                    <GridViewColumn Header="Actual Answer" 
+                        <GridViewColumn Header="Actual Answer" 
                                     Width="120" 
                                     DisplayMemberBinding="{Binding PlayerAnswer}"/>
-                    <GridViewColumn Header="Success?" 
+                        <GridViewColumn Header="Success?" 
                                     Width="50" 
                                     DisplayMemberBinding="{Binding IsCorrect}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button IsCancel="True" Content="Close" HorizontalAlignment="Left" Margin="738,384,0,0" VerticalAlignment="Top"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button IsCancel="True" Content="Close" HorizontalAlignment="right" VerticalAlignment="Bottom" Margin="10,0,10,10" Foreground="White"/>
 
-    </Grid>
+        </Grid>
+
 </Window>

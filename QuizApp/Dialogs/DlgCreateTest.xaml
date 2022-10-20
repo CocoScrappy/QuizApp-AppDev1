@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizApp"
         mc:Ignorable="d"
-        Title="DlgCreateTest" Height="314" Width="504"
+        Height="314" Width="504"
+        Loaded="Window_Loaded"
+        FontFamily="/Fonts/Poppins/#Poppins"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
+        WindowStyle="None">
     <Grid>
-        <Label Content="Create a Test" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="What's it going to be?" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label Content="N° of Questions:" HorizontalAlignment="Left" Margin="85,73,0,0" VerticalAlignment="Top"/>
         <Label Content="Category:" HorizontalAlignment="Left" Margin="129,104,0,0" VerticalAlignment="Top"/>
         <Label Content="Difficulty:" HorizontalAlignment="Left" Margin="122,135,0,0" VerticalAlignment="Top"/>
@@ -33,9 +36,17 @@
             <ComboBoxItem Content="Multiple Choice"/>
             <ComboBoxItem Content="True / False"/>
         </ComboBox>
-        
-        <Button IsDefault="True" Name="BtnCreateTest" Content="Create your Test!" HorizontalAlignment="Left" Margin="209,214,0,0" VerticalAlignment="Top" Click="BtnCreateTest_Click"/>
-        <Button IsCancel="true" Content="_Cancel" HorizontalAlignment="Left" Margin="432,252,0,0" VerticalAlignment="Top"/>
+
+        <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                    Orientation="Horizontal"
+                    Margin="10,0,10,10"
+                    >
+            <Button Foreground="White" IsCancel="true" Content="_Cancel" Margin="0,0,4,0" Background="#FFA2A3A7" BorderBrush="#FFA2A3A7"  />
+            <Button Foreground="White" IsDefault="True" Name="BtnCreateTest" Content="Qwizzle up!"  Click="BtnCreateTest_Click"  />
+            
+        </StackPanel>
+
 
     </Grid>
 </Window>

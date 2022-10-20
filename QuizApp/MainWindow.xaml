@@ -157,11 +157,12 @@
                     Background="white"
                     CornerRadius="0,20,0, 0">
 
-                <StackPanel Orientation="Horizontal"
+                <DockPanel 
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Grid.Column="1" 
-                        Cursor="Hand">
+                        Cursor="Hand"
+                        Width="700">
 
                     <!--Logo-->
                     <TextBlock Text="Qwizzle"
@@ -175,21 +176,32 @@
 
                     <!--Search box-->
                     <TextBox Width="250"
-                     Height="40"
-                     VerticalContentAlignment="Center"
-                     HorizontalAlignment="Left"
-                     Margin="5"
-                     Grid.Column="1"
-                     Style="{StaticResource QuizzleTextbox}"/>
+                             Name="TbxSearch"
+                             Height="40"
+                             VerticalContentAlignment="Center"
+                             HorizontalAlignment="Left"
+                             Margin="5"
+                             Grid.Column="1"
+                             Style="{StaticResource QuizzleTextbox}"/>
+                    
+                    <!--Login / Logout-->
+                    <DockPanel HorizontalAlignment="Right">
+                        <Button Name="BtnLogin"
+                                Foreground="White"
+                                Click="Login_Click"
+                                Margin="0">
+                            Login
+                        </Button>
+                        <Button Name="BtnLogout"   
+                                 Foreground="White"
+                                Click="Logout_Click">
+                            Logout
+                        </Button>
+                    </DockPanel>
 
-                    <StackPanel>
-                        <Button Name="BtnLogin" Click="Login_Click">Login</Button>
-                        <Button Name="BtnLogout" Click="Logout_Click">Logout</Button>
-                    </StackPanel>
 
 
-
-                </StackPanel>
+                </DockPanel>
 
 
             </Border>
@@ -211,7 +223,36 @@
 
             </Rectangle>
 
-            <Image Name="userAvatar"  HorizontalAlignment="Left" Height="86" Margin="608,28,0,0" VerticalAlignment="Top" Width="86" Grid.Column="1" Grid.RowSpan="2"/>
+            <Image Name="userAvatar"  
+                   HorizontalAlignment="Right" 
+                   Margin="0,0,125,0"
+                   Height="50" 
+                   Width="50" 
+                   VerticalAlignment="Center" 
+                   Stretch="Fill"
+                   Grid.Column="1">
+                <Image.OpacityMask>
+                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                        <GradientStop Color="#ffffffff" Offset="1" />
+                        <GradientStop Color="#00ffffff" Offset="1" />
+                    </RadialGradientBrush>
+                </Image.OpacityMask>
+            </Image>
+
+            <!--<Image Width="50" 
+                   Height="50"
+                   Name="userAvatar"
+                   HorizontalAlignment="Right" 
+                   Margin="0,0,125,0"
+                   VerticalAlignment="Center" 
+                    Grid.Column="1"
+                   Stretch="Fill"
+                   >
+                <Image.Clip>
+                    <EllipseGeometry      
+                         Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5"/>
+                </Image.Clip>
+            </Image>-->
 
 
 

@@ -3,26 +3,62 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QuizApp.UserManagement"
+        xmlns:local="clr-namespace:QuizApp.UserManagement" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="800"
-        WindowStyle="None">
-    <Grid>
+        Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        FontFamily="/Fonts/Poppins/#Poppins">
 
-        <StackPanel>
-            <Image Margin="12,12,16,71" Name="userAvatar"
-                Stretch="Fill" Height="150" Width="150"  />
-            <Label Name="LblEmail" HorizontalAlignment="Center">Email</Label>
+    <StackPanel HorizontalAlignment="Center" 
+                VerticalAlignment="top">
+
+        <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Margin="10,10,10,10"
+                    >
+
+            <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Email" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                <Label Name="LblEmail" HorizontalAlignment="Center" Foreground="#FF353535">
+                    Email
+                </Label>
+            </StackPanel>
+            
+            
             <TextBox Name="TbxEmail" HorizontalAlignment="Center" Width="300"></TextBox>
-            <Label Name="LblUsername" HorizontalAlignment="Center">Username</Label>
+
+            <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF353535"/>
+                <Label Name="LblUsername" 
+                       HorizontalAlignment="Center" 
+                       Foreground="#FF353535">
+                    Username
+                </Label>
+            </StackPanel>
+           
             <TextBox Name="TbxUsername" HorizontalAlignment="Center" Width="300"></TextBox>
+            
+            
             <Label Name="LblPassword" HorizontalAlignment="Center">Password</Label>
             <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
             <Label Name="LblConfirmPass" HorizontalAlignment="Center">Confirm Password</Label>
             <PasswordBox Name="PbxConfirmPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
+            
+            
+            
             <Button Height="23" Margin="12,0,0,34" Name="BtnLoad" Click="BtnLoad_Click" HorizontalAlignment="Center">_Load</Button>
             <Button Name="Register" Click="BtnRegister_Click" HorizontalAlignment="Center">Register</Button>
             <Button Name="BtnBackToMain" Click="BtnBackToMain_Click" HorizontalAlignment="Center">BackToMain</Button>
+            
+            
         </StackPanel>
-    </Grid>
+        <Image Margin="12,12,16,71" Name="userAvatar"
+                Stretch="Fill" Height="150" Width="150"  />
+    </StackPanel>
+    
 </Window>

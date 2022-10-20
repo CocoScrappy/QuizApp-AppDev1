@@ -5,16 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuizApp.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-    <TextBlock     Text="New Quiz"
-                   Foreground="White"
-                   FontSize="28"
-                   HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
-                   FontFamily="/Fonts/Poppins/#Poppins"
+             d:DesignHeight="450" d:DesignWidth="800"
+             FontFamily="/Fonts/Poppins/#Poppins"
+             
+             >
+    
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,0,0,100">
+        
+        <TextBlock     Text="Design your own Quizzle"
+                   Foreground="#FF353535"
+                   FontSize="22"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,30"
+                   
                    />
-        <Button Content="Button" Click="Button_Click"/>
+        <TextBlock     Text="Choose the category, difficulty level, and number of questions you want."
+                   Foreground="#FF353535"
+                   FontSize="14"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"
+                   
+                   />
+        <Button Content="Generate a new quiz!" Click="Button_Click" Foreground="White" Height="50"/>
 
     </StackPanel>
 </UserControl>

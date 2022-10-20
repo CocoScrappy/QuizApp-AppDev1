@@ -9,13 +9,13 @@
 
     <StackPanel>
         <TextBlock Text="My Stats"
-                   Foreground="White"
-                   FontSize="28"
+                   Foreground="#FF353535"
+                   FontSize="22"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    FontFamily="/Fonts/Poppins/#Poppins"
                    />
-        <StackPanel Orientation="Horizontal">
+        <!--<StackPanel>-->
         <Grid>
         <ListView Name="LvAttempts"
                   Margin="0, 0, 0 0"
@@ -52,6 +52,6 @@
             
         </ListView>
         </Grid>
-        </StackPanel>
+        <!--</StackPanel>-->
     </StackPanel>
 </UserControl>

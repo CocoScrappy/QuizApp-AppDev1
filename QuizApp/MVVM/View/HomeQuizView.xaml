@@ -13,7 +13,7 @@
     <StackPanel>
         <TextBlock Text="My Quizzes"
                    Foreground="#FF353535"
-                   FontSize="24"
+                   FontSize="22"
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"
                    FontFamily="/Fonts/Poppins/#Poppins"
@@ -41,7 +41,7 @@
                     Width="350"
                     Height="200"
                     Margin="0,0,10,0"
-                    Background="Aqua"
+                    Background="#618CFB"
                     Tag="{Binding}"
                     Click="Button_Click" 
                     >
@@ -107,7 +107,7 @@
                         <Button Width="150"
                                 Height="130"
                                 Margin="0,0,10,0"
-                                Background="Aqua"
+                                Background="#618CFB"
                                 Click="Button_Click"
                                 Tag="{Binding}"
                                 >

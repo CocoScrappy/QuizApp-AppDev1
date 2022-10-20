@@ -17,6 +17,7 @@ namespace QuizApp
 
         private static User _currentUser;
 
+
         public static User CurrentUser
         {
             get { return _currentUser; }

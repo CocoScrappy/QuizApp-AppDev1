@@ -106,7 +106,6 @@
     <Compile Include="Category.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="CategoryTemp.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
@@ -297,7 +296,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
-    <Folder Include="Partials\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -133,7 +133,7 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding NewQuizViewCommand}"
+                             Command="{Binding NewQuizViewCommand}" Checked="RadioButton_Checked"
                              />
                 <RadioButton
                              Content="My Stats"

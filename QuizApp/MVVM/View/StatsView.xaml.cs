@@ -26,8 +26,8 @@ namespace QuizApp.MVVM.View
         public StatsView()
         {
             InitializeComponent();
-            //Display all attempts for current user                         FIX MY ID
-            UserAttemps = Globals.DbContextAutoGen.Attempts.Where(a => a.PlayerId == 2).ToList();
+            //Display all attempts for current user                         
+            UserAttemps = Globals.DbContextAutoGen.Attempts.Where(a => a.PlayerId == Globals.CurrentUser.Id).ToList();
             LvAttempts.ItemsSource = UserAttemps = UserAttemps.ToList();
         }
 

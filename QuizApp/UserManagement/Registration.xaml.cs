@@ -17,6 +17,7 @@ namespace QuizApp.UserManagement
         public Registration()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
@@ -78,9 +79,9 @@ namespace QuizApp.UserManagement
                 //clear inputs
                 ResetRegistrationFields();
 
-                Login login = new Login();
+                MainWindow mainWindow = new MainWindow();
                 //this will open your child window
-                login.Show();
+                mainWindow.Show();
                 //this will close parent window. Registration window in this case
                 this.Close();
 
@@ -213,6 +214,15 @@ namespace QuizApp.UserManagement
         {
             User Duplicate = Globals.DbContextAutoGen.Users.Where(Users => Users.Email == TbxEmail.Text).FirstOrDefault();
             return Duplicate;
+        }
+
+        private void BtnBackToMain_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            //this will open your child window
+            mainWindow.Show();
+            //this will close parent window. Registration window in this case
+            this.Close();
         }
     }
 }

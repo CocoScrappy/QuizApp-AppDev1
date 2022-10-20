@@ -1,24 +1,13 @@
 ﻿// using Newtonsoft.Json;
 // using Newtonsoft.Json.Linq;
-using Microsoft.Win32;
 using QuizApp.UserManagement;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Markup;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Xml.Linq;
+
 
 namespace QuizApp
 {
@@ -31,7 +20,36 @@ namespace QuizApp
         public MainWindow()
         {
             InitializeComponent();
-            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            if (Globals.CurrentUser == null) 
+            {
+                // user is Logged out - close up controls, display Logoin/Register buttons and Avatar
+                BtnLogin.Visibility = Visibility.Visible;
+                BtnLogout.Visibility = Visibility.Collapsed;
+                StackPnlMenu.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                // user is Logged in - open up controls, display Logout button and hide Avatar
+                CommunityQuizzesRect.Visibility = Visibility.Hidden;
+                StackPnlMenu.Visibility = Visibility.Visible;
+
+
+                BtnLogin.Visibility = Visibility.Collapsed;
+                BtnLogout.Visibility = Visibility.Visible;
+
+                if (Globals.CurrentUser.ImgId == null)
+                {
+                    userAvatar.Source = new BitmapImage(new Uri("pack://application:,,,/images/ProfileDefaultPic.JPG"));
+                }
+                else
+                {
+                    byte[] ImgBytes = Globals.CurrentUser.Image.Image1; //Globals.DbContextAutoGen.Images.Where(Images => Images.Id == Globals.CurrentUser.ImgId).Single().Image1; //
+                    userAvatar.Source = ToImage(ImgBytes);
+                }
+
+            }
 
         }
 
@@ -49,12 +67,14 @@ namespace QuizApp
         {
             Registration RegistrationWindow = new Registration();
             RegistrationWindow.Show();
+            this.Hide();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             Login LoginWindow = new Login();
             LoginWindow.Show();
+            this.Hide();
         }
 
         private void MinimizeButton_MouseLeftDown(object sender, MouseButtonEventArgs e)
@@ -72,7 +92,25 @@ namespace QuizApp
 
         private void CloseButton_MouseLeftDown(object sender, MouseButtonEventArgs e)
         {
-            Close();
+            Globals.CurrentUser = null;
+            this.Close();
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            Globals.CurrentUser = null;
+            this.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
+
+        public BitmapImage ToImage(byte[] array)
+        {
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.StreamSource = new MemoryStream(array);
+            image.EndInit();
+            return image;
         }
     }
 }

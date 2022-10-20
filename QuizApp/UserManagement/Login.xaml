@@ -14,11 +14,8 @@
             <Label Name="LblPass" HorizontalAlignment="Center">Password</Label>
             <PasswordBox Name="PbxPass" HorizontalAlignment="Center" Width="300"></PasswordBox>
             <Button Name="BtnLogin" Click="BtnLogin_Click" Content="Login" HorizontalAlignment="Center"></Button>
-            <Label Content="" Name="LblUsernameCurrent" HorizontalAlignment="Center"></Label>
-            
-            <Image Margin="12,12,16,71" Name="userAvatar"
-                Stretch="Fill" Height="150" Width="150"  />
-            
+
+            <Button Name="BtnRegister" Click="Registration_Click" HorizontalAlignment="Center">Register</Button>
         </StackPanel>
     </Grid>
 </Window>

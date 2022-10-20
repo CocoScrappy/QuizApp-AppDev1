@@ -31,10 +31,10 @@ namespace QuizApp.MVVM.View
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             if (Globals.CurrentUser != null) {
-                List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id).OrderBy(t => t.Id).ThenByDescending(t => t.Id).ToList();
+                List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id && x.TestQuestions.Count() != 0).OrderBy(t => t.Id).ThenByDescending(t => t.Id).ToList();
                 IcUserTests.ItemsSource = userTests;
 
-                List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(t => t.OwnerId != Globals.CurrentUser.Id).OrderBy(t => t.Id).ThenByDescending(t => t.Id).ToList();
+                List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId != Globals.CurrentUser.Id && x.TestQuestions.Count() != 0).OrderBy(t => t.Id).ThenByDescending(t => t.Id).ToList();
                 IcCommunityTests.ItemsSource = communityTests;
             }
             

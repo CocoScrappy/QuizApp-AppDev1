@@ -42,19 +42,21 @@ namespace QuizApp
         }
         public DlgTakeTest(Test test)
         {
-            
+            Test = test;
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            Test = test;
+            
+            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
             if (Test == null)
             {
                 MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
             // populate questions list
             TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == Test.Id).ToList();
             if (TestQuestions == null || TestQuestions.Count() == 0)

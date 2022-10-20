@@ -37,14 +37,10 @@ namespace QuizApp.MVVM.View
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(u => u.Id == 23).FirstOrDefault();
-            List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id).ToList();
+            List<Test> userTests = Globals.DbContextAutoGen.Tests.Where(x => x.OwnerId == Globals.CurrentUser.Id).OrderBy(t => t.Id).ThenByDescending(t => t.Id).ToList();
             IcUserTests.ItemsSource = userTests;
-            foreach(Test test in userTests)
-            {
-                Console.WriteLine(test.Category.Name);
-            }
-            List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(t => t.OwnerId != Globals.CurrentUser.Id).ToList();
+
+            List<Test> communityTests = Globals.DbContextAutoGen.Tests.Where(t => t.OwnerId != Globals.CurrentUser.Id).OrderBy(t => t.Id).ThenByDescending(t => t.Id).ToList();
             IcCommunityTests.ItemsSource = communityTests;
             
         }

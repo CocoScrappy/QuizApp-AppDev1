@@ -106,7 +106,6 @@
     <Compile Include="Category.cs">
       <DependentUpon>QuizApp_dbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="CategoryTemp.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
@@ -139,7 +138,6 @@
     <Compile Include="MVVM\View\StatsView.xaml.cs">
       <DependentUpon>StatsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Partials\Image.cs" />
     <Compile Include="QuizAppProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

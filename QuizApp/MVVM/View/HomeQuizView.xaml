@@ -39,34 +39,45 @@
 
                             <!--User's own created quizzes go HERE -->
                     <Button
-                    Width="350"
-                    Height="200"
-                    Margin="0,0,10,0"
-                    Background="#618CFB"
-                    Tag="{Binding}"
-                    Click="Button_Click" 
+                        Width="350"
+                        Height="200"
+                        Margin="0,0,10,0"
+                        Padding="0"
+                        Background="#618CFB"
+                        Tag="{Binding}"
+                        Click="Button_Click" 
                     >
                         <Grid>
                               <Image Source="{Binding Category.Image.Image1}"
-                               Height="200"
-                               Opacity=".7"/>
-                            <StackPanel>
-                            <TextBlock Foreground="White" 
-                                   Text="User Tests"
-                                   FontSize="25"/>
-                            <TextBlock Foreground="White" 
-                                   Text="{Binding Category.Name}"
-                                   FontSize="25"/>
-                            <TextBlock Foreground="White" 
-                                   Text="{Binding Difficulty}"
-                                   FontSize="18"/>
-                            <TextBlock Foreground="White" 
-                                   Text="{Binding User.Username}" TextWrapping="Wrap"
-                                   FontSize="18" />
-                            <Image Source="{Binding User.Image.Image1}"
-                               Height="50"
-                               Width="50"/>
-                             </StackPanel>
+                                     Height="200"
+                                     Opacity=".7"
+                                     Stretch="Fill"/>
+                                    <StackPanel Margin="4,4,4,4">
+                                        <TextBlock Foreground="White" 
+                                           Text="{Binding Category.Name}"
+                                           FontSize="25"/>
+                                        <TextBlock Foreground="White" 
+                                           Text="{Binding Difficulty}"
+                                           FontSize="18"/>
+                                        <TextBlock Foreground="White" 
+                                           Text="{Binding User.Username}" TextWrapping="Wrap"
+                                           FontSize="18" />
+                                        <Image Source="{Binding User.Image.Image1}"
+                                               Height="30"
+                                               Width="30"
+                                               Stretch="Fill"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Bottom"
+                                               Margin="0,10,0,0">
+                                                <Image.OpacityMask>
+                                                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                                        <GradientStop Color="#ffffffff" Offset="1" />
+                                                        <GradientStop Color="#00ffffff" Offset="1" />
+                                                    </RadialGradientBrush>
+                                                </Image.OpacityMask>
+                                        </Image>
+
+                                    </StackPanel>
                              </Grid>
                         </Button>
 
@@ -109,15 +120,17 @@
                         <Button Width="150"
                                 Height="130"
                                 Margin="0,0,10,0"
+                                 Padding="0"
                                 Background="#618CFB"
                                 Click="Button_Click"
                                 Tag="{Binding}"
                                 >
                             <Grid>
                                   <Image Source="{Binding Category.Image.Image1}"
-                                    Height="200"
-                                    Opacity=".7"/>
-                                <StackPanel>
+                                        Height="200"
+                                        Opacity=".7"
+                                         Stretch="Fill"/>
+                                <StackPanel Margin="4,4,4,4">
                                     <TextBlock Foreground="White" 
                                         Text="{Binding Category.Name}"
                                         FontSize="14"/>
@@ -130,10 +143,20 @@
                                     <TextBlock Foreground="White" 
                                         Text="{Binding Id}"
                                         FontSize="12" Visibility="Hidden" />
-                                    <Image Source="{Binding User.Image.Image1}"
-                                        Height="50"
-                                        Width="50"/>
-                                </StackPanel>
+                                            <Image Source="{Binding User.Image.Image1}"
+                                                    Height="50"
+                                                    Width="50"
+                                                    HorizontalAlignment="Left"
+                                                    VerticalAlignment="Bottom"
+                                                    Margin="0,4,0,0">
+                                                <Image.OpacityMask>
+                                                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                                        <GradientStop Color="#ffffffff" Offset="1" />
+                                                        <GradientStop Color="#00ffffff" Offset="1" />
+                                                    </RadialGradientBrush>
+                                                </Image.OpacityMask>
+                                            </Image>
+                                        </StackPanel>
                             </Grid>
                         </Button>
                         <!--1 card end-->

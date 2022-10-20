@@ -40,11 +40,16 @@ namespace QuizApp
                 return $"{CurrentIndex + 1}/{ListLenght}";
             }
         }
-        public DlgTakeTest()
+        public DlgTakeTest(Test test)
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-
+            Test = test;
+            if (Test == null)
+            {
+                MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -52,14 +57,9 @@ namespace QuizApp
             
             //find test entity
             ////FIXME:: Find for dynamic testId
-            Test = Globals.DbContextAutoGen.Tests.Where(t => t.Id == 14).OfType<Test>().FirstOrDefault();
-            if (Test == null)
-            {
-                MessageBox.Show(this, "Test could not be found", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            
             // populate questions list
-            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == 14).OfType<TestQuestion>().ToList();
+            TestQuestions = Globals.DbContextAutoGen.TestQuestions.Where(q => q.TestId == Test.Id).OfType<TestQuestion>().ToList();
             if (TestQuestions == null || TestQuestions.Count() == 0)
             {
                 MessageBox.Show(this, "No questions were found for this Test", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -70,7 +70,8 @@ namespace QuizApp
             ListLenght = TestQuestions.Count();
             PaintCurrentQuestion();
             PlayerResponses = new List<AttemptRespons>();
-
+            // FOR TESTING REMOVE ME 
+            Globals.CurrentUser = Globals.DbContextAutoGen.Users.Where(u => u.Id == 2).FirstOrDefault();
         }
 
         private void PaintCurrentQuestion()
@@ -262,7 +263,7 @@ namespace QuizApp
             Attempt Attempt = new Attempt();
 
             Attempt.TestId = Test.Id;
-            Attempt.PlayerId = 2;
+            Attempt.PlayerId = Globals.CurrentUser.Id;
             Attempt.DateTaken = DateTime.Now;
             Attempt.Archived = 0;
             double result = ((double)AnsweredCorrectly/(double)ListLenght) * 100;
@@ -273,6 +274,8 @@ namespace QuizApp
                 Globals.DbContextAutoGen.Attempts.Add(Attempt);
                 Globals.DbContextAutoGen.SaveChanges();
                 SavePlayerResponses(Attempt.Id);
+                //increase score based on test difficulty
+                UpdateUserScore();
             }
             catch (SystemException ex)
             {
@@ -295,6 +298,26 @@ namespace QuizApp
             {
                 throw;
             }
+        }
+
+        private void UpdateUserScore()
+        {
+            if(Globals.CurrentUser.Score == null) Globals.CurrentUser.Score = 0;
+            int increase = 0;
+            switch (Test.Difficulty)
+            {
+                case "Easy":
+                    increase = 1;
+                    break;
+                case "Medium":
+                    increase = 2;
+                    break;
+                case "Hard":
+                    increase = 3;
+                    break;
+            }
+            Globals.CurrentUser.Score += increase;
+            Globals.DbContextAutoGen.SaveChanges();
         }
 
 

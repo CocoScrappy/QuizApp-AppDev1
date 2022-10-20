@@ -1,5 +1,16 @@
 ---- SCRUM 7 ----
 
+2022/10/19 Alina  
+1. Done / not done since last scrum: 
+- Style Quiz Dialog
+- User can close app
+- Material Design works
+
+2. To do until next Scrum: 
+- Rest of styling
+3. Need assistance / figure things out 
+
+
 2022/10/19 Dmitry  
 
 1. Done / not done since last scrum: 
